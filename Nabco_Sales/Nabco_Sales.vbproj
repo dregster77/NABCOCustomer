@@ -192,6 +192,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="nabcogt_logo_DEr_icon.ico" />
+    <None Include="Resources\page_save.png" />
     <None Include="Resources\LHI-CLHI.png" />
     <None Include="Resources\RHO-RHI.png" />
     <None Include="Resources\RHO-LHO.png" />

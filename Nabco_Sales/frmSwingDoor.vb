@@ -8,11 +8,12 @@ Imports Telerik.WinControls.UI
 
 Public Class frmSwingDoor
     Private LoadingSpecs As Boolean
+    Private SkipPop As Boolean
 
     Private Sub frmSwingDoor_Load(sender As Object, e As EventArgs) Handles Me.Load
         RemoveHandler tabparenttab.SelectedTabChanged, AddressOf tabparenttab_TabIndexChanged
         PopModelList()
-        PopImages(0)
+        PopBtnImages()
         PopApplications()
         PopSwingersImages()
         PopPivots()
@@ -21,120 +22,117 @@ Public Class frmSwingDoor
     End Sub
 
     Private Sub btnFullPower_CheckStateChanged(ByVal sender As Object, ByVal e As EventArgs) Handles btnFullPower.CheckStateChanged
+        If SkipPop = True Then Exit Sub
         If btnFullPower.CheckState = CheckState.Checked And btnLowEnergy.CheckState = CheckState.Checked Then
+            SkipPop = True
             btnLowEnergy.CheckState = CheckState.Unchecked
+            SkipPop = False
         End If
 
         PopModelList()
     End Sub
 
     Private Sub btnLowEnergy_CheckStateChanged(ByVal sender As Object, ByVal e As EventArgs) Handles btnLowEnergy.CheckStateChanged
+        If SkipPop = True Then Exit Sub
         If btnFullPower.CheckState = CheckState.Checked And btnLowEnergy.CheckState = CheckState.Checked Then
+            SkipPop = True
             btnFullPower.CheckState = CheckState.Unchecked
+            SkipPop = False
         End If
-
         PopModelList()
     End Sub
 
     Private Sub btnOHC_CheckStateChanged(ByVal sender As Object, ByVal e As EventArgs) Handles btnOHC.CheckStateChanged
-
+        btnOHC.Image = ResizeImage(IIf(btnOHC.IsChecked, My.Resources.ohccheck, My.Resources.ohc), btnOHC.Size)
+        If SkipPop = True Then Exit Sub
         If btnCU.CheckState = CheckState.Checked And btnOHC.CheckState = CheckState.Checked Then
+            SkipPop = True
             btnCU.CheckState = CheckState.Unchecked
+            SkipPop = False
         End If
         PopModelList()
-        PopImages(3)
     End Sub
 
     Private Sub btnCU_CheckStateChanged(ByVal sender As Object, ByVal e As EventArgs) Handles btnCU.CheckStateChanged
-
+        btnCU.Image = ResizeImage(IIf(btnCU.IsChecked, My.Resources.cucheck, My.Resources.cu), btnCU.Size)
+        If SkipPop = True Then Exit Sub
         If btnCU.CheckState = CheckState.Checked And btnOHC.CheckState = CheckState.Checked Then
+            SkipPop = True
             btnOHC.CheckState = CheckState.Unchecked
+            SkipPop = False
         End If
 
         PopModelList()
-        PopImages(4)
     End Sub
 
     Private Sub btnSide_CheckStateChanged(ByVal sender As Object, ByVal e As EventArgs) Handles btnSide.CheckStateChanged
-
+        btnSide.Image = ResizeImage(IIf(btnSide.IsChecked, My.Resources.sidecheck, My.Resources.sideload), btnSide.Size)
+        If SkipPop = True Then Exit Sub
         If btnSide.CheckState = CheckState.Checked And btnBottom.CheckState = CheckState.Checked Then
+            SkipPop = True
             btnBottom.CheckState = CheckState.Unchecked
+            SkipPop = False
         End If
 
         PopModelList()
-        PopImages(2)
-    End Sub
-
-    Private Sub PopImages(ByVal clicked As Integer)
-        Select Case clicked
-            Case 0 ' just loading the images
-                btnBottom.Image = My.Resources.Resources.bottom
-                btnCU.Image = My.Resources.Resources.cu
-                btnOHC.Image = My.Resources.Resources.ohc
-                btnSide.Image = My.Resources.Resources.sideload
-                btnBottom.Image = ResizeImage(btnBottom.Image, btnBottom.Size)
-                btnCU.Image = ResizeImage(btnCU.Image, btnCU.Size)
-                btnOHC.Image = ResizeImage(btnOHC.Image, btnOHC.Size)
-                btnSide.Image = ResizeImage(btnSide.Image, btnSide.Size)
-                Exit Select
-            Case 1 ' bottom clicked
-                btnBottom.Image = ResizeImage(IIf(btnBottom.IsChecked, My.Resources.bottomcheck, My.Resources.bottom), btnBottom.Size)
-                Exit Select
-            Case 2 ' side clicked
-                btnSide.Image = ResizeImage(IIf(btnSide.IsChecked, My.Resources.sidecheck, My.Resources.sideload), btnSide.Size)
-                Exit Select
-            Case 3  ' ohc clicked
-                btnOHC.Image = ResizeImage(IIf(btnOHC.IsChecked, My.Resources.ohccheck, My.Resources.ohc), btnOHC.Size)
-                Exit Select
-            Case 4  ' cu clicked
-                btnCU.Image = ResizeImage(IIf(btnCU.IsChecked, My.Resources.cucheck, My.Resources.cu), btnCU.Size)
-                Exit Select
-        End Select
     End Sub
 
     Private Sub btnBottom_CheckStateChanged(ByVal sender As Object, e As EventArgs) Handles btnBottom.CheckStateChanged
+        btnBottom.Image = ResizeImage(IIf(btnBottom.IsChecked, My.Resources.bottomcheck, My.Resources.bottom), btnBottom.Size)
+        If SkipPop = True Then Exit Sub
+
         If btnSide.CheckState = CheckState.Checked And btnBottom.CheckState = CheckState.Checked Then
+            SkipPop = True
             btnSide.CheckState = CheckState.Unchecked
+            SkipPop = False
         End If
 
         PopModelList()
-        PopImages(1)
     End Sub
 
-    Private Sub ddlFinsih_SelectedIndexChanged(ByVal sender As Object, ByVal e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles ddlFinsih.SelectedIndexChanged
-        If ddlFinsih.SelectedIndex = 0 Then
+    ' set images for all of the buttons 
+    Private Sub PopBtnImages()
+        btnBottom.Image = My.Resources.Resources.bottom
+        btnCU.Image = My.Resources.Resources.cu
+        btnOHC.Image = My.Resources.Resources.ohc
+        btnSide.Image = My.Resources.Resources.sideload
+        btnBottom.Image = ResizeImage(btnBottom.Image, btnBottom.Size)
+        btnCU.Image = ResizeImage(btnCU.Image, btnCU.Size)
+        btnOHC.Image = ResizeImage(btnOHC.Image, btnOHC.Size)
+        btnSide.Image = ResizeImage(btnSide.Image, btnSide.Size)
+    End Sub
+
+    Private Sub ddlFinsih_SelectedIndexChanged(ByVal sender As Object, ByVal e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles ddlFinish.SelectedIndexChanged
+        If ddlFinish.SelectedIndex = 0 Then
             ddlColor.Visible = True
             txtColor.Visible = False
             ddlColor.SelectedIndex = 0
-        ElseIf ddlFinsih.SelectedIndex >= 1 Then
+        ElseIf ddlFinish.SelectedIndex >= 1 Then
             ddlColor.Visible = False
             txtColor.Visible = True
         End If
     End Sub
 
-
-
     Private Sub ddlColor_SelectedIndexChanged(ByVal sender As Object, ByVal e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles ddlColor.SelectedIndexChanged
         tabApplication.Enabled = True
+        lblColor.Tag = ddlColor.SelectedItem.Text
     End Sub
 
     Private Sub txtColor_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles txtColor.TextChanged
         If Not String.IsNullOrEmpty(txtColor.Text) Then
             tabApplication.Enabled = True
+            lblColor.Tag = ddlColor.SelectedItem.Text
         End If
     End Sub
-
-
-    ' set images for all of the buttons 
-
-
 
     ' Populate all the models for the selected options
     Private Sub PopModelList()
         ddlModel.Items.Clear()
 
         Try
-            SQL = "Select m.model, m.model_id " & " from t_model m " & "  where m.status= 1  "
+            SQL = "Select m.model, m.model_id, case when m.mounting_bracket is null then 0 else 1 end as mount " &
+             " from t_model m " &
+             "  where m.status= 1  "
 
             If btnLowEnergy.CheckState = CheckState.Checked Then
                 SQL += " and m.power_type = 0 "
@@ -161,6 +159,7 @@ Public Class frmSwingDoor
                 Dim lstitem = New RadListDataItem()
                 lstitem.Text = Trim("" & RS("model"))
                 lstitem.Tag = Trim("" & RS("model_id"))
+                lstitem.Value = RS("mount")
                 ddlModel.Items.Add(lstitem)
             End While
 
@@ -168,10 +167,9 @@ Public Class frmSwingDoor
             ddlModel.SelectedIndex = 0
             ' dt.Clear()
         Catch ex As Exception
-            MsgBox(ex.Message, Title:="PopModelList")
+            MsgBox(ex.Message, "PopModelList")
         End Try
     End Sub
-
 
     ' Populate the application drop down
     Private Sub PopApplications()
@@ -198,14 +196,13 @@ Public Class frmSwingDoor
             CloseRS(RS)
             ddlapplication.SelectedIndex = 0
         Catch ex As Exception
-            MsgBox(ex.Message, Title:="PopApplicaitons")
+            MsgBox(ex.Message, "PopApplicaitons")
         End Try
 
         AddHandler ddlapplication.SelectedIndexChanged, AddressOf ddlapplication_SelectedIndexChanged
         AddHandler ddlSwing1.SelectedIndexChanged, AddressOf ddlSwing1_SelectedIndexChanged
         AddHandler ddlSwing2.SelectedIndexChanged, AddressOf ddlSwing2_SelectedIndexChanged
     End Sub
-
 
     ' Creates the image list that will fill which image is to be used
     Private Sub PopSwingersImages()
@@ -237,7 +234,7 @@ Public Class frmSwingDoor
             ddlSwing1.SelectedIndex = 0
             ddlSwing2.SelectedIndex = 0
         Catch ex As Exception
-            MsgBox(ex.Message, Title:="PopSwingers")
+            MsgBox(ex.Message, "PopSwingers")
         End Try
     End Sub
 
@@ -263,13 +260,12 @@ Public Class frmSwingDoor
             CloseRS(RS)
             ddlPivot.SelectedIndex = 0
         Catch ex As Exception
-            MsgBox(ex.Message, Title:="PopPivots")
+            MsgBox(ex.Message, "PopPivots")
         End Try
     End Sub
 
     Private Function DispPanic() As Boolean
         Dim DispPanicRet As Boolean = Nothing
-
         Try
             SQL = "Select inout from t_swing where swing_id = " & ddlSwing1.SelectedItem.Tag
 
@@ -284,7 +280,7 @@ Public Class frmSwingDoor
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message, Title:="DispPanic")
+            MsgBox(ex.Message, "DispPanic")
         Finally
             CloseRS(RS)
         End Try
@@ -303,8 +299,6 @@ Public Class frmSwingDoor
     ' Gets the defined 
     Private Sub PopDoorSpecs()
         LoadingSpecs = True
-        Dim tempOpen As Double
-
         Try
             SQL = "Select ms.overlap_min, overlap_def, ms.reveal_limit, ms.reveal_limit_lng, ms.door_opening " &
             " from ((t_model_specs ms left join t_model m on   m.model_id =ms.model_id) " &
@@ -323,17 +317,15 @@ Public Class frmSwingDoor
                 txtLHReveal.Minimum = RS("reveal_limit")
                 txtOverlap.Minimum = RS("overlap_min")
                 txtOverlap.Value = RS("overlap_def")
+                txtLHDoorW.Value = (RS("door_opening") / 2)
 
                 If txtRHDoorW.Visible = True Then
-                    txtLHDoorW.Value = RS("door_opening")
-                    txtRHDoorW.Value = RS("door_opening")
-                Else
-                    txtLHDoorW.Value = RS("door_opening")
+                    txtRHDoorW.Value = txtLHDoorW.Value
                 End If
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message, Title:="PopDoorSpecs")
+            MsgBox(ex.Message, "PopDoorSpecs")
         Finally
             CloseRS(RS)
             LoadingSpecs = False
@@ -358,6 +350,7 @@ Public Class frmSwingDoor
         lblDoorWidth.Text = "Door Width:"
         ddlRHOp.Visible = False
         ddlLHOp.Visible = False
+        lblLHOpMan.Visible = False
     End Sub
 
     ' Determines what information should be displayed when they are on the specs screen
@@ -374,9 +367,7 @@ Public Class frmSwingDoor
             chkPanic.Visible = True
         End If
 
-        Dim switchExpr = ddlapplication.SelectedItem.Text
-
-        Select Case switchExpr
+        Select Case ddlapplication.SelectedItem.Text
             Case "Single"
                 lblLHReveal.Text = "Reveal:"
                 txtLHReveal.Visible = True
@@ -463,7 +454,7 @@ Public Class frmSwingDoor
         End If
 
         If txtOverlap.Visible = True Then
-            GetHeaderLengthRet += Conversions.ToDouble(txtOverlap.Value * CDec(2))
+            GetHeaderLengthRet += Conversions.ToDouble(txtOverlap.Value * 2)
         End If
 
         Return GetHeaderLengthRet
@@ -522,7 +513,6 @@ Public Class frmSwingDoor
 
         If ddlSwing1.SelectedIndex > 0 Then
             ShowSpecsTabRet = True
-
             If ddlSwing2.Visible = False Then
                 GoTo Endfun
             End If
@@ -559,13 +549,10 @@ Endfun:
                 lblSwing2.Visible = True
                 ddlSwing2.Visible = True
                 pctSwingTwo.Visible = True
-                Dim argddl = ddlSwing1
-                PopSwingOptions(argddl, 0)
-                Dim argddl1 = ddlSwing2
-                PopSwingOptions(argddl1, 1)
+                PopSwingOptions(ddlSwing1, 0)
+                PopSwingOptions(ddlSwing2, 1)
             Else
-                Dim argddl2 = ddlSwing1
-                PopSwingOptions(argddl2, 2)
+                PopSwingOptions(ddlSwing1, 2)
                 lblSwing2.Visible = False
                 ddlSwing2.Visible = False
                 pctSwingTwo.Visible = False
@@ -573,7 +560,15 @@ Endfun:
             End If
         End If
 
-        tabDimensions.Enabled = ShowSpecsTab()
+        If ShowSpecsTab() = True Then
+            tabDimensions.Enabled = True
+            tabAccessories.Enabled = True
+            tabReview.Enabled = True
+        Else
+            tabDimensions.Enabled = False
+            tabAccessories.Enabled = False
+            tabReview.Enabled = False
+        End If
     End Sub
 
     Private Function GetCompelteImage() As String
@@ -590,7 +585,7 @@ Endfun:
             End While
 
         Catch ex As Exception
-            MsgBox(ex.Message, Title:="GetCompleteImage")
+            MsgBox(ex.Message, "GetCompleteImage")
         Finally
             CloseRS(RS)
         End Try
@@ -601,9 +596,10 @@ Endfun:
 
     Private Sub ddlSwing1_SelectedIndexChanged(ByVal sender As Object, ByVal e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles ddlSwing1.SelectedIndexChanged
 
-        pctSwingOne.Image = imlSwings.Images(ddlSwing1.SelectedItem.Tag)
+
 
         If ddlSwing1.SelectedIndex > 0 Then
+            pctSwingOne.Image = imlSwings.Images(ddlSwing1.SelectedItem.Tag)
             pctSpecsComplete.Image = imlSwings.Images(ddlSwing1.SelectedItem.Tag)
             ' 
             ' 
@@ -616,12 +612,19 @@ Endfun:
             pctSwingOne.Image = Nothing
         End If
 
-        tabDimensions.Enabled = ShowSpecsTab()
+        If ShowSpecsTab() = True Then
+            tabDimensions.Enabled = True
+            tabAccessories.Enabled = True
+            tabReview.Enabled = True
+        Else
+            tabDimensions.Enabled = False
+            tabAccessories.Enabled = False
+            tabReview.Enabled = False
+        End If
     End Sub
 
     Private Sub ddlSwing2_SelectedIndexChanged(ByVal sender As Object, ByVal e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles ddlSwing2.SelectedIndexChanged
         If ddlSwing2.SelectedIndex > 0 Then
-
             pctSwingTwo.Image = imlSwings.Images(ddlSwing2.SelectedItem.Tag)
             If ddlapplication.SelectedItem.Text = "Dual" Or ddlapplication.SelectedItem.Text = "OpMan" Then
 
@@ -634,19 +637,79 @@ Endfun:
             pctSwingTwo.Image = Nothing
         End If
 
-        tabDimensions.Enabled = ShowSpecsTab()
+        If ShowSpecsTab() = True Then
+            tabDimensions.Enabled = True
+            tabAccessories.Enabled = True
+            tabReview.Enabled = True
+        Else
+            tabDimensions.Enabled = False
+            tabAccessories.Enabled = False
+            tabReview.Enabled = False
+        End If
     End Sub
 
     Private Sub tabparenttab_TabIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles tabparenttab.TabIndexChanged
         If tabparenttab.SelectedTab Is tabDimensions Then
-
             If ShowSpecsTab() = True Then
-                pctSpecsComplete.Image = ResizeImage(My.Resources.ResourceManager.GetObject(GetCompelteImage), pctSpecsComplete.Size)
+                If ddlSwing2.Visible = True Then
+                    pctSpecsComplete.Image = ResizeImage(My.Resources.ResourceManager.GetObject(GetCompelteImage), pctSpecsComplete.Size)
+                Else
+                    pctSpecsComplete.Image = ResizeImage(pctSwingOne.Image, pctSpecsComplete.Size)
+                End If
             End If
-
             GetDoorSpecs()
+            tabAccessories.Enabled = True
+            tabReview.Enabled = True
+
+        End If
+        If tabparenttab.SelectedTab Is tabAccessories Then
+            If ddlModel.SelectedItem Is Nothing Then Exit Sub
+            If ddlModel.SelectedItem.Value = 1 Then
+                ddlMountingBracket.Visible = True
+                lblMountingBracket.Visible = True
+            Else
+                ddlMountingBracket.Visible = False
+                lblMountingBracket.Visible = False
+            End If
+        End If
+        If tabparenttab.SelectedTab Is tabReview Then
+            txtOrderReivew.Text = PopOrderReview()
         End If
     End Sub
+
+    'This will Populate the order review 
+    Private Function PopOrderReview() As String
+        Dim NL As String
+        NL = "*" & System.Environment.NewLine
+
+        PopOrderReview = "Model: " & ddlModel.SelectedItem.Text
+        PopOrderReview &= NL
+        If ddlSwing2.Visible = True Then
+            PopOrderReview &= "Left Side Panel - " & ddlSwing1.SelectedItem.Text
+            PopOrderReview &= "    Right Side Panel - " & ddlSwing2.SelectedItem.Text
+        Else
+            PopOrderReview &= "Panel - " & ddlSwing1.SelectedItem.Text
+        End If
+        PopOrderReview &= NL
+        PopOrderReview &= "Header Length: " & txtHeaderLength.Value
+        PopOrderReview &= NL
+        If txtRHDoorW.Visible = True Then
+            PopOrderReview &= "Left Side Door Opening: " & txtLHDoorW.Value
+            PopOrderReview &= "Right Side Door Opening: " & txtRHDoorW.Value
+        Else
+            PopOrderReview &= "Door Opening: " & txtLHDoorW.Value
+        End If
+        PopOrderReview &= NL & "Finish: " & lblColor.Tag
+
+        '  PopOrderReview &= "Finish: " & IIf(ddlFinsih.Visible = True, ddlFinsih.SelectedItem.Text, txtColor.Text)
+        PopOrderReview &= NL
+        PopOrderReview &= ddlPivot.SelectedItem.Text & NL
+        PopOrderReview &= "Overlap: " & txtOverlap.Value & NL
+        PopOrderReview &= "Reveal: " & txtLHReveal.Value & "*"
+        Return PopOrderReview
+
+
+    End Function
 
     Private Sub ddlPivot_SelectedIndexChanged(ByVal sender As Object, ByVal e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles ddlPivot.SelectedIndexChanged
         If ddlPivot.SelectedIndex > 0 Then
@@ -663,17 +726,27 @@ Endfun:
             pnlSpecs.Enabled = False
         End If
 
-        tabDimensions.Enabled = ShowSpecsTab()
+        If ShowSpecsTab() = True Then
+            tabDimensions.Enabled = True
+            tabAccessories.Enabled = True
+            tabReview.Enabled = True
+        Else
+            tabDimensions.Enabled = False
+            tabAccessories.Enabled = False
+            tabReview.Enabled = False
+        End If
     End Sub
 
     Private Sub txtLHDoorW_ValueChanged(ByVal sender As Object, ByVal e As EventArgs) Handles txtLHDoorW.ValueChanged
-        If txtLHDoorW.Visible = False Then Return
-        txtHeaderLength.Value = Conversions.ToDecimal(GetHeaderLength())
+        If txtLHDoorW.Visible = False Then Exit Sub
+        txtHeaderLength.Value = GetHeaderLength()
+        If chkMatchW.Checked = True Then txtRHDoorW.Value = txtLHDoorW.Value
     End Sub
 
     Private Sub txtRHDoorW_ValueChanged(ByVal sender As Object, ByVal e As EventArgs) Handles txtRHDoorW.ValueChanged
-        If txtRHDoorW.Visible = False Then Return
-        txtHeaderLength.Value = Conversions.ToDecimal(GetHeaderLength())
+        If txtRHDoorW.Visible = False Then Exit Sub
+        txtHeaderLength.Value = GetHeaderLength()
+        If chkMatchW.Checked = True Then txtLHDoorW.Value = txtRHDoorW.Value
     End Sub
 
     Private Sub txtOverlap_ValueChanged(ByVal sender As Object, ByVal e As EventArgs) Handles txtOverlap.ValueChanged
@@ -686,4 +759,9 @@ Endfun:
         Me.txtHeaderLength.Value = GetHeaderLength()
     End Sub
 
+    Private Sub ddlModel_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles ddlModel.SelectedIndexChanged
+        If ddlModel.SelectedIndex > 0 Then
+
+        End If
+    End Sub
 End Class

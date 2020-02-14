@@ -46,21 +46,31 @@ Partial Class frmSwingDoor
         Dim RadListDataItem21 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem22 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim RadListDataItem23 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem24 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem25 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem26 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem27 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem28 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem29 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem30 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem31 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem32 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem33 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSwingDoor))
         Me.tabparenttab = New Telerik.WinControls.UI.RadTabbedFormControl()
         Me.tabModel = New Telerik.WinControls.UI.RadTabbedFormControlTab()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblColor = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.lblFinish = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.lblModel = New System.Windows.Forms.Label()
         Me.txtColor = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.ddlColor = New Telerik.WinControls.UI.RadDropDownList()
         Me.txtUnit = New System.Windows.Forms.TextBox()
-        Me.ddlFinsih = New Telerik.WinControls.UI.RadDropDownList()
+        Me.ddlFinish = New Telerik.WinControls.UI.RadDropDownList()
         Me.txtQuant = New System.Windows.Forms.NumericUpDown()
         Me.ddlModel = New Telerik.WinControls.UI.RadDropDownList()
-        Me.lblModel = New System.Windows.Forms.Label()
-        Me.lblColor = New System.Windows.Forms.Label()
-        Me.lblFinish = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.btnBottom = New Telerik.WinControls.UI.RadToggleButton()
         Me.btnFullPower = New Telerik.WinControls.UI.RadToggleButton()
@@ -115,14 +125,44 @@ Partial Class frmSwingDoor
         Me.Label5 = New System.Windows.Forms.Label()
         Me.pctSpecsComplete = New System.Windows.Forms.PictureBox()
         Me.tabAccessories = New Telerik.WinControls.UI.RadTabbedFormControlTab()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.RadTextBox4 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBox3 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBox2 = New Telerik.WinControls.UI.RadTextBox()
+        Me.RadTextBox1 = New Telerik.WinControls.UI.RadTextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ddlMountingBracket = New Telerik.WinControls.UI.RadDropDownList()
+        Me.lblMountingBracket = New System.Windows.Forms.Label()
         Me.tabReview = New Telerik.WinControls.UI.RadTabbedFormControlTab()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.RadToggleButton1 = New Telerik.WinControls.UI.RadToggleButton()
+        Me.txtPrice = New Telerik.WinControls.UI.RadTextBox()
+        Me.txtSubTotal = New Telerik.WinControls.UI.RadTextBox()
+        Me.txtAddedPrices = New Telerik.WinControls.UI.RadTextBox()
+        Me.txtBasePrice = New Telerik.WinControls.UI.RadTextBox()
+        Me.ddlTier = New Telerik.WinControls.UI.RadDropDownList()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtOrderReivew = New Telerik.WinControls.UI.RadTextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.imlSwings = New System.Windows.Forms.ImageList(Me.components)
         CType(Me.tabparenttab, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabparenttab.SuspendLayout()
         Me.tabModel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.ddlColor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ddlFinsih, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlFinish, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtQuant, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddlModel, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -156,6 +196,24 @@ Partial Class frmSwingDoor
         CType(Me.txtHeaderLength, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCenterJamb, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pctSpecsComplete, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabAccessories.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        CType(Me.RadTextBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlMountingBracket, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabReview.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox1.SuspendLayout()
+        CType(Me.RadToggleButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtPrice, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtSubTotal, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtAddedPrices, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtBasePrice, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlTier, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtOrderReivew, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -190,51 +248,87 @@ Partial Class frmSwingDoor
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.lblColor)
+        Me.Panel1.Controls.Add(Me.Label24)
+        Me.Panel1.Controls.Add(Me.lblFinish)
+        Me.Panel1.Controls.Add(Me.Label22)
+        Me.Panel1.Controls.Add(Me.lblModel)
         Me.Panel1.Controls.Add(Me.txtColor)
-        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.ddlColor)
         Me.Panel1.Controls.Add(Me.txtUnit)
-        Me.Panel1.Controls.Add(Me.ddlFinsih)
+        Me.Panel1.Controls.Add(Me.ddlFinish)
         Me.Panel1.Controls.Add(Me.txtQuant)
         Me.Panel1.Controls.Add(Me.ddlModel)
-        Me.Panel1.Controls.Add(Me.lblModel)
-        Me.Panel1.Controls.Add(Me.lblColor)
-        Me.Panel1.Controls.Add(Me.lblFinish)
         Me.Panel1.Location = New System.Drawing.Point(492, 101)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(50, 3, 3, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(357, 450)
         Me.Panel1.TabIndex = 14
         '
-        'Label2
+        'lblColor
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(52, 27)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(73, 21)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Quantity:"
+        Me.lblColor.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblColor.Location = New System.Drawing.Point(10, 97)
+        Me.lblColor.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
+        Me.lblColor.Name = "lblColor"
+        Me.lblColor.Size = New System.Drawing.Size(115, 27)
+        Me.lblColor.TabIndex = 18
+        Me.lblColor.Text = "Color:"
+        Me.lblColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label24
+        '
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(10, 134)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(115, 27)
+        Me.Label24.TabIndex = 17
+        Me.Label24.Text = "Quantity:"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblFinish
+        '
+        Me.lblFinish.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFinish.Location = New System.Drawing.Point(10, 57)
+        Me.lblFinish.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
+        Me.lblFinish.Name = "lblFinish"
+        Me.lblFinish.Size = New System.Drawing.Size(115, 27)
+        Me.lblFinish.TabIndex = 16
+        Me.lblFinish.Text = "Finish:"
+        Me.lblFinish.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label22
+        '
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(10, 177)
+        Me.Label22.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(115, 27)
+        Me.Label22.TabIndex = 15
+        Me.Label22.Text = "Unit ID:"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'lblModel
+        '
+        Me.lblModel.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblModel.Location = New System.Drawing.Point(10, 20)
+        Me.lblModel.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
+        Me.lblModel.Name = "lblModel"
+        Me.lblModel.Size = New System.Drawing.Size(115, 27)
+        Me.lblModel.TabIndex = 14
+        Me.lblModel.Text = "Model:"
+        Me.lblModel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtColor
         '
         Me.txtColor.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.txtColor.Location = New System.Drawing.Point(138, 236)
+        Me.txtColor.Location = New System.Drawing.Point(135, 99)
+        Me.txtColor.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
         Me.txtColor.Name = "txtColor"
-        Me.txtColor.Size = New System.Drawing.Size(125, 29)
+        Me.txtColor.Size = New System.Drawing.Size(216, 29)
         Me.txtColor.TabIndex = 13
         Me.txtColor.Visible = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label1.Location = New System.Drawing.Point(52, 78)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 21)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Unit ID: "
         '
         'ddlColor
         '
@@ -248,23 +342,24 @@ Partial Class frmSwingDoor
         Me.ddlColor.Items.Add(RadListDataItem1)
         Me.ddlColor.Items.Add(RadListDataItem2)
         Me.ddlColor.Items.Add(RadListDataItem3)
-        Me.ddlColor.Location = New System.Drawing.Point(138, 236)
+        Me.ddlColor.Location = New System.Drawing.Point(135, 99)
+        Me.ddlColor.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
         Me.ddlColor.Name = "ddlColor"
-        Me.ddlColor.Size = New System.Drawing.Size(125, 27)
+        Me.ddlColor.Size = New System.Drawing.Size(216, 27)
         Me.ddlColor.TabIndex = 12
-        Me.ddlColor.Visible = False
         '
         'txtUnit
         '
         Me.txtUnit.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.txtUnit.Location = New System.Drawing.Point(138, 75)
+        Me.txtUnit.Location = New System.Drawing.Point(135, 175)
+        Me.txtUnit.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
         Me.txtUnit.Name = "txtUnit"
         Me.txtUnit.Size = New System.Drawing.Size(100, 29)
         Me.txtUnit.TabIndex = 4
         '
-        'ddlFinsih
+        'ddlFinish
         '
-        Me.ddlFinsih.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.ddlFinish.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         RadListDataItem4.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         RadListDataItem4.Tag = "0"
         RadListDataItem4.Text = "Standard"
@@ -283,22 +378,23 @@ Partial Class frmSwingDoor
         RadListDataItem9.Font = New System.Drawing.Font("Segoe UI", 8.25!)
         RadListDataItem9.Tag = "5"
         RadListDataItem9.Text = "Paint By Customer"
-        Me.ddlFinsih.Items.Add(RadListDataItem4)
-        Me.ddlFinsih.Items.Add(RadListDataItem5)
-        Me.ddlFinsih.Items.Add(RadListDataItem6)
-        Me.ddlFinsih.Items.Add(RadListDataItem7)
-        Me.ddlFinsih.Items.Add(RadListDataItem8)
-        Me.ddlFinsih.Items.Add(RadListDataItem9)
-        Me.ddlFinsih.Location = New System.Drawing.Point(138, 201)
-        Me.ddlFinsih.Name = "ddlFinsih"
-        Me.ddlFinsih.Size = New System.Drawing.Size(125, 27)
-        Me.ddlFinsih.TabIndex = 11
-        Me.ddlFinsih.Text = "Select A Finish"
+        Me.ddlFinish.Items.Add(RadListDataItem4)
+        Me.ddlFinish.Items.Add(RadListDataItem5)
+        Me.ddlFinish.Items.Add(RadListDataItem6)
+        Me.ddlFinish.Items.Add(RadListDataItem7)
+        Me.ddlFinish.Items.Add(RadListDataItem8)
+        Me.ddlFinish.Items.Add(RadListDataItem9)
+        Me.ddlFinish.Location = New System.Drawing.Point(135, 58)
+        Me.ddlFinish.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
+        Me.ddlFinish.Name = "ddlFinish"
+        Me.ddlFinish.Size = New System.Drawing.Size(216, 27)
+        Me.ddlFinish.TabIndex = 11
         '
         'txtQuant
         '
         Me.txtQuant.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.txtQuant.Location = New System.Drawing.Point(138, 25)
+        Me.txtQuant.Location = New System.Drawing.Point(135, 136)
+        Me.txtQuant.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
         Me.txtQuant.Name = "txtQuant"
         Me.txtQuant.Size = New System.Drawing.Size(100, 29)
         Me.txtQuant.TabIndex = 6
@@ -307,41 +403,12 @@ Partial Class frmSwingDoor
         'ddlModel
         '
         Me.ddlModel.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.ddlModel.Location = New System.Drawing.Point(138, 158)
+        Me.ddlModel.Location = New System.Drawing.Point(135, 20)
+        Me.ddlModel.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
         Me.ddlModel.Name = "ddlModel"
-        Me.ddlModel.Size = New System.Drawing.Size(125, 27)
+        Me.ddlModel.Size = New System.Drawing.Size(216, 27)
         Me.ddlModel.TabIndex = 10
         Me.ddlModel.Text = "RadDropDownList1"
-        '
-        'lblModel
-        '
-        Me.lblModel.AutoSize = True
-        Me.lblModel.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.lblModel.Location = New System.Drawing.Point(55, 159)
-        Me.lblModel.Name = "lblModel"
-        Me.lblModel.Size = New System.Drawing.Size(57, 21)
-        Me.lblModel.TabIndex = 7
-        Me.lblModel.Text = "Model:"
-        '
-        'lblColor
-        '
-        Me.lblColor.AutoSize = True
-        Me.lblColor.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.lblColor.Location = New System.Drawing.Point(55, 237)
-        Me.lblColor.Name = "lblColor"
-        Me.lblColor.Size = New System.Drawing.Size(51, 21)
-        Me.lblColor.TabIndex = 9
-        Me.lblColor.Text = "Color:"
-        '
-        'lblFinish
-        '
-        Me.lblFinish.AutoSize = True
-        Me.lblFinish.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.lblFinish.Location = New System.Drawing.Point(55, 202)
-        Me.lblFinish.Name = "lblFinish"
-        Me.lblFinish.Size = New System.Drawing.Size(51, 21)
-        Me.lblFinish.TabIndex = 8
-        Me.lblFinish.Text = "Finish"
         '
         'TableLayoutPanel1
         '
@@ -982,6 +1049,8 @@ Partial Class frmSwingDoor
         '
         'tabAccessories
         '
+        Me.tabAccessories.Controls.Add(Me.Label7)
+        Me.tabAccessories.Controls.Add(Me.Panel3)
         Me.tabAccessories.Enabled = False
         Me.tabAccessories.Location = New System.Drawing.Point(1, 31)
         Me.tabAccessories.Name = "tabAccessories"
@@ -989,14 +1058,373 @@ Partial Class frmSwingDoor
         Me.tabAccessories.Tag = "2"
         Me.tabAccessories.Text = "Accessories"
         '
+        'Label7
+        '
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(11, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(1017, 98)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "Accessories"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Label14)
+        Me.Panel3.Controls.Add(Me.RadTextBox4)
+        Me.Panel3.Controls.Add(Me.RadTextBox3)
+        Me.Panel3.Controls.Add(Me.RadTextBox2)
+        Me.Panel3.Controls.Add(Me.RadTextBox1)
+        Me.Panel3.Controls.Add(Me.Label13)
+        Me.Panel3.Controls.Add(Me.Label12)
+        Me.Panel3.Controls.Add(Me.Label10)
+        Me.Panel3.Controls.Add(Me.Label9)
+        Me.Panel3.Controls.Add(Me.ddlMountingBracket)
+        Me.Panel3.Controls.Add(Me.lblMountingBracket)
+        Me.Panel3.Location = New System.Drawing.Point(11, 101)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(1009, 526)
+        Me.Panel3.TabIndex = 0
+        '
+        'Label14
+        '
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(3, 118)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(1003, 57)
+        Me.Label14.TabIndex = 18
+        Me.Label14.Text = "Additional Notes"
+        Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'RadTextBox4
+        '
+        Me.RadTextBox4.AutoSize = False
+        Me.RadTextBox4.Location = New System.Drawing.Point(169, 224)
+        Me.RadTextBox4.Name = "RadTextBox4"
+        Me.RadTextBox4.Size = New System.Drawing.Size(526, 27)
+        Me.RadTextBox4.TabIndex = 16
+        '
+        'RadTextBox3
+        '
+        Me.RadTextBox3.AutoSize = False
+        Me.RadTextBox3.Location = New System.Drawing.Point(169, 298)
+        Me.RadTextBox3.Name = "RadTextBox3"
+        Me.RadTextBox3.Size = New System.Drawing.Size(526, 27)
+        Me.RadTextBox3.TabIndex = 17
+        '
+        'RadTextBox2
+        '
+        Me.RadTextBox2.AutoSize = False
+        Me.RadTextBox2.Location = New System.Drawing.Point(169, 261)
+        Me.RadTextBox2.Name = "RadTextBox2"
+        Me.RadTextBox2.Size = New System.Drawing.Size(526, 27)
+        Me.RadTextBox2.TabIndex = 16
+        '
+        'RadTextBox1
+        '
+        Me.RadTextBox1.AutoSize = False
+        Me.RadTextBox1.Location = New System.Drawing.Point(169, 187)
+        Me.RadTextBox1.Name = "RadTextBox1"
+        Me.RadTextBox1.Size = New System.Drawing.Size(526, 27)
+        Me.RadTextBox1.TabIndex = 15
+        '
+        'Label13
+        '
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(4, 298)
+        Me.Label13.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(147, 27)
+        Me.Label13.TabIndex = 13
+        Me.Label13.Text = "Extra Line #4:"
+        Me.Label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label12
+        '
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(4, 261)
+        Me.Label12.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(147, 27)
+        Me.Label12.TabIndex = 12
+        Me.Label12.Text = "Extra Line #3:"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label10
+        '
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(4, 224)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(147, 27)
+        Me.Label10.TabIndex = 11
+        Me.Label10.Text = "Extra Line #2:"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label9
+        '
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(4, 187)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(3, 150, 3, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(147, 27)
+        Me.Label9.TabIndex = 10
+        Me.Label9.Text = "Extra Line #1:"
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ddlMountingBracket
+        '
+        Me.ddlMountingBracket.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        RadListDataItem24.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadListDataItem24.Tag = "-1"
+        RadListDataItem24.Text = "None"
+        RadListDataItem25.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        RadListDataItem25.Tag = "0"
+        RadListDataItem25.Text = "Short w/ Holes"
+        RadListDataItem26.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        RadListDataItem26.Tag = "1"
+        RadListDataItem26.Text = "Short w/o Holes"
+        RadListDataItem27.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        RadListDataItem27.Tag = "2"
+        RadListDataItem27.Text = "Full Length w/ Holes"
+        RadListDataItem28.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        RadListDataItem28.Tag = "3"
+        RadListDataItem28.Text = "Full Length w/o Holes"
+        Me.ddlMountingBracket.Items.Add(RadListDataItem24)
+        Me.ddlMountingBracket.Items.Add(RadListDataItem25)
+        Me.ddlMountingBracket.Items.Add(RadListDataItem26)
+        Me.ddlMountingBracket.Items.Add(RadListDataItem27)
+        Me.ddlMountingBracket.Items.Add(RadListDataItem28)
+        Me.ddlMountingBracket.Location = New System.Drawing.Point(169, 11)
+        Me.ddlMountingBracket.Name = "ddlMountingBracket"
+        Me.ddlMountingBracket.Size = New System.Drawing.Size(283, 27)
+        Me.ddlMountingBracket.TabIndex = 9
+        '
+        'lblMountingBracket
+        '
+        Me.lblMountingBracket.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMountingBracket.Location = New System.Drawing.Point(4, 10)
+        Me.lblMountingBracket.Margin = New System.Windows.Forms.Padding(3, 10, 3, 0)
+        Me.lblMountingBracket.Name = "lblMountingBracket"
+        Me.lblMountingBracket.Size = New System.Drawing.Size(147, 27)
+        Me.lblMountingBracket.TabIndex = 8
+        Me.lblMountingBracket.Text = "Mounting Bracket:"
+        Me.lblMountingBracket.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'tabReview
         '
+        Me.tabReview.Controls.Add(Me.Panel4)
+        Me.tabReview.Controls.Add(Me.Label15)
         Me.tabReview.Enabled = False
         Me.tabReview.Location = New System.Drawing.Point(1, 31)
         Me.tabReview.Name = "tabReview"
         Me.tabReview.Size = New System.Drawing.Size(1031, 630)
         Me.tabReview.Tag = "3"
         Me.tabReview.Text = "Review"
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.RadGroupBox1)
+        Me.Panel4.Controls.Add(Me.txtOrderReivew)
+        Me.Panel4.Location = New System.Drawing.Point(11, 101)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1009, 518)
+        Me.Panel4.TabIndex = 13
+        '
+        'RadGroupBox1
+        '
+        Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox1.Controls.Add(Me.CheckBox1)
+        Me.RadGroupBox1.Controls.Add(Me.Label21)
+        Me.RadGroupBox1.Controls.Add(Me.RadToggleButton1)
+        Me.RadGroupBox1.Controls.Add(Me.txtPrice)
+        Me.RadGroupBox1.Controls.Add(Me.txtSubTotal)
+        Me.RadGroupBox1.Controls.Add(Me.txtAddedPrices)
+        Me.RadGroupBox1.Controls.Add(Me.txtBasePrice)
+        Me.RadGroupBox1.Controls.Add(Me.ddlTier)
+        Me.RadGroupBox1.Controls.Add(Me.Label20)
+        Me.RadGroupBox1.Controls.Add(Me.Label18)
+        Me.RadGroupBox1.Controls.Add(Me.Label19)
+        Me.RadGroupBox1.Controls.Add(Me.Label16)
+        Me.RadGroupBox1.Controls.Add(Me.Label17)
+        Me.RadGroupBox1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadGroupBox1.HeaderText = "Pricing Information"
+        Me.RadGroupBox1.HeaderTextAlignment = System.Drawing.ContentAlignment.MiddleCenter
+        Me.RadGroupBox1.Location = New System.Drawing.Point(570, 20)
+        Me.RadGroupBox1.Margin = New System.Windows.Forms.Padding(3, 3, 20, 3)
+        Me.RadGroupBox1.Name = "RadGroupBox1"
+        Me.RadGroupBox1.Size = New System.Drawing.Size(419, 478)
+        Me.RadGroupBox1.TabIndex = 13
+        Me.RadGroupBox1.Text = "Pricing Information"
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.Location = New System.Drawing.Point(166, 233)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(44, 54)
+        Me.CheckBox1.TabIndex = 26
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'Label21
+        '
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(12, 233)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(10, 10, 3, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(147, 54)
+        Me.Label21.TabIndex = 25
+        Me.Label21.Text = "I have reviewed this Configuration:"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RadToggleButton1
+        '
+        Me.RadToggleButton1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.RadToggleButton1.Image = Global.Nabco_Sales.My.Resources.Resources.page_save
+        Me.RadToggleButton1.Location = New System.Drawing.Point(165, 293)
+        Me.RadToggleButton1.Name = "RadToggleButton1"
+        Me.RadToggleButton1.Size = New System.Drawing.Size(188, 62)
+        Me.RadToggleButton1.TabIndex = 24
+        Me.RadToggleButton1.Text = "Submit Order"
+        Me.RadToggleButton1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtPrice
+        '
+        Me.txtPrice.AutoSize = False
+        Me.txtPrice.Location = New System.Drawing.Point(165, 196)
+        Me.txtPrice.Name = "txtPrice"
+        Me.txtPrice.ReadOnly = True
+        Me.txtPrice.Size = New System.Drawing.Size(230, 27)
+        Me.txtPrice.TabIndex = 23
+        '
+        'txtSubTotal
+        '
+        Me.txtSubTotal.AutoSize = False
+        Me.txtSubTotal.Location = New System.Drawing.Point(165, 122)
+        Me.txtSubTotal.Name = "txtSubTotal"
+        Me.txtSubTotal.ReadOnly = True
+        Me.txtSubTotal.Size = New System.Drawing.Size(230, 27)
+        Me.txtSubTotal.TabIndex = 22
+        '
+        'txtAddedPrices
+        '
+        Me.txtAddedPrices.AutoSize = False
+        Me.txtAddedPrices.Location = New System.Drawing.Point(165, 85)
+        Me.txtAddedPrices.Name = "txtAddedPrices"
+        Me.txtAddedPrices.ReadOnly = True
+        Me.txtAddedPrices.Size = New System.Drawing.Size(230, 27)
+        Me.txtAddedPrices.TabIndex = 21
+        '
+        'txtBasePrice
+        '
+        Me.txtBasePrice.AutoSize = False
+        Me.txtBasePrice.Location = New System.Drawing.Point(165, 48)
+        Me.txtBasePrice.Name = "txtBasePrice"
+        Me.txtBasePrice.ReadOnly = True
+        Me.txtBasePrice.Size = New System.Drawing.Size(230, 27)
+        Me.txtBasePrice.TabIndex = 20
+        '
+        'ddlTier
+        '
+        Me.ddlTier.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        RadListDataItem29.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadListDataItem29.Tag = "-1"
+        RadListDataItem29.Text = "None"
+        RadListDataItem30.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        RadListDataItem30.Tag = "0"
+        RadListDataItem30.Text = "Short w/ Holes"
+        RadListDataItem31.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        RadListDataItem31.Tag = "1"
+        RadListDataItem31.Text = "Short w/o Holes"
+        RadListDataItem32.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        RadListDataItem32.Tag = "2"
+        RadListDataItem32.Text = "Full Length w/ Holes"
+        RadListDataItem33.Font = New System.Drawing.Font("Segoe UI", 8.25!)
+        RadListDataItem33.Tag = "3"
+        RadListDataItem33.Text = "Full Length w/o Holes"
+        Me.ddlTier.Items.Add(RadListDataItem29)
+        Me.ddlTier.Items.Add(RadListDataItem30)
+        Me.ddlTier.Items.Add(RadListDataItem31)
+        Me.ddlTier.Items.Add(RadListDataItem32)
+        Me.ddlTier.Items.Add(RadListDataItem33)
+        Me.ddlTier.Location = New System.Drawing.Point(165, 160)
+        Me.ddlTier.Name = "ddlTier"
+        Me.ddlTier.Size = New System.Drawing.Size(230, 27)
+        Me.ddlTier.TabIndex = 18
+        '
+        'Label20
+        '
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(12, 196)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(10, 10, 3, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(147, 27)
+        Me.Label20.TabIndex = 17
+        Me.Label20.Text = "Price:"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label18
+        '
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(12, 159)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(10, 10, 3, 0)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(147, 27)
+        Me.Label18.TabIndex = 16
+        Me.Label18.Text = "Tier:"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label19
+        '
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(12, 122)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(10, 10, 3, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(147, 27)
+        Me.Label19.TabIndex = 15
+        Me.Label19.Text = "Sub Total:"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label16
+        '
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(12, 85)
+        Me.Label16.Margin = New System.Windows.Forms.Padding(10, 10, 3, 0)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(147, 27)
+        Me.Label16.TabIndex = 13
+        Me.Label16.Text = "Added Prices"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label17
+        '
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(12, 48)
+        Me.Label17.Margin = New System.Windows.Forms.Padding(10, 30, 3, 0)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(147, 27)
+        Me.Label17.TabIndex = 12
+        Me.Label17.Text = "Base Price:"
+        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtOrderReivew
+        '
+        Me.txtOrderReivew.AutoSize = False
+        Me.txtOrderReivew.Location = New System.Drawing.Point(8, 20)
+        Me.txtOrderReivew.Margin = New System.Windows.Forms.Padding(3, 20, 20, 20)
+        Me.txtOrderReivew.Multiline = True
+        Me.txtOrderReivew.Name = "txtOrderReivew"
+        Me.txtOrderReivew.Size = New System.Drawing.Size(539, 478)
+        Me.txtOrderReivew.TabIndex = 0
+        '
+        'Label15
+        '
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(11, 0)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(1017, 98)
+        Me.Label15.TabIndex = 12
+        Me.Label15.Text = "Order Review"
+        Me.Label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'imlSwings
         '
@@ -1024,7 +1452,7 @@ Partial Class frmSwingDoor
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.ddlColor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ddlFinsih, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlFinish, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtQuant, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddlModel, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
@@ -1061,6 +1489,26 @@ Partial Class frmSwingDoor
         CType(Me.txtHeaderLength, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCenterJamb, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pctSpecsComplete, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabAccessories.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        CType(Me.RadTextBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadTextBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlMountingBracket, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabReview.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox1.ResumeLayout(False)
+        Me.RadGroupBox1.PerformLayout()
+        CType(Me.RadToggleButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtPrice, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtSubTotal, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtAddedPrices, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtBasePrice, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlTier, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtOrderReivew, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1080,15 +1528,10 @@ Partial Class frmSwingDoor
     Friend WithEvents btnSide As Telerik.WinControls.UI.RadToggleButton
     Friend WithEvents btnBottom As Telerik.WinControls.UI.RadToggleButton
     Friend WithEvents ddlColor As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents ddlFinsih As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents ddlFinish As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents ddlModel As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents lblColor As Label
-    Friend WithEvents lblFinish As Label
-    Friend WithEvents lblModel As Label
     Friend WithEvents txtQuant As NumericUpDown
-    Friend WithEvents Label2 As Label
     Friend WithEvents txtUnit As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents txtColor As TextBox
     Friend WithEvents ddlapplication As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Label3 As Label
@@ -1136,5 +1579,40 @@ Partial Class frmSwingDoor
     Friend WithEvents lblLHOpMan As Label
     Friend WithEvents ddlPivot As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents ddlMountingBracket As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents lblMountingBracket As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents RadTextBox4 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBox3 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBox2 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents RadTextBox1 As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents RadToggleButton1 As Telerik.WinControls.UI.RadToggleButton
+    Friend WithEvents txtPrice As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents txtSubTotal As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents txtAddedPrices As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents txtBasePrice As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents ddlTier As Telerik.WinControls.UI.RadDropDownList
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label18 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents txtOrderReivew As Telerik.WinControls.UI.RadTextBox
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents lblFinish As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents lblModel As Label
+    Friend WithEvents lblColor As Label
 End Class
 
