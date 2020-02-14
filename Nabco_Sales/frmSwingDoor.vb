@@ -5,7 +5,6 @@ Imports Microsoft.VisualBasic
 Imports Microsoft.VisualBasic.CompilerServices
 Imports Telerik.WinControls.UI
 
-
 Public Class frmSwingDoor
     Private LoadingSpecs As Boolean
     Private SkipPop As Boolean
@@ -18,6 +17,7 @@ Public Class frmSwingDoor
         PopSwingersImages()
         PopPivots()
         tabparenttab.SelectedTab = tabModel
+        ddlFinish.SelectedIndex = 0
         AddHandler tabparenttab.SelectedTabChanged, AddressOf tabparenttab_TabIndexChanged
     End Sub
 
@@ -318,6 +318,8 @@ Public Class frmSwingDoor
                 txtOverlap.Minimum = RS("overlap_min")
                 txtOverlap.Value = RS("overlap_def")
                 txtLHDoorW.Value = (RS("door_opening") / 2)
+                txtLHReveal.Value = txtLHReveal.Minimum
+                txtRHReveal.Value = txtRHReveal.Minimum
 
                 If txtRHDoorW.Visible = True Then
                     txtRHDoorW.Value = txtLHDoorW.Value
@@ -349,8 +351,12 @@ Public Class frmSwingDoor
         lblRHOpMan.Visible = False
         lblDoorWidth.Text = "Door Width:"
         ddlRHOp.Visible = False
+        txtRHDoorW.Visible = False
         ddlLHOp.Visible = False
         lblLHOpMan.Visible = False
+        lblRHOpMan.Visible = False
+        txtRHDoorW.Visible = False
+        lblRHDoorWidth.Visible = False
     End Sub
 
     ' Determines what information should be displayed when they are on the specs screen
@@ -762,6 +768,12 @@ Endfun:
     Private Sub ddlModel_SelectedIndexChanged(sender As Object, e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles ddlModel.SelectedIndexChanged
         If ddlModel.SelectedIndex > 0 Then
 
+        End If
+    End Sub
+
+    Private Sub chkMatchW_CheckStateChanged(sender As Object, e As EventArgs) Handles chkMatchW.CheckStateChanged
+        If chkMatchW.CheckState = CheckState.Checked Then
+            txtRHDoorW.Value = txtLHDoorW.Value
         End If
     End Sub
 End Class
