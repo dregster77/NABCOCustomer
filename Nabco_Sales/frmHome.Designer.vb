@@ -32,21 +32,21 @@ Partial Class frmHome
         Me.mnuUserSet = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnlHomebtns = New System.Windows.Forms.Panel()
         Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
+        Me.btnLogout = New Telerik.WinControls.UI.RadButton()
         Me.btnSwingDoor = New Telerik.WinControls.UI.RadButton()
         Me.stsMain = New Telerik.WinControls.UI.RadStatusStrip()
         Me.lblStatusMain = New Telerik.WinControls.UI.RadLabelElement()
         Me.pnlMain = New Telerik.WinControls.UI.Docking.RadDock()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
-        Me.btnLogout = New Telerik.WinControls.UI.RadButton()
         Me.mnuStrip.SuspendLayout()
         Me.pnlHomebtns.SuspendLayout()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSwingDoor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.stsMain, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pnlMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlMain.SuspendLayout()
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -127,6 +127,25 @@ Partial Class frmHome
         Me.RadButton2.TabIndex = 1
         Me.RadButton2.Text = "RadButton2"
         '
+        'btnLogout
+        '
+        Me.btnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogout.Image = Global.Nabco_Sales.My.Resources.Resources.door_out
+        Me.btnLogout.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
+        Me.btnLogout.Location = New System.Drawing.Point(1041, 5)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnLogout.Name = "btnLogout"
+        Me.btnLogout.Size = New System.Drawing.Size(70, 60)
+        Me.btnLogout.TabIndex = 2
+        Me.btnLogout.Text = "Logout"
+        Me.btnLogout.TextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        CType(Me.btnLogout.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.Nabco_Sales.My.Resources.Resources.door_out
+        CType(Me.btnLogout.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.TopCenter
+        CType(Me.btnLogout.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.BottomCenter
+        CType(Me.btnLogout.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Logout"
+        CType(Me.btnLogout.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        '
         'btnSwingDoor
         '
         Me.btnSwingDoor.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -186,25 +205,6 @@ Partial Class frmHome
         Me.DocumentContainer1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.DocumentContainer1.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
         '
-        'btnLogout
-        '
-        Me.btnLogout.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnLogout.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnLogout.Image = Global.Nabco_Sales.My.Resources.Resources.door_out
-        Me.btnLogout.ImageAlignment = System.Drawing.ContentAlignment.TopCenter
-        Me.btnLogout.Location = New System.Drawing.Point(1041, 5)
-        Me.btnLogout.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(70, 60)
-        Me.btnLogout.TabIndex = 2
-        Me.btnLogout.Text = "Logout"
-        Me.btnLogout.TextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        CType(Me.btnLogout.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.Nabco_Sales.My.Resources.Resources.door_out
-        CType(Me.btnLogout.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).ImageAlignment = System.Drawing.ContentAlignment.TopCenter
-        CType(Me.btnLogout.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.BottomCenter
-        CType(Me.btnLogout.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Logout"
-        CType(Me.btnLogout.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        '
         'frmHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -224,12 +224,12 @@ Partial Class frmHome
         Me.mnuStrip.PerformLayout()
         Me.pnlHomebtns.ResumeLayout(False)
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnLogout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnSwingDoor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.stsMain, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pnlMain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlMain.ResumeLayout(False)
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnLogout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

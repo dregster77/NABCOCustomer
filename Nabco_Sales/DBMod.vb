@@ -8,7 +8,7 @@ Module DBMod
 
     'Checking the Connection to the database to insure there is a proper connection 
     Public Sub TestConnection()
-        Dim con As New SqlConnection
+        Dim con As New SqlConnection(CONSTR)
         Try
             con.ConnectionString = CONSTR
             con.Open()

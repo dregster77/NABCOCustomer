@@ -103,4 +103,11 @@ Public Class frmHome
         ShowFrom(frm)
 
     End Sub
+
+    Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
+        Dim frm As New frmOrder
+        frm.MdiParent = Me
+
+        ShowFrom(frm)
+    End Sub
 End Class
