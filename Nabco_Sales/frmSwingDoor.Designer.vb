@@ -227,7 +227,7 @@ Partial Class frmSwingDoor
         Me.tabparenttab.ItemDragMode = Telerik.WinControls.UI.TabItemDragMode.None
         Me.tabparenttab.Location = New System.Drawing.Point(0, 0)
         Me.tabparenttab.Name = "tabparenttab"
-        Me.tabparenttab.SelectedTab = Me.tabDimensions
+        Me.tabparenttab.SelectedTab = Me.tabModel
         Me.tabparenttab.ShowItemToolTips = False
         Me.tabparenttab.ShowNewTabButton = False
         Me.tabparenttab.ShowTabCloseButton = False
