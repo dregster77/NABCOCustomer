@@ -14,8 +14,6 @@ Public Class frmHome
         pnlMain.MdiChildrenDockType = Telerik.WinControls.UI.Docking.DockType.ToolWindow
         TestConnection()
 
-
-
     End Sub
     Private Sub frmHome_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         PopLoginForm()

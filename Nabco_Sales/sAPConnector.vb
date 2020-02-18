@@ -3,7 +3,6 @@
 Public Class SAPConnector
     Implements IDestinationConfiguration
 
-
     Public Event ConfigurationChanged As RfcDestinationManager.ConfigurationChangeHandler Implements IDestinationConfiguration.ConfigurationChanged
 
     Public Function GetParameters(destinationName As String) As RfcConfigParameters Implements IDestinationConfiguration.GetParameters

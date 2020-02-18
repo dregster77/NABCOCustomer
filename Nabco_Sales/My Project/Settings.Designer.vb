@@ -101,6 +101,28 @@ Namespace My
                 Me("User_security") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Client=700;Host=172.26.3.13;Password=Ian1234;Stored Procedure Filter=BAPI_custome"& _ 
+            "r_getlist;System Id=UTA;User=idreger")>  _
+        Public ReadOnly Property ConnectionString() As String
+            Get
+                Return CType(Me("ConnectionString"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Client=700;Host=172.26.3.13;Password=Ian1234;Stored Procedure Filter=BAPI_custome"& _ 
+            "r_getlist;System Id=UTA;System Number=00;User=idreger")>  _
+        Public ReadOnly Property ConnectionString11() As String
+            Get
+                Return CType(Me("ConnectionString11"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -1,32 +1,105 @@
 ﻿Imports SAP.Middleware.Connector
-
+Imports Nabco_Sales.IFfcTableExtension
+Imports Telerik.WinControls.UI
 
 Public Class frmOrder
 
     Private _RFCDest As RfcDestination
-
-
-    Sub Main()
-
-    End Sub
+    Private _Repo As RfcRepository
+    Private _WaitingBar As New RadWaitingBar()
 
     Private Sub frmOrder_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         Try
 
-
             RfcDestinationManager.RegisterDestinationConfiguration(New SAPConnector)
-            Dim rfcDest As RfcDestination = RfcDestinationManager.GetDestination("NabTest")
+            '  Dim rfcDest As RfcDestination = RfcDestinationManager.GetDestination("NabTest")
 
+            _RFCDest = RfcDestinationManager.GetDestination("NabTest")
+            _Repo = _RFCDest.Repository
 
+            ' GetCustList()
 
-            Dim customer As Customers = New Customers()
-            customer.GetCustomerDetails(rfcDest)
-            System.Environment.[Exit](0)
+            '  Dim customer As Customers = New Customers()
+            ' customer.GetCustomerDetails(rfcDest)
+            '     System.Environment.[Exit](0)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
+    Private Sub GetCustList()
+        '   Dim cfg As SAPConnectionConfigurator = New SAPConnectionConfigurator()
+        ' RfcDestinationManager.RegisterDestinationConfiguration(cfg)
+        'Dim dest As RfcDestination = RfcDestinationManager.GetDestination("mySAPdestination"
+        'Need to know the name of the FUnction or BAPI to call and insert that into the function below 
+        Dim func As IRfcFunction = _Repo.CreateFunction("BAPI_CUSTOMER_FIND")
+        'EXPORTING Information goes here 
+        func.SetValue("MAX_CNT", "100") 'maximum number of records found 
+        func.SetValue("PL_HOLD", "*")
+        Dim searchFields As IRfcTable = func.GetTable("SELOPT_TAB") 'search fields
+        ' Dim dt2 As DataTable = ToDataTable(customerList, "search")
+        searchFields.Insert()
+        'Values that i will be sending to the rfc
+        searchFields.CurrentRow.SetValue("COMP_CODE", "R000")
+        searchFields.CurrentRow.SetValue("TABNAME", "KNA1")
+        searchFields.CurrentRow.SetValue("FIELDNAME", "NAME1")
+        searchFields.CurrentRow.SetValue("FIELDVALUE", "*")
+        func.Invoke(_RFCDest) 'actually executes the given funciton 
+        Dim results As IRfcTable = func.GetTable("RESULT_TAB")
+        Dim dt As DataTable = ToDataTable(results, "data")
+
+        ' gvInfo.DataSource = dt
+    End Sub
+
+    Private Sub StartWaiting()
+    End Sub
+    Private Sub btnGet_Click(sender As Object, e As EventArgs) Handles btnGETlist.Click
+
+        Dim repo As RfcRepository = _RFCDest.Repository
+        'Need to know the name of the FUnction or BAPI to call and insert that into the function below 
+
+        Dim func As IRfcFunction = repo.CreateFunction("/SAPXCQM/GET_CUSTOMERS")
+        func.Invoke(_RFCDest) 'actually executes the given funciton 
+        Dim results As IRfcTable = func.GetTable("T_CUSTOMER")
+        Dim dt As DataTable = ToDataTable(results, "data")
+        gvCustomer.DataSource = dt
+        gvCustomer.EnableFiltering = True
+        lblROwcount.Text = "Row Count: " & dt.Rows.Count
+        ' Dim func As IRfcFunction = _RFCDest.CreateFunction("BAPI_CUSTOMER_FIND")
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnFind.Click
+        '  Dim repo As RfcRepository = _RFCDest.Repository
+        'Need to know the name of the FUnction or BAPI to call and insert that into the function below 
+        Dim func As IRfcFunction = _Repo.CreateFunction("BAPI_CUSTOMER_FIND")
+        'EXPORTING Information goes here 
+        func.SetValue("MAX_CNT", "100") 'maximum number of records found 
+        func.SetValue("PL_HOLD", "*")
+        Dim searchFields As IRfcTable = func.GetTable("SELOPT_TAB") 'search fields
+        ' Dim dt2 As DataTable = ToDataTable(customerList, "search")
+        searchFields.Insert()
+        'Values that i will be sending to the rfc
+        searchFields.CurrentRow.SetValue("COMP_CODE", "R000")
+        searchFields.CurrentRow.SetValue("TABNAME", "KNA1")
+        searchFields.CurrentRow.SetValue("FIELDNAME", "NAME1")
+        searchFields.CurrentRow.SetValue("FIELDVALUE", "*")
+        func.Invoke(_RFCDest) 'actually executes the given funciton 
+        Dim results As IRfcTable = func.GetTable("RESULT_TAB")
+        Dim dt As DataTable = ToDataTable(results, "data")
+        gvCustomer.DataSource = dt
+        gvCustomer.EnableFiltering = True
+    End Sub
+
+    Private Sub btnOPen_Click(sender As Object, e As EventArgs) Handles btnOPen.Click
+        SplashScreen1.Show()
+        SplashScreen1.BringToFront()
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        SplashScreen1.Close()
+    End Sub
 
 
     'Private Sub GetCustList()

@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -39,6 +39,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>Nabco_Sales.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -77,8 +78,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.CData.SAPERP, Version=19.0.0.40, Culture=neutral, PublicKeyToken=cdc168f89cffe9cf" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -105,14 +109,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Customers.vb" />
     <Compile Include="frmOrder.Designer.vb">
       <DependentUpon>frmOrder.vb</DependentUpon>
     </Compile>
     <Compile Include="frmOrder.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="IFfcTableExtension.vb" />
     <Compile Include="SAPConnector.vb" />
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SQLControl.vb" />
     <Compile Include="DBMod.vb" />
     <Compile Include="Form1.Designer.vb">
@@ -139,9 +149,6 @@
     </Compile>
     <Compile Include="frmLogin.vb">
       <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MdiClientPanel.vb">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -210,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOrder.resx">
       <DependentUpon>frmOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
