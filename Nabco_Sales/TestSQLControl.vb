@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 
-Public Class SQLControl
+Public Class TestSQLControl
     Private DBCon As New SqlConnection("Data Source=Nabco-td;Initial Catalog= NabcoSales;User ID= sa;Password=2SZvW9hDY7_KJC")
     Private DBCmd As SqlCommand
 

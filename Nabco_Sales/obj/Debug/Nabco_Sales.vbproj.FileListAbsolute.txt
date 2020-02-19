@@ -3,6 +3,8 @@ C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Interop.TEXTEDIT
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Interop.VBA.dll
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.vbproj.ResolveComReference.cache
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.Form1.resources
+C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmWaitTest.resources
+C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmWait.resources
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmHomeOld.resources
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmDB.resources
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmLogin.resources
@@ -28,9 +30,10 @@ C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Telerik.WinContr
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Telerik.WinControls.GridView.xml
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Telerik.WinControls.RadDock.xml
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Telerik.WinControls.UI.xml
+C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.vbprojAssemblyReference.cache
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.vbproj.CopyComplete
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.exe
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.xml
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.pdb
-C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.vbprojAssemblyReference.cache
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.SplashScreen1.resources
+C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.FrmOrderInfo.resources

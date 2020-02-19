@@ -22,22 +22,31 @@ Partial Class SplashScreen1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.RadWaitingBar1 = New Telerik.WinControls.UI.RadWaitingBar()
+        Me.pgrWait = New Telerik.WinControls.UI.RadWaitingBar()
         Me.WaitingBarIndicatorElement1 = New Telerik.WinControls.UI.WaitingBarIndicatorElement()
         Me.WaitingBarIndicatorElement2 = New Telerik.WinControls.UI.WaitingBarIndicatorElement()
-        CType(Me.RadWaitingBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pgrWait, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'RadWaitingBar1
+        'pgrWait
         '
-        Me.RadWaitingBar1.Location = New System.Drawing.Point(0, 0)
-        Me.RadWaitingBar1.Name = "RadWaitingBar1"
-        Me.RadWaitingBar1.Size = New System.Drawing.Size(397, 90)
-        Me.RadWaitingBar1.TabIndex = 0
-        Me.RadWaitingBar1.Text = "RadWaitingBar1"
-        Me.RadWaitingBar1.WaitingIndicators.Add(Me.WaitingBarIndicatorElement1)
-        Me.RadWaitingBar1.WaitingIndicators.Add(Me.WaitingBarIndicatorElement2)
-        Me.RadWaitingBar1.WaitingStyle = Telerik.WinControls.Enumerations.WaitingBarStyles.Dash
+        Me.pgrWait.Cursor = System.Windows.Forms.Cursors.WaitCursor
+        Me.pgrWait.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pgrWait.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.pgrWait.Location = New System.Drawing.Point(0, 0)
+        Me.pgrWait.Name = "pgrWait"
+        Me.pgrWait.ShowText = True
+        Me.pgrWait.Size = New System.Drawing.Size(379, 85)
+        Me.pgrWait.TabIndex = 0
+        Me.pgrWait.Text = "Loading Nabco Sales Applicaiton "
+        Me.pgrWait.UseWaitCursor = True
+        '
+        '
+        '
+        Me.pgrWait.WaitingBarElement.ShowText = True
+        Me.pgrWait.WaitingIndicators.Add(Me.WaitingBarIndicatorElement1)
+        Me.pgrWait.WaitingIndicators.Add(Me.WaitingBarIndicatorElement2)
+        Me.pgrWait.WaitingStyle = Telerik.WinControls.Enumerations.WaitingBarStyles.Dash
         '
         'WaitingBarIndicatorElement1
         '
@@ -53,21 +62,22 @@ Partial Class SplashScreen1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(397, 90)
+        Me.ClientSize = New System.Drawing.Size(379, 85)
         Me.ControlBox = False
-        Me.Controls.Add(Me.RadWaitingBar1)
+        Me.Controls.Add(Me.pgrWait)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SplashScreen1"
+        Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        CType(Me.RadWaitingBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pgrWait, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents RadWaitingBar1 As Telerik.WinControls.UI.RadWaitingBar
+    Friend WithEvents pgrWait As Telerik.WinControls.UI.RadWaitingBar
     Friend WithEvents WaitingBarIndicatorElement1 As Telerik.WinControls.UI.WaitingBarIndicatorElement
     Friend WithEvents WaitingBarIndicatorElement2 As Telerik.WinControls.UI.WaitingBarIndicatorElement
 End Class

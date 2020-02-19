@@ -1,8 +1,8 @@
-﻿Imports Nabco_Sales.DBMod
+﻿Imports Nabco_Sales.SQLMod
 Imports System.IO
 
 Public Class Form1
-    Private sql2 As New SQLControl
+    Private sql2 As New TestSQLControl
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim opf As New OpenFileDialog
         opf.Filter = "Chose Image (*.JPG; *.png; *.gif)| *.JPG; *.png; *.gif"

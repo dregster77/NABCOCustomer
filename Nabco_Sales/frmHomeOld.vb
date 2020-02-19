@@ -12,7 +12,7 @@ Public Class frmHomeOld
 
         '   Me.IsMdiContainer = True
         Me.WindowState = FormWindowState.Maximized
-        TestConnection()
+        TestSQLConnection()
 
         '   Me.BackgroundImage = My.Resources.NabcoLogo
         'Me.BackgroundImageLayout = ImageLayout.Stretch

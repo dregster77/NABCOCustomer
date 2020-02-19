@@ -31,6 +31,7 @@ Partial Class frmHome
         Me.mnuCustomerTier = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuUserSet = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnlHomebtns = New System.Windows.Forms.Panel()
+        Me.cmdTest = New Telerik.WinControls.UI.RadButton()
         Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
         Me.btnLogout = New Telerik.WinControls.UI.RadButton()
         Me.btnSwingDoor = New Telerik.WinControls.UI.RadButton()
@@ -40,6 +41,7 @@ Partial Class frmHome
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.mnuStrip.SuspendLayout()
         Me.pnlHomebtns.SuspendLayout()
+        CType(Me.cmdTest, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnLogout, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSwingDoor, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,6 +111,7 @@ Partial Class frmHome
         '
         Me.pnlHomebtns.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.pnlHomebtns.Controls.Add(Me.cmdTest)
         Me.pnlHomebtns.Controls.Add(Me.RadButton2)
         Me.pnlHomebtns.Controls.Add(Me.btnLogout)
         Me.pnlHomebtns.Controls.Add(Me.btnSwingDoor)
@@ -119,13 +122,21 @@ Partial Class frmHome
         Me.pnlHomebtns.Size = New System.Drawing.Size(1116, 70)
         Me.pnlHomebtns.TabIndex = 4
         '
+        'cmdTest
+        '
+        Me.cmdTest.Location = New System.Drawing.Point(155, 5)
+        Me.cmdTest.Name = "cmdTest"
+        Me.cmdTest.Size = New System.Drawing.Size(70, 60)
+        Me.cmdTest.TabIndex = 3
+        Me.cmdTest.Text = "Wait Test"
+        '
         'RadButton2
         '
         Me.RadButton2.Location = New System.Drawing.Point(79, 5)
         Me.RadButton2.Name = "RadButton2"
         Me.RadButton2.Size = New System.Drawing.Size(70, 60)
         Me.RadButton2.TabIndex = 1
-        Me.RadButton2.Text = "RadButton2"
+        Me.RadButton2.Text = "Customer"
         '
         'btnLogout
         '
@@ -215,6 +226,7 @@ Partial Class frmHome
         Me.Controls.Add(Me.pnlHomebtns)
         Me.Controls.Add(Me.mnuStrip)
         Me.Name = "frmHome"
+
         '
         '
         '
@@ -223,6 +235,7 @@ Partial Class frmHome
         Me.mnuStrip.ResumeLayout(False)
         Me.mnuStrip.PerformLayout()
         Me.pnlHomebtns.ResumeLayout(False)
+        CType(Me.cmdTest, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnLogout, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnSwingDoor, System.ComponentModel.ISupportInitialize).EndInit()
@@ -252,5 +265,6 @@ Partial Class frmHome
     Friend WithEvents btnSwingDoor As Telerik.WinControls.UI.RadButton
     Friend WithEvents stsMain As Telerik.WinControls.UI.RadStatusStrip
     Friend WithEvents lblStatusMain As Telerik.WinControls.UI.RadLabelElement
+    Friend WithEvents cmdTest As Telerik.WinControls.UI.RadButton
 End Class
 

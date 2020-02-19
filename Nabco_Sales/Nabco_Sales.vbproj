@@ -64,7 +64,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>nabcogt_logo_DEr_icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\nabcogt_logo_DEr_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -109,6 +109,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmOrderInfo.Designer.vb">
+      <DependentUpon>frmOrderInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWaitTest.Designer.vb">
+      <DependentUpon>frmWaitTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWaitTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWait.Designer.vb">
+      <DependentUpon>frmWait.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWait.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmOrder.Designer.vb">
       <DependentUpon>frmOrder.vb</DependentUpon>
     </Compile>
@@ -116,15 +134,16 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IFfcTableExtension.vb" />
-    <Compile Include="SAPConnector.vb" />
+    <Compile Include="Program.vb" />
+    <Compile Include="SAPClass.vb" />
     <Compile Include="SplashScreen1.Designer.vb">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </Compile>
     <Compile Include="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SQLControl.vb" />
-    <Compile Include="DBMod.vb" />
+    <Compile Include="TestSQLControl.vb" />
+    <Compile Include="SQLMod.vb" />
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -189,6 +208,15 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderInfo.resx">
+      <DependentUpon>frmOrderInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWaitTest.resx">
+      <DependentUpon>frmWaitTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWait.resx">
+      <DependentUpon>frmWait.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHomeOld.resx">
       <DependentUpon>frmHomeOld.vb</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +251,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -235,7 +266,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="nabcogt_logo_DEr_icon.ico" />
+    <Content Include="Resources\nabcogt_logo_DEr_icon.ico" />
     <None Include="Resources\page_save.png" />
     <None Include="Resources\LHI-CLHI.png" />
     <None Include="Resources\RHO-RHI.png" />

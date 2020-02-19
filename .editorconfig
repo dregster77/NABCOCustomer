@@ -1,0 +1,4 @@
+﻿[*.vb]
+
+# BC42026: Expression recursively calls the containing property
+dotnet_diagnostic.BC42026.severity = none

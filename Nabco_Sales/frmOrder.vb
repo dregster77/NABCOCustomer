@@ -1,31 +1,27 @@
 ﻿Imports SAP.Middleware.Connector
 Imports Nabco_Sales.IFfcTableExtension
 Imports Telerik.WinControls.UI
+Imports System.ComponentModel
 
 Public Class frmOrder
 
-    Private _RFCDest As RfcDestination
-    Private _Repo As RfcRepository
-    Private _WaitingBar As New RadWaitingBar()
+    Public _RFCDest As RfcDestination
+    Public _Repo As RfcRepository
+
 
     Private Sub frmOrder_Load(sender As Object, e As EventArgs) Handles Me.Load
+        gvCustomer.DataSource = My.Settings.CustomerDATA
+        'Try
 
-        Try
+        '    RfcDestinationManager.RegisterDestinationConfiguration(New SAPMod)
 
-            RfcDestinationManager.RegisterDestinationConfiguration(New SAPConnector)
-            '  Dim rfcDest As RfcDestination = RfcDestinationManager.GetDestination("NabTest")
+        '    _RFCDest = RfcDestinationManager.GetDestination("NabTest")
+        '    _Repo = _RFCDest.Repository
 
-            _RFCDest = RfcDestinationManager.GetDestination("NabTest")
-            _Repo = _RFCDest.Repository
 
-            ' GetCustList()
-
-            '  Dim customer As Customers = New Customers()
-            ' customer.GetCustomerDetails(rfcDest)
-            '     System.Environment.[Exit](0)
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
+        'Catch ex As Exception
+        '    MsgBox(ex.Message)
+        'End Try
     End Sub
 
     Private Sub GetCustList()
@@ -52,13 +48,11 @@ Public Class frmOrder
         ' gvInfo.DataSource = dt
     End Sub
 
-    Private Sub StartWaiting()
-    End Sub
+
     Private Sub btnGet_Click(sender As Object, e As EventArgs) Handles btnGETlist.Click
 
         Dim repo As RfcRepository = _RFCDest.Repository
         'Need to know the name of the FUnction or BAPI to call and insert that into the function below 
-
         Dim func As IRfcFunction = repo.CreateFunction("/SAPXCQM/GET_CUSTOMERS")
         func.Invoke(_RFCDest) 'actually executes the given funciton 
         Dim results As IRfcTable = func.GetTable("T_CUSTOMER")
@@ -66,7 +60,7 @@ Public Class frmOrder
         gvCustomer.DataSource = dt
         gvCustomer.EnableFiltering = True
         lblROwcount.Text = "Row Count: " & dt.Rows.Count
-        ' Dim func As IRfcFunction = _RFCDest.CreateFunction("BAPI_CUSTOMER_FIND")
+
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnFind.Click
@@ -92,13 +86,18 @@ Public Class frmOrder
     End Sub
 
     Private Sub btnOPen_Click(sender As Object, e As EventArgs) Handles btnOPen.Click
-        SplashScreen1.Show()
-        SplashScreen1.BringToFront()
+
 
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        SplashScreen1.Close()
+
+    End Sub
+
+    Private Sub frmOrder_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        For i As Integer = 0 To gvCustomer.Columns.Count - 1
+            'gvCustomer.Columns(i).Width
+        Next
     End Sub
 
 

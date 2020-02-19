@@ -123,6 +123,17 @@ Namespace My
                 Return CType(Me("ConnectionString11"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property CustomerDATA() As Global.System.Data.DataTable
+            Get
+                Return CType(Me("CustomerDATA"),Global.System.Data.DataTable)
+            End Get
+            Set
+                Me("CustomerDATA") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

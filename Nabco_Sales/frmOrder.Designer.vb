@@ -77,6 +77,10 @@ Partial Class frmOrder
         '
         '
         Me.gvCustomer.MasterTemplate.AllowAddNewRow = False
+        Me.gvCustomer.MasterTemplate.AllowCellContextMenu = False
+        Me.gvCustomer.MasterTemplate.AllowDeleteRow = False
+        Me.gvCustomer.MasterTemplate.AllowDragToGroup = False
+        Me.gvCustomer.MasterTemplate.AllowSearchRow = True
         Me.gvCustomer.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.gvCustomer.Name = "gvCustomer"
         Me.gvCustomer.ReadOnly = True

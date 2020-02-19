@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SqlClient
-Module DBMod
+Module SQLMod
 
     Public SQL As String
     Public Const CONSTR As String = "Data Source=Nabco-td;Initial Catalog= NabcoSales;User ID= sa;Password=2SZvW9hDY7_KJC"
@@ -7,7 +7,7 @@ Module DBMod
     Public RS As SqlDataReader
 
     'Checking the Connection to the database to insure there is a proper connection 
-    Public Sub TestConnection()
+    Public Sub TestSQLConnection()
         Dim con As New SqlConnection(CONSTR)
         Try
             con.ConnectionString = CONSTR
@@ -21,6 +21,9 @@ Module DBMod
             con = Nothing
         End Try
     End Sub
+
+
+
 
     'This will pull the data using a sql call establish then will return a datatable that you can read from 
     Public Sub GetData(ByRef DT As DataTable)

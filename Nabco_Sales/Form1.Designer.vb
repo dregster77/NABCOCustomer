@@ -32,9 +32,12 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.RadCollapsiblePanel1 = New Telerik.WinControls.UI.RadCollapsiblePanel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadCollapsiblePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadCollapsiblePanel1.PanelContainer.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -56,27 +59,27 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(598, 334)
+        Me.Button2.Location = New System.Drawing.Point(3, 96)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(130, 104)
+        Me.Button2.Size = New System.Drawing.Size(118, 40)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Insert"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(465, 334)
+        Me.Button3.Location = New System.Drawing.Point(3, 51)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(127, 104)
+        Me.Button3.Size = New System.Drawing.Size(118, 39)
         Me.Button3.TabIndex = 3
         Me.Button3.Text = "PopFile"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(332, 334)
+        Me.Button4.Location = New System.Drawing.Point(3, 3)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(127, 104)
+        Me.Button4.Size = New System.Drawing.Size(118, 42)
         Me.Button4.TabIndex = 4
         Me.Button4.Text = "Clear Images"
         Me.Button4.UseVisualStyleBackColor = True
@@ -121,19 +124,31 @@ Partial Class Form1
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Label1"
         '
+        'RadCollapsiblePanel1
+        '
+        Me.RadCollapsiblePanel1.Location = New System.Drawing.Point(12, 334)
+        Me.RadCollapsiblePanel1.Name = "RadCollapsiblePanel1"
+        '
+        'RadCollapsiblePanel1.PanelContainer
+        '
+        Me.RadCollapsiblePanel1.PanelContainer.Controls.Add(Me.Button4)
+        Me.RadCollapsiblePanel1.PanelContainer.Controls.Add(Me.Button3)
+        Me.RadCollapsiblePanel1.PanelContainer.Controls.Add(Me.Button2)
+        Me.RadCollapsiblePanel1.PanelContainer.Size = New System.Drawing.Size(264, 172)
+        Me.RadCollapsiblePanel1.Size = New System.Drawing.Size(266, 200)
+        Me.RadCollapsiblePanel1.TabIndex = 10
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1439, 678)
+        Me.Controls.Add(Me.RadCollapsiblePanel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.btntest)
         Me.Controls.Add(Me.NumericUpDown1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
@@ -141,6 +156,8 @@ Partial Class Form1
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadCollapsiblePanel1.PanelContainer.ResumeLayout(False)
+        CType(Me.RadCollapsiblePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -156,4 +173,5 @@ Partial Class Form1
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents RadCollapsiblePanel1 As Telerik.WinControls.UI.RadCollapsiblePanel
 End Class
