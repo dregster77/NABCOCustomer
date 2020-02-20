@@ -25582,7 +25582,7 @@
             Gets the actual column width
             </summary>
             <param name="column">An instance of <see cref="T:Telerik.WinControls.UI.GridViewColumn"/>.</param>
-            <returns>The actual column width, when successfull.</returns>
+            <returns>The actual column width, when successful.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.TableViewRowLayoutBase.GetColumnOffset(Telerik.WinControls.UI.GridViewColumn)">
             <summary>
@@ -25625,7 +25625,7 @@
         </member>
         <member name="M:Telerik.WinControls.UI.TableViewRowLayoutBase.ResizeColumn(System.Int32)">
             <summary>
-            Changes the size of an already choosen column by using the specified delta
+            Changes the size of an already chosen column by using the specified delta
             </summary>
             <param name="delta"></param>
         </member>
@@ -25644,7 +25644,7 @@
             Determines the actual row height.
             </summary>
             <param name="rowInfo">The desired <see cref="T:Telerik.WinControls.UI.GridViewRowInfo"/>.</param>
-            <returns>The actual row height, if successfull.</returns>
+            <returns>The actual row height, if successful.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.TableViewRowLayoutBase.MeasurePinnedColumns(Telerik.WinControls.UI.PinnedColumnTraverser)">
             <summary>
@@ -37015,15 +37015,15 @@
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGrid.EndEdit">
             <summary>
-            Ends the editing process and tries to commit any changes made to the edito value. Returns a value indicating whther the operation succeeded.
+            Ends the editing process and tries to commit any changes made to the edit value. Returns a value indicating whether the operation succeeded.
             </summary>
-            <returns>Returns true if the operation is successfull. Returns false if the operation is not successfull e.g. validation fails or the grid was not in edit mode.</returns>
+            <returns>Returns true if the operation is successful. Returns false if the operation is not successful e.g. validation fails or the grid was not in edit mode.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGrid.CancelEdit">
             <summary>
-            Ends the editing process without committing any changes. Returns a value indicating whther the operation succeeded.
+            Ends the editing process without committing any changes. Returns a value indicating whether the operation succeeded.
             </summary>
-            <returns>Returns true if the operation is successfull. Returns false if the operation is not successfull e.g. the grid was not in edit mode.</returns>
+            <returns>Returns true if the operation is successful. Returns false if the operation is not successful e.g. the grid was not in edit mode.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGrid.OnLayout(System.Windows.Forms.LayoutEventArgs)">
             <summary>
@@ -37116,7 +37116,7 @@
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGrid.GetDefaultXmlSerializationInfo">
              <summary>
-             Gets the default serialization info for RadVirtualGrid used by Save/Load loyout methods to persist grid settings to/from XML.
+             Gets the default serialization info for RadVirtualGrid used by Save/Load layout methods to persist grid settings to/from XML.
              </summary>
             <remarks>
              You can use the serialization info to include/exclude properties of RadVirtualGrid and related objects from XML serialization.
@@ -37576,7 +37576,7 @@
         </member>
         <member name="E:Telerik.WinControls.UI.RadVirtualGrid.Copying">
             <summary>
-            Occurs when the content of cell(s) is copyed. Allows users to modify the operation or content.
+            Occurs when the content of cell(s) is copied. Allows users to modify the operation or content.
             </summary>
         </member>
         <member name="E:Telerik.WinControls.UI.RadVirtualGrid.Pasting">
@@ -37596,7 +37596,7 @@
         </member>
         <member name="P:Telerik.WinControls.UI.RadVirtualGrid.XmlSerializationInfo">
             <summary>
-            Gets the serialization info for RadVirtualGrid used by Save/Load loyout methods to persist grid settings to/from XML.
+            Gets the serialization info for RadVirtualGrid used by Save/Load layout methods to persist grid settings to/from XML.
             By default, or when this property is set to null, the ComponentXmlSerializationInfo specified by GetDefaultXmlSerializationInfo() will be used.
             </summary>
         </member>
@@ -37719,14 +37719,14 @@
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.IsRowPinned(System.Int32)">
             <summary>
-            Returs a value indicating whether the specified row is pinned.
+            Returns a value indicating whether the specified row is pinned.
             </summary>
             <param name="rowIndex">The index of the row.</param>
             <returns>True if the row is pinned at top or bottom, otherwise false.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.IsColumnPinned(System.Int32)">
             <summary>
-            Returs a value indicating whether the specified column is pinned.
+            Returns a value indicating whether the specified column is pinned.
             </summary>
             <param name="columnIndex">The index of the column.</param>
             <returns>True if the column is pinned at left or right, otherwise false.</returns>
@@ -37747,7 +37747,7 @@
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.IsRowExpanded(System.Int32)">
             <summary>
-            Returs a value indicating whether the specified row is expanded.
+            Returns a value indicating whether the specified row is expanded.
             </summary>
             <param name="rowIndex">The index of the row.</param>
             <returns>True if the row is expanded, otherwise false.</returns>
@@ -38067,15 +38067,15 @@
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.CancelEdit">
             <summary>
-            Ends the editing process without committing any changes. Returns a value indicating whther the operation succeeded.
+            Ends the editing process without committing any changes. Returns a value indicating whether the operation succeeded.
             </summary>
-            <returns>Returns true if the operation is successfull. Returns false if the operation is not successfull e.g. the grid was not in edit mode.</returns>
+            <returns>Returns true if the operation is successful. Returns false if the operation is not successful e.g. the grid was not in edit mode.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.EndEdit">
             <summary>
-            Ends the editing process and tries to commit any changes made to the edito value. Returns a value indicating whther the operation succeeded.
+            Ends the editing process and tries to commit any changes made to the edit value. Returns a value indicating whether the operation succeeded.
             </summary>
-            <returns>Returns true if the operation is successfull. Returns false if the operation is not successfull e.g. validation fails or the grid was not in edit mode.</returns>
+            <returns>Returns true if the operation is successful. Returns false if the operation is not successful e.g. validation fails or the grid was not in edit mode.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.SetCellValue(System.Object,System.Int32,System.Int32,Telerik.WinControls.UI.VirtualGridViewInfo)">
             <summary>
@@ -38235,7 +38235,7 @@
             <param name="rowIndex">The row index of the cell.</param>
             <param name="columnIndex">The column index of the cell.</param>
             <param name="viewInfo">The view info of the cell.</param>
-            <returns>Teh cell element, if found, otherwise false.</returns>
+            <returns>The cell element, if found, otherwise false.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.GetCellElement(System.Int32,System.Int32,Telerik.WinControls.UI.VirtualGridTableElement)">
             <summary>
@@ -38243,8 +38243,8 @@
             </summary>
             <param name="rowIndex">The row index of the cell.</param>
             <param name="columnIndex">The column index of the cell.</param>
-            <param name="tableElement">The tabke element of the cell.</param>
-            <returns>Teh cell element, if found, otherwise false.</returns>
+            <param name="tableElement">The table element of the cell.</param>
+            <returns>The cell element, if found, otherwise false.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.BestFitColumn(System.Int32)">
             <summary>
@@ -38302,7 +38302,7 @@
             <param name="endColumn">The index of the column where the content copy should end.</param>
             <param name="viewInfo">The view info of the cell region.</param>
             <param name="selectedOnly">Determines whether only selected cells are copied.</param>
-            <param name="cut">Determines whether cell values should be cleard after the copy.</param>
+            <param name="cut">Determines whether cell values should be cleared after the copy.</param>
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.ProcessContent(System.String,System.Int32,System.Int32,System.Int32,System.Int32,Telerik.WinControls.UI.VirtualGridViewInfo,System.Boolean,System.Boolean)">
             <summary>
@@ -38315,14 +38315,14 @@
             <param name="endColumn">The index of the column where the content processing should end.</param>
             <param name="viewInfo">The view info of the cell region.</param>
             <param name="selectedOnly">Determines whether only selected cells are processed.</param>
-            <param name="cut">Determines whether cell values should be cleard after they are processed.</param>
+            <param name="cut">Determines whether cell values should be cleared after they are processed.</param>
             <returns></returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadVirtualGridElement.Paste">
             <summary>
-            Pastes the content of the clipboard into starting from the current cell and going on until either the available cells or the clipboard conent ends.
+            Pastes the content of the clipboard into starting from the current cell and going on until either the available cells or the clipboard content ends.
             </summary>
-            <returns>True if the operatrion is successful, otherwise false.</returns>
+            <returns>True if the operation is successful, otherwise false.</returns>
         </member>
         <member name="P:Telerik.WinControls.UI.RadVirtualGridElement.AllowColumnResize">
             <summary>
@@ -38687,7 +38687,7 @@
         </member>
         <member name="E:Telerik.WinControls.UI.RadVirtualGridElement.Copying">
             <summary>
-            Occurs when the content of cell(s) is copyed. Allows users to modify the operation or content.
+            Occurs when the content of cell(s) is copied. Allows users to modify the operation or content.
             </summary>
         </member>
         <member name="E:Telerik.WinControls.UI.RadVirtualGridElement.Pasting">
@@ -39694,7 +39694,7 @@
             Creates a new visual element for the grid
             </summary>
             <param name="viewInfo">The <see cref="T:Telerik.WinControls.UI.GridViewInfo"/> object that owns the visual element.</param>
-            <returns>If successfull, the new <see cref="T:Telerik.WinControls.UI.IRowView"/>.</returns>
+            <returns>If successful, the new <see cref="T:Telerik.WinControls.UI.IRowView"/>.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.TableViewDefinition.CreateRowLayout">
             <summary>
@@ -40411,7 +40411,7 @@
             Gets the actual column width
             </summary>
             <param name="column">An instance of <see cref="T:Telerik.WinControls.UI.GridViewColumn"/>.</param>
-            <returns>The actual column width, when successfull.</returns>
+            <returns>The actual column width, when successful.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.TableViewRowLayout.GetColumnOffset(Telerik.WinControls.UI.GridViewColumn)">
             <summary>
@@ -40466,9 +40466,9 @@
         </member>
         <member name="P:Telerik.WinControls.UI.TableViewRowLayout.LayoutImpl">
             <summary>
-            Gets the layout impl.
+            Gets the helper for the column layout.
             </summary>
-            <value>The layout impl.</value>
+            <value>The helper for the column layout.</value>
         </member>
         <member name="P:Telerik.WinControls.UI.TableViewRowLayout.DesiredSize">
             <summary>

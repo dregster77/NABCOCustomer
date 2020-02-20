@@ -22,26 +22,23 @@ Module SQLMod
         End Try
     End Sub
 
-
-
-
-    'This will pull the data using a sql call establish then will return a datatable that you can read from 
-    Public Sub GetData(ByRef DT As DataTable)
-        Dim connection As New SqlConnection(CONSTR)
-        Dim command As New SqlCommand(SQL, connection)
-        Dim rdr As SqlDataReader
-        Try
-            connection.Open()
-            rdr = command.ExecuteReader()
-            DT.Load(rdr)
-            command.Dispose()
-            command = Nothing
-            connection.Dispose()
-            connection = Nothing
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        End Try
-    End Sub
+    ''This will pull the data using a sql call establish then will return a datatable that you can read from 
+    'Public Sub GetData(ByRef DT As DataTable)
+    '    Dim connection As New SqlConnection(CONSTR)
+    '    Dim command As New SqlCommand(SQL, connection)
+    '    Dim rdr As SqlDataReader
+    '    Try
+    '        connection.Open()
+    '        rdr = command.ExecuteReader()
+    '        DT.Load(rdr)
+    '        command.Dispose()
+    '        command = Nothing
+    '        connection.Dispose()
+    '        connection = Nothing
+    '    Catch ex As Exception
+    '        MsgBox(ex.Message)
+    '    End Try
+    'End Sub
 
     'Opening the connection to the database and then also making sure that the connection 
     'is closed once the reader is complete

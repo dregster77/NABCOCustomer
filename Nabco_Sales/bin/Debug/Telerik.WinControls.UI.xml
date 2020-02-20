@@ -1187,6 +1187,11 @@
             The auto complete popup location.
             </value>
         </member>
+        <member name="P:Telerik.WinControls.UI.RadAutoCompleteBoxElement.AllowDuplicates">
+            <summary>
+             Gets or sets whether already selected items can be suggested.
+            </summary>
+        </member>
         <member name="E:Telerik.WinControls.UI.RadAutoCompleteBoxElement.TokenValidating">
             <summary>
             Occurs when text is validating as token
@@ -3008,6 +3013,11 @@
         <member name="P:Telerik.WinControls.UI.RadDropDownList.ListElement">
             <summary>
             Represent the List element
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadDropDownList.ItemHeight">
+            <summary>
+            Gets or sets the item height for the items in the pop-up. This property is disregarded when AutoSizeItems is set to true.
             </summary>
         </member>
         <member name="P:Telerik.WinControls.UI.RadDropDownList.SelectedItems">
@@ -8698,6 +8708,16 @@
             Occurs when the DirectoryInfo wrapper is about to be created.
             </summary>
         </member>
+        <member name="E:Telerik.WinControls.FileDialogs.FileDialogComponentBase.DirectoryNavigating">
+            <summary>
+            Occurs when the current folder is about to change.
+            </summary>
+        </member>
+        <member name="E:Telerik.WinControls.FileDialogs.FileDialogComponentBase.ShellContextMenuOpening">
+            <summary>
+            Occurs when context menu is about to open.
+            </summary>
+        </member>
         <member name="E:Telerik.WinControls.FileDialogs.FileDialogComponentBase.ExceptionRaised">
             <summary>
             Occurs when the <see cref="T:System.Exception"/> is raised.
@@ -9024,6 +9044,16 @@
             Raises the <see cref="E:Telerik.WinControls.FileDialogs.FileDialogFormBase.ExceptionRaised"/> event.
             </summary>
         </member>
+        <member name="M:Telerik.WinControls.FileDialogs.FileDialogFormBase.RaiseDirectoryNavigatingEvent(Telerik.WinControls.FileDialogs.DirectoryNavigatingEventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.WinControls.FileDialogs.FileDialogFormBase.DirectoryNavigating"/> event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.FileDialogs.FileDialogFormBase.RaiseShellContextMenuOpening(Telerik.WinControls.FileDialogs.ContextMenuOpeningEventArgs)">
+            <summary>
+            Raises the <see cref="E:Telerik.WinControls.FileDialogs.FileDialogFormBase.ShellContextMenuOpening"/> event.
+            </summary>
+        </member>
         <member name="E:Telerik.WinControls.FileDialogs.FileDialogFormBase.ExceptionRaised">
             <summary>
             Occurs when the <see cref="T:System.Exception"/> is raised.
@@ -9032,6 +9062,16 @@
         <member name="E:Telerik.WinControls.FileDialogs.FileDialogFormBase.DirectoryRequesting">
             <summary>
             Occurs when the DirectoryInfo wrapper is about to be created.
+            </summary>
+        </member>
+        <member name="E:Telerik.WinControls.FileDialogs.FileDialogFormBase.DirectoryNavigating">
+            <summary>
+            Occurs when the current folder is about to change.
+            </summary>
+        </member>
+        <member name="E:Telerik.WinControls.FileDialogs.FileDialogFormBase.ShellContextMenuOpening">
+            <summary>
+            Occurs when context menu is about to open.
             </summary>
         </member>
         <member name="P:Telerik.WinControls.FileDialogs.FileDialogFormBase.FileName">
@@ -9047,6 +9087,12 @@
         <member name="P:Telerik.WinControls.FileDialogs.FileDialogFormBase.InitialDirectory">
             <summary>
             Gets or sets the initial directory.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.FileDialogs.FileDialogFormBase.EditingOptions">
+            <summary>
+            Determines how the files and folders in the <see cref="T:Telerik.WinControls.UI.ExplorerControl"/> can be edited. 
+            Note that the shell context menu and drag and drop operations are handled separately.
             </summary>
         </member>
         <member name="P:Telerik.WinControls.FileDialogs.FileDialogFormBase.RestoreDirectory">
@@ -9638,6 +9684,39 @@
             The data from the drag source is linked to the drop target.
             </summary>
         </member>
+        <member name="T:Telerik.WinControls.FileDialogs.ContextMenuOpeningEventArgs">
+            <summary>
+            Event args for the ShellContextMenuOpening event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.FileDialogs.ContextMenuOpeningEventArgs.#ctor(System.Collections.Generic.IList{Telerik.WinControls.FileDialogs.FileSystemInfoWrapper},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.FileDialogs.ContextMenuOpeningEventArgs"/> class.
+            </summary>
+            <param name="selectedFiles">The files on which the context menu is triggered.</param>
+            <param name="isOpeningOnEmptySpace">A value indicating whether the context menu is opening over an empty space.</param>
+        </member>
+        <member name="P:Telerik.WinControls.FileDialogs.ContextMenuOpeningEventArgs.SelectedFiles">
+            <summary>
+            Gets the list of files on which the context menu is being opened.
+            If the list is empty, context menu is opened on empty space in the dialog or explorer control.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.FileDialogs.ContextMenuOpeningEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether this context menu opening should be cancelled.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.FileDialogs.ContextMenuOpeningEventArgs.IsOpeningOnEmptySpace">
+            <summary>
+            Gets or sets a value indicating whether the short context menu is opening (shown on empty places on no selected files).
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.FileDialogs.ContextMenuOpeningEventArgs.ShortContextMenuOptions">
+            <summary>
+            Gets or sets a value indicating all available options for the short context menu (shown on empty places on no selected files).
+            </summary>
+        </member>
         <member name="T:Telerik.WinControls.FileDialogs.ExplorerControlSizeMode">
             <summary>
             Provides options for sizing the text part of the <see cref="T:Telerik.WinControls.UI.ExplorerControl"/>
@@ -10189,6 +10268,36 @@
             <value>
                 The default value is <a href="ms-help://MS.VSCC.v80/MS.MSDN.v80/MS.NETDEVFX.v20.en/cpref2/html/T_System_String.htm">ContentAlignment.MiddleLeft</a>.
             </value>		
+        </member>
+        <member name="T:Telerik.WinControls.FileDialogs.ShortContextMenuOptions">
+            <summary>
+            ShortContextMenuOptions is Flags enum indicating the available options in the context menu which appears on empty spaces in <see cref="T:Telerik.WinControls.UI.ExplorerControl"/>.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.ShortContextMenuOptions.View">
+            <summary>
+            View menu option.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.ShortContextMenuOptions.Paste">
+            <summary>
+            Paste menu option.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.ShortContextMenuOptions.NewFolder">
+            <summary>
+            New folder menu option.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.ShortContextMenuOptions.Properties">
+            <summary>
+            Properties menu option.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.ShortContextMenuOptions.All">
+            <summary>
+            All options in the menu are available.
+            </summary>
         </member>
         <member name="T:Telerik.WinControls.FileDialogs.HistoryNavigationPaneUserControl">
             <summary>
@@ -12270,6 +12379,12 @@
             Gets the root <see cref="T:Telerik.WinControls.FileDialogs.DirectoryInfoWrapper"/> used for folder navigation.
             </summary>
         </member>
+        <member name="P:Telerik.WinControls.FileDialogs.DialogViewModel.EditingOptions">
+            <summary>
+            Determines how the files and folders in the <see cref="T:Telerik.WinControls.FileDialogs.DialogViewModel"/> can be edited. 
+            Note that the shell context menu and drag and drop operations are handled separately.
+            </summary>
+        </member>
         <member name="P:Telerik.WinControls.FileDialogs.DialogViewModel.Path">
             <inheritdoc />
         </member>
@@ -12330,6 +12445,73 @@
         <member name="P:Telerik.WinControls.FileDialogs.DialogViewModel.IsSearchViewActive">
             <summary>
             Gets or sets the <see cref="P:Telerik.WinControls.FileDialogs.DialogViewModel.IsSearchViewActive"/>. When true, it indicates the Dialog's Main Pane shows results from search operation. 
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.FileDialogs.DirectoryNavigatingEventArgs">
+            <summary>
+            Event arguments for DirectoryNavigating event.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.FileDialogs.DirectoryNavigatingEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.WinControls.FileDialogs.DirectoryNavigatingEventArgs"/> class.
+            </summary>
+            <param name="newDirectoryPath">The new directory path to be navigated.</param>
+        </member>
+        <member name="P:Telerik.WinControls.FileDialogs.DirectoryNavigatingEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether to cancel the change of the current directory.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.FileDialogs.DirectoryNavigatingEventArgs.DirectoryPath">
+            <summary>
+            The path of the new directory path which is about to get current.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.FileDialogs.EditingOptions">
+            <summary>
+            Determines how the files and folders in the <see cref="T:Telerik.WinControls.UI.ExplorerControl"/> can be edited. 
+            Note that the shell context menu and drag and drop operations are handled separately.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.EditingOptions.None">
+            <summary>
+            Editing is not allowed.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.EditingOptions.Cut">
+            <summary>
+            Cut is enabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.EditingOptions.Copy">
+            <summary>
+            Copy is enabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.EditingOptions.Paste">
+            <summary>
+            Paste is enabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.EditingOptions.Delete">
+            <summary>
+            Delete is enabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.EditingOptions.Rename">
+            <summary>
+            Rename is enabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.EditingOptions.NewFolder">
+            <summary>
+            New folder is enabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.WinControls.FileDialogs.EditingOptions.All">
+            <summary>
+            All options in the menu are available.
             </summary>
         </member>
         <member name="T:Telerik.WinControls.FileDialogs.ExplorerControlFileViewModel">
@@ -13046,11 +13228,12 @@
             NewFolder command.
             </summary>
         </member>
-        <member name="M:Telerik.WinControls.FileDialogs.ShellHelpers.ShellContextMenuManager.ShowContextMenu(System.Collections.IList,System.IntPtr,System.Boolean,System.Boolean,System.Boolean,Telerik.WinControls.FileDialogs.LayoutType)">
+        <member name="M:Telerik.WinControls.FileDialogs.ShellHelpers.ShellContextMenuManager.ShowContextMenu(System.Collections.Generic.IList{Telerik.WinControls.FileDialogs.FileSystemInfoWrapper},Telerik.WinControls.UI.ExplorerControl,System.IntPtr,System.Boolean,System.Boolean,System.Boolean,Telerik.WinControls.FileDialogs.LayoutType)">
             <summary>
             Show shell context menu.
             </summary>
             <param name="selectedFileSystemInfoWrappers">Selected FileSystemInfoWrappers.</param>
+            <param name="explorer">Explorer control.</param> 
             <param name="controlHandle">The handle of control.</param>
             <param name="canRename">Can rename.</param>
             <param name="shouldInvokeOpenCommand">Should invoke open command.</param>
@@ -13245,6 +13428,16 @@
             Occurs when the DirectoryInfo wrapper is about to be created.
             </summary>
         </member>
+        <member name="E:Telerik.WinControls.UI.ExplorerControl.DirectoryNavigating">
+            <summary>
+            Occurs when the current folder is about to change.
+            </summary>
+        </member>
+        <member name="E:Telerik.WinControls.UI.ExplorerControl.ShellContextMenuOpening">
+            <summary>
+            Occurs when context menu is about to open.
+            </summary>
+        </member>
         <member name="P:Telerik.WinControls.UI.ExplorerControl.CustomPlacesPaths">
             <summary>
             Gets or sets the paths to the custom places navigation tree view.
@@ -13258,6 +13451,12 @@
         <member name="P:Telerik.WinControls.UI.ExplorerControl.MultiSelect">
             <summary>
             Gets or sets a value indicating whether multiple selection of files or folders is allowed.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.ExplorerControl.EditingOptions">
+            <summary>
+            Gets or sets how the files and folders in the <see cref="T:Telerik.WinControls.UI.ExplorerControl"/> can be edited. 
+            Note that the shell context menu and drag and drop operations are handled separately.
             </summary>
         </member>
         <member name="P:Telerik.WinControls.UI.ExplorerControl.LayoutType">
@@ -13364,7 +13563,7 @@
         </member>
         <member name="T:Telerik.WinControls.FileDialogs.FileDialogsStringId">
             <summary>
-            RadTimeSpanPicker localization strings.
+            FileDialogs localization strings.
             </summary>
         </member>
         <member name="M:Telerik.WinControls.UI.RadOpenFileDialog.OpenFile">
@@ -13393,6 +13592,12 @@
         <member name="P:Telerik.WinControls.UI.RadOpenFileDialog.MultiSelect">
             <inheritdoc/>
         </member>
+        <member name="P:Telerik.WinControls.UI.RadOpenFileDialog.EditingOptions">
+            <summary>
+            Determines how the files and folders in the <see cref="T:Telerik.WinControls.UI.ExplorerControl"/> can be edited. 
+            Note that the shell context menu and drag and drop operations are handled separately.
+            </summary>
+        </member>
         <member name="P:Telerik.WinControls.UI.RadOpenFileDialog.ReadOnlyChecked">
             <summary>
             Gets or sets a value indicating whether the read-only check box is selected.
@@ -13417,6 +13622,12 @@
         </member>
         <member name="P:Telerik.WinControls.UI.RadOpenFolderDialog.MultiSelect">
             <inheritdoc/>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadOpenFolderDialog.EditingOptions">
+            <summary>
+            Determines how the files and folders in the <see cref="T:Telerik.WinControls.UI.ExplorerControl"/> can be edited. 
+            Note that the shell context menu and drag and drop operations are handled separately.
+            </summary>
         </member>
         <member name="P:Telerik.WinControls.UI.RadOpenFolderDialog.FileNames">
             <inheritdoc />
@@ -13446,6 +13657,29 @@
         </member>
         <member name="P:Telerik.WinControls.UI.RadSaveFileDialog.FilterIndex">
             <inheritdoc/>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadSaveFileDialog.EditingOptions">
+            <summary>
+            Determines how the files and folders in the <see cref="T:Telerik.WinControls.UI.ExplorerControl"/> can be edited. 
+            Note that the shell context menu and drag and drop operations are handled separately.
+            </summary>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadMaskedEditBoxLocalizationProvider">
+            <summary>
+            Provides localization services for RadMaskedEditBox.
+            </summary>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadMaskedEditBoxLocalizationProvider.GetLocalizedString(System.String)">
+            <summary>
+            Gets the string corresponding to the given ID.
+            </summary>
+            <param name="id">String ID.</param>
+            <returns>The string corresponding to the given ID.</returns>
+        </member>
+        <member name="T:Telerik.WinControls.UI.RadMaskedEditBoxStringId">
+            <summary>
+            RadMaskedEditBox localization strings.
+            </summary>
         </member>
         <member name="M:Telerik.WinControls.UI.MaskTimeSpanProvider.ToString(System.TimeSpan,System.Collections.Generic.IList{Telerik.WinControls.UI.TimeSpanMaskPart},System.Globalization.CultureInfo)">
             <summary>
@@ -39985,7 +40219,7 @@
             </summary>
             <param name="stream">The stream to write to.</param>
             <Rmarks>
-            Writes the Xml content in the stream and leaves the stream open.
+            Writes the XML content in the stream and leaves the stream open.
             </Rmarks>
         </member>
         <member name="M:Telerik.WinControls.UI.RadLayoutControl.SaveLayout(System.String)">
@@ -40024,7 +40258,7 @@
         </member>
         <member name="M:Telerik.WinControls.UI.RadLayoutControl.GetDefaultXmlSerializationInfo">
             <summary>
-            Gets the default serialization info for RadLayoutControl used by Save/Load loyout methods to persist the layout to/from XML.
+            Gets the default serialization info for RadLayoutControl used by Save/Load layout methods to persist the layout to/from XML.
             </summary>
             <returns>The default serialization info.</returns>
         </member>
@@ -40122,7 +40356,7 @@
         </member>
         <member name="P:Telerik.WinControls.UI.RadLayoutControl.XmlSerializationInfo">
             <summary>
-            Gets the serialization info for RadLayoutControl used by Save/Load loyout methods to persist the layout to/from XML.
+            Gets the serialization info for RadLayoutControl used by Save/Load layout methods to persist the layout to/from XML.
             By default or when set to null the ComponentXmlSerializationInfo provided by GetDefaultXmlSerializationInfo() will be used.
             </summary>
         </member>
@@ -43458,6 +43692,11 @@
             Initializes a new instance of the <see cref="T:Telerik.WinControls.UI.RadAutoCompleteBox"/> class.
             </summary>
         </member>
+        <member name="P:Telerik.WinControls.UI.RadAutoCompleteBox.AllowDuplicates">
+            <summary>
+             Gets or sets whether already selected items can be suggested.
+            </summary>
+        </member>
         <member name="P:Telerik.WinControls.UI.RadAutoCompleteBox.AutoCompleteTextBoxElement">
             <summary>
             Gets the associated auto complete text box element.
@@ -43544,17 +43783,35 @@
             </summary>
             <returns>A <see cref="T:System.Windows.Forms.OpenFileDialog"/>.</returns>
         </member>
+        <member name="M:Telerik.WinControls.UI.RadBrowseEditorElement.CreateRadOpenFileDialog">
+            <summary>
+            Creates the <see cref="T:Telerik.WinControls.UI.RadOpenFileDialog"/> that will be opened when the browse button is clicked.
+            </summary>
+            <returns>A <see cref="T:Telerik.WinControls.UI.RadOpenFileDialog"/>.</returns>
+        </member>
         <member name="M:Telerik.WinControls.UI.RadBrowseEditorElement.CreateFolderBrowserDialog">
             <summary>
             Creates the <see cref="T:System.Windows.Forms.FolderBrowserDialog"/> that will be opened when the browse button is clicked.
             </summary>
             <returns>A <see cref="T:System.Windows.Forms.FolderBrowserDialog"/>.</returns>
         </member>
+        <member name="M:Telerik.WinControls.UI.RadBrowseEditorElement.CreateRadFolderBrowserDialog">
+            <summary>
+            Creates the <see cref="T:Telerik.WinControls.UI.RadOpenFolderDialog"/> that will be opened when the browse button is clicked.
+            </summary>
+            <returns>A <see cref="T:Telerik.WinControls.UI.RadOpenFolderDialog"/>.</returns>
+        </member>
         <member name="M:Telerik.WinControls.UI.RadBrowseEditorElement.CreateSaveFileDialog">
             <summary>
             Creates the <see cref="T:System.Windows.Forms.SaveFileDialog"/> that will be opened when the browse button is clicked.
             </summary>
             <returns>A <see cref="T:System.Windows.Forms.SaveFileDialog"/>.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.UI.RadBrowseEditorElement.CreateRadSaveFileDialog">
+            <summary>
+            Creates the <see cref="T:Telerik.WinControls.UI.RadSaveFileDialog"/> that will be opened when the browse button is clicked.
+            </summary>
+            <returns>A <see cref="T:Telerik.WinControls.UI.RadSaveFileDialog"/>.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadBrowseEditorElement.CreateDialogButtonElement">
             <summary>
@@ -43580,7 +43837,12 @@
         </member>
         <member name="P:Telerik.WinControls.UI.RadBrowseEditorElement.Dialog">
             <summary>
-            Gets the <see cref="P:Telerik.WinControls.UI.RadBrowseEditorElement.Dialog"/> that will open upon pressing the browse button.
+            Use the BrowseDialog property and and cast it to the actual dialog type.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadBrowseEditorElement.BrowseDialog">
+            <summary>
+            Gets the <see cref="P:Telerik.WinControls.UI.RadBrowseEditorElement.BrowseDialog"/> that will open upon pressing the browse button.
             </summary>
         </member>
         <member name="P:Telerik.WinControls.UI.RadBrowseEditorElement.ReadOnly">
@@ -43625,7 +43887,12 @@
         </member>
         <member name="P:Telerik.WinControls.UI.RadBrowseEditor.Dialog">
             <summary>
-            Gets the OpenFileDialog of this control.
+            Use the BrowseDialog property and and cast it to the actual dialog type.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.RadBrowseEditor.BrowseDialog">
+            <summary>
+            Gets the <see cref="P:Telerik.WinControls.UI.RadBrowseEditor.BrowseDialog"/> that will open upon pressing the browse button.
             </summary>
         </member>
         <member name="P:Telerik.WinControls.UI.RadBrowseEditor.DialogType">
@@ -44217,7 +44484,7 @@
         </member>
         <member name="M:Telerik.WinControls.UI.RadPropertyStore.#ctor">
             <summary>
-            Creates a new instace of the <see cref="T:Telerik.WinControls.UI.RadPropertyStore"/>
+            Creates a new instance of the <see cref="T:Telerik.WinControls.UI.RadPropertyStore"/>
             </summary>
         </member>
         <member name="M:Telerik.WinControls.UI.RadPropertyStore.Add(Telerik.WinControls.UI.PropertyStoreItem)">
@@ -44273,7 +44540,7 @@
             Removes the item with the specified name form the collection.
             </summary>
             <param name="propertyName">The name of the item to remove.</param>
-            <returns>True if the removal was successfull otherwise false.</returns>
+            <returns>True if the removal was successful otherwise false.</returns>
         </member>
         <member name="M:Telerik.WinControls.UI.RadPropertyStore.RemoveAt(System.Int32)">
             <summary>
@@ -70997,7 +71264,7 @@
         <member name="T:Telerik.WinControls.UI.HostedTextBoxBase">
             <summary>
             The TextBox control that is hosted by default by RadTextBoxItem.
-            Children of this calss can be passed to RadTextBoxItem in order to customize the hosted text box.
+            Children of this class can be passed to RadTextBoxItem in order to customize the hosted text box.
             </summary>
         </member>
         <member name="M:Telerik.WinControls.UI.HostedTextBoxBase.DrawTextPrompt">
@@ -71011,20 +71278,45 @@
             Draws the NullText in the client area of the TextBox using the default font and color.
             </summary>
         </member>
+        <member name="M:Telerik.WinControls.UI.HostedTextBoxBase.ShouldSerializeNullText">
+            <summary>
+            Returns a value indicating whether the NullText should be serialized.
+            </summary>
+            <returns>Whether to serialize the null text.</returns>
+        </member>
+        <member name="M:Telerik.WinControls.UI.HostedTextBoxBase.ResetNullText">
+            <summary>
+            Resets the null text to an empty string.
+            </summary>
+        </member>
         <member name="P:Telerik.WinControls.UI.HostedTextBoxBase.NullTextColor">
             <summary>
-            Gets or sets a color of the null text
+            Gets or sets a color of the null text.
             </summary>
         </member>
         <member name="P:Telerik.WinControls.UI.HostedTextBoxBase.ShowNullText">
             <summary>
-            Gets or sets a value indicating whether the null text will be shown when the control is focused and the text is empty
+            Gets or sets a value indicating whether the null text will be shown when the control is focused and the text is empty.
             </summary>
         </member>
         <member name="P:Telerik.WinControls.UI.HostedTextBoxBase.UseGenericBorderPaint">
             <summary>
-            Gets or sets a value indicating whether to show the bottom part of characters, clipped 
-            due to font name or size particularities
+            Gets or sets a value indicating whether to show the bottom part of characters, clipped due to font name or size particularities.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.HostedTextBoxBase.NullText">
+            <summary>
+            Gets or sets the prompt text that is displayed when the TextBox contains no text.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.HostedTextBoxBase.PromptForeColor">
+            <summary>
+            Gets or sets whether to use different than SystemColors.GrayText color for the prompt text.
+            </summary>
+        </member>
+        <member name="P:Telerik.WinControls.UI.HostedTextBoxBase.Multiline">
+            <summary>
+            Controls whether the text of the edit control can span more than one line.
             </summary>
         </member>
         <member name="T:Telerik.WinControls.UI.CheckBoxLayoutPanel">

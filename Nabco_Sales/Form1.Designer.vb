@@ -22,6 +22,10 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -33,11 +37,14 @@ Partial Class Form1
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RadCollapsiblePanel1 = New Telerik.WinControls.UI.RadCollapsiblePanel()
+        Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadCollapsiblePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadCollapsiblePanel1.PanelContainer.SuspendLayout()
+        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -138,11 +145,34 @@ Partial Class Form1
         Me.RadCollapsiblePanel1.Size = New System.Drawing.Size(266, 200)
         Me.RadCollapsiblePanel1.TabIndex = 10
         '
+        'RadGridView1
+        '
+        Me.RadGridView1.Location = New System.Drawing.Point(307, 347)
+        '
+        '
+        '
+        Me.RadGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
+        GridViewTextBoxColumn1.HeaderText = "Small"
+        GridViewTextBoxColumn1.Name = "Column Small"
+        GridViewTextBoxColumn1.Width = 236
+        GridViewTextBoxColumn2.HeaderText = "Med"
+        GridViewTextBoxColumn2.Name = "ColMedium"
+        GridViewTextBoxColumn2.Width = 236
+        GridViewTextBoxColumn3.HeaderText = "Big"
+        GridViewTextBoxColumn3.Name = "ColBig"
+        GridViewTextBoxColumn3.Width = 235
+        Me.RadGridView1.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3})
+        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition1
+        Me.RadGridView1.Name = "RadGridView1"
+        Me.RadGridView1.Size = New System.Drawing.Size(726, 301)
+        Me.RadGridView1.TabIndex = 11
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1439, 678)
+        Me.Controls.Add(Me.RadGridView1)
         Me.Controls.Add(Me.RadCollapsiblePanel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
@@ -158,6 +188,8 @@ Partial Class Form1
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadCollapsiblePanel1.PanelContainer.ResumeLayout(False)
         CType(Me.RadCollapsiblePanel1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -174,4 +206,5 @@ Partial Class Form1
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents RadCollapsiblePanel1 As Telerik.WinControls.UI.RadCollapsiblePanel
+    Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
 End Class

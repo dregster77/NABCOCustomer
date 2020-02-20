@@ -45,8 +45,8 @@ Public Class SAPClass
                 parms.Add(RfcConfigParameters.AppServerHost, "172.26.3.13")
                 parms.Add(RfcConfigParameters.SystemNumber, "00")
                 parms.Add(RfcConfigParameters.SystemID, "UTA")
-                parms.Add(RfcConfigParameters.User, SAPUser)
-                parms.Add(RfcConfigParameters.Password, SAPPass)
+                parms.Add(RfcConfigParameters.User, My.Settings.Sap_User)
+                parms.Add(RfcConfigParameters.Password, My.Settings.sap_Pass)
                 parms.Add(RfcConfigParameters.Client, "700")
                 parms.Add(RfcConfigParameters.Language, "EN")
                 parms.Add(RfcConfigParameters.PoolSize, "5")
@@ -61,22 +61,6 @@ Public Class SAPClass
         Return False
     End Function
 
-    Public Property SAPUser() As String
-        Get
-            Return SAPUser
-        End Get
-        Set(value As String)
-            SAPUser = value
-        End Set
-    End Property
 
-    Public Property SAPPass() As String
-        Get
-            Return SAPPass
-        End Get
-        Set(value As String)
-            SAPPass = value
-        End Set
-    End Property
 
 End Class

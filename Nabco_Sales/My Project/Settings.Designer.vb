@@ -134,6 +134,30 @@ Namespace My
                 Me("CustomerDATA") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Sap_User() As String
+            Get
+                Return CType(Me("Sap_User"),String)
+            End Get
+            Set
+                Me("Sap_User") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property sap_Pass() As String
+            Get
+                Return CType(Me("sap_Pass"),String)
+            End Get
+            Set
+                Me("sap_Pass") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

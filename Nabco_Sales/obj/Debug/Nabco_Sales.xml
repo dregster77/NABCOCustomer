@@ -77,6 +77,11 @@ Nabco_Sales
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Nabco_Sales.My.Resources.Resources.inbox_upload">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Nabco_Sales.My.Resources.Resources.LHI_LHI">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -113,6 +118,11 @@ Nabco_Sales
 </summary>
 </member>
 <member name="P:Nabco_Sales.My.Resources.Resources.LHO_RHO">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Nabco_Sales.My.Resources.Resources.lorry">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -182,12 +192,22 @@ Nabco_Sales
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Nabco_Sales.My.Resources.Resources.script">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Nabco_Sales.My.Resources.Resources.sidecheck">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Nabco_Sales.My.Resources.Resources.sideload">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Nabco_Sales.My.Resources.Resources.tag_blue_add">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -55,6 +55,10 @@ Public Class frmLogin
 
             errorPop.Clear()
         End If
+
+        'add logic to get user information from sap
+        'SAPClass.SAPUser = "idreger"
+
         frmHome.Login()
 
         Me.Close()
@@ -76,6 +80,7 @@ Public Class frmLogin
         autopop()
     End Sub
 
+    'fortesting purpose will remove later
     Private Sub autopop()
         txtUserName.Text = "idreger"
         txtPassword.Text = "id2020"

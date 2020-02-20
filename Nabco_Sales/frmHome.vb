@@ -16,13 +16,14 @@ Public Class frmHome
 
     Public Sub New()
 
-
+        'Set the main form to invisible while it does the loading of the SAP dataTable in the background
         InitializeComponent()
         Me.Visible = False
 
     End Sub
 
     Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles Me.Load
+        'Need to reset the visibility of the form to not visible
         Me.Visible = False
 
         TestSQLConnection()
@@ -60,12 +61,12 @@ Public Class frmHome
     End Sub
 
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
-        Dim frm As New FrmOrderInfo
+        Dim frm As New frmOrderInfo
         ShowForm(frm)
     End Sub
 
     Private Sub cmdTest_Click(sender As Object, e As EventArgs) Handles cmdTest.Click
-        Dim frm As New frmWaitTest
+        Dim frm As New frmCustomers
         ShowForm(frm)
     End Sub
 #End Region
@@ -81,6 +82,8 @@ Public Class frmHome
         mnuUserSet.Visible = True
         btnLogout.Enabled = True
         pnlHomebtns.Enabled = True
+
+
     End Sub
 
     Public Sub Logoff()

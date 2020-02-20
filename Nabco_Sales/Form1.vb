@@ -1,4 +1,5 @@
 ﻿Imports Nabco_Sales.SQLMod
+Imports System.ComponentModel
 Imports System.IO
 
 Public Class Form1
@@ -54,5 +55,16 @@ Public Class Form1
         End If
 
 
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
+
+        TestSQLConnection()
+        My.Settings.Sap_User = "idreger"
+        LoadGridLayout(RadGridView1, Me.Name)
+    End Sub
+
+    Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        SaveGridLayout(RadGridView1, Me.Name)
     End Sub
 End Class
