@@ -26,7 +26,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -66,6 +66,7 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\nabcogt_logo_DEr_icon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="sapnco, Version=3.0.0.42, Culture=neutral, PublicKeyToken=50436dca5c7f7d23, processorArchitecture=AMD64">
@@ -123,16 +124,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmLoading.Designer.vb">
+      <DependentUpon>frmLoading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoading.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmOrderInfo.Designer.vb">
       <DependentUpon>frmOrderInfo.vb</DependentUpon>
     </Compile>
     <Compile Include="frmOrderInfo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmWaitTest.Designer.vb">
+    <Compile Include="OldForms\frmWaitTest.Designer.vb">
       <DependentUpon>frmWaitTest.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmWaitTest.vb">
+    <Compile Include="OldForms\frmWaitTest.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmWait.Designer.vb">
@@ -148,12 +155,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IFfcTableExtension.vb" />
-    <Compile Include="Program.vb" />
+    <Compile Include="OldForms\Program.vb" />
     <Compile Include="SAPClass.vb" />
-    <Compile Include="frmSplash.Designer.vb">
+    <Compile Include="OldForms\frmSplash.Designer.vb">
       <DependentUpon>frmSplash.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSplash.vb">
+    <Compile Include="OldForms\frmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TestSQLControl.vb" />
@@ -222,10 +235,13 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOrderInfo.resx">
       <DependentUpon>frmOrderInfo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmWaitTest.resx">
+    <EmbeddedResource Include="OldForms\frmWaitTest.resx">
       <DependentUpon>frmWaitTest.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWait.resx">
@@ -260,8 +276,11 @@
     <EmbeddedResource Include="frmCustomers.resx">
       <DependentUpon>frmCustomers.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSplash.resx">
+    <EmbeddedResource Include="OldForms\frmSplash.resx">
       <DependentUpon>frmSplash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -284,6 +303,7 @@
     <None Include="Resources\script.png" />
     <None Include="Resources\lorry.png" />
     <None Include="Resources\inbox_upload.png" />
+    <None Include="Resources\google_custom_search.png" />
     <Content Include="Resources\nabcogt_logo_DEr_icon.ico" />
     <None Include="Resources\page_save.png" />
     <None Include="Resources\LHI-CLHI.png" />

@@ -9,11 +9,48 @@ Public Class SAPClass
     Public Shared Property CustomerData As DataTable = New DataTable()
     Public Event ConfigurationChanged As RfcDestinationManager.ConfigurationChangeHandler Implements IDestinationConfiguration.ConfigurationChanged
 
-    Public Sub SetCustomerData()
+    Public Sub GetCustomerData()
         Dim func As IRfcFunction = REPO.CreateFunction("/SAPXCQM/GET_CUSTOMERS")
         func.Invoke(RFCDEST)
-        My.Settings.CustomerDATA = ToDataTable(func.GetTable("T_Customer"), "CustomerData")
+        My.Settings.CustomerDATARaw = ToDataTable(func.GetTable("T_Customer"), "CustomerData")
     End Sub
+
+    Public Shared Function CleanCustomerData()
+        Dim dt As DataTable = My.Settings.CustomerDATARaw
+        'My.Settings.CustomerDataClean = My.Settings.CustomerDATARaw
+        '   Dim temp As New DataTable
+        ' temp = dt
+        dt = My.Settings.CustomerDATARaw
+        Dim colsToDelete As List(Of DataColumn) = New List(Of DataColumn)()
+        For Each col As DataColumn In dt.Columns
+            Select Case col.ColumnName.ToUpper
+                Case "CUSTNR"
+                    col.Caption = "Customer Number"
+                Case "COMPANYNAME"
+                    col.Caption = "Company Name"
+                Case "CITY"
+                    col.Caption = "City"
+                Case "STREET"
+                    col.Caption = "Street"
+                Case "ZIP"
+                    col.Caption = "ZIP"
+                Case "COUNTRY"
+                    col.Caption = "Country"
+                Case "REGION"
+                    col.Caption = "Region"
+                Case "TELEF1"
+                    col.Caption = "Telephone Number"
+                Case Else
+                    colsToDelete.Add(col)
+            End Select
+        Next
+
+        For Each col In colsToDelete
+            dt.Columns.Remove(col)
+        Next
+        Return dt
+
+    End Function
 
     Public Sub TestSAPConnection()
         Try

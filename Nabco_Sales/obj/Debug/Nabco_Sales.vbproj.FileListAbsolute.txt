@@ -37,3 +37,5 @@ C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Telerik.WinContr
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Telerik.WinControls.UI.xml
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.vbprojAssemblyReference.cache
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmCustomers.resources
+C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmLoading.resources
+C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.SplashScreen1.resources

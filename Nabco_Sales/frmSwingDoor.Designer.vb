@@ -268,7 +268,7 @@ Partial Class frmSwingDoor
         'lblColor
         '
         Me.lblColor.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblColor.Location = New System.Drawing.Point(10, 97)
+        Me.lblColor.Location = New System.Drawing.Point(10, 99)
         Me.lblColor.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
         Me.lblColor.Name = "lblColor"
         Me.lblColor.Size = New System.Drawing.Size(115, 27)

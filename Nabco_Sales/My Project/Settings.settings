@@ -30,13 +30,16 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Client=700;Host=172.26.3.13;Password=Ian1234;Stored Procedure Filter=BAPI_customer_getlist;System Id=UTA;System Number=00;User=idreger</Value>
     </Setting>
-    <Setting Name="CustomerDATA" Type="System.Data.DataTable" Scope="User">
+    <Setting Name="CustomerDATARaw" Type="System.Data.DataTable" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="Sap_User" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="sap_Pass" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CustomerDataClean" Type="System.Data.DataTable" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

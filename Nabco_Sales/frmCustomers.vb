@@ -22,7 +22,7 @@ Public Class frmCustomers
     Private Function ConvertToRead() As DataTable
         '   Dim temp As New DataTable
         ' temp = dt
-        dt = My.Settings.CustomerDATA
+        dt = My.Settings.CustomerDATARaw
         Dim colsToDelete As List(Of DataColumn) = New List(Of DataColumn)()
         For Each col As DataColumn In dt.Columns
             Select Case col.ColumnName.ToUpper

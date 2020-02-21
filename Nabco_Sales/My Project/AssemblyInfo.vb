@@ -8,12 +8,12 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Nabco_Sales")>
+<Assembly: AssemblyTitle("Nabco Sales")>
 <Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("Nabco Entrances")>
-<Assembly: AssemblyProduct("Nabco_Sales")>
+<Assembly: AssemblyCompany("© 2020 NABCO Entrances Inc")>
+<Assembly: AssemblyProduct("Nabco Sales")>
 <Assembly: AssemblyCopyright("Copyright ©  2020")>
-<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyTrademark("Designed by JiveTurkey Solutions")>
 
 <Assembly: ComVisible(False)>
 

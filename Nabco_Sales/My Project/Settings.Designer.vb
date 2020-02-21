@@ -126,12 +126,12 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
-        Public Property CustomerDATA() As Global.System.Data.DataTable
+        Public Property CustomerDATARaw() As Global.System.Data.DataTable
             Get
-                Return CType(Me("CustomerDATA"),Global.System.Data.DataTable)
+                Return CType(Me("CustomerDATARaw"),Global.System.Data.DataTable)
             End Get
             Set
-                Me("CustomerDATA") = value
+                Me("CustomerDATARaw") = value
             End Set
         End Property
         
@@ -156,6 +156,17 @@ Namespace My
             End Get
             Set
                 Me("sap_Pass") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute()>  _
+        Public Property CustomerDataClean() As Global.System.Data.DataTable
+            Get
+                Return CType(Me("CustomerDataClean"),Global.System.Data.DataTable)
+            End Get
+            Set
+                Me("CustomerDataClean") = value
             End Set
         End Property
     End Class

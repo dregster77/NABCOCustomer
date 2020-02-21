@@ -10,8 +10,6 @@ Public Class frmHome
     Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
     Public SAP As New SAPClass
 
-
-
 #Region "Control Code"
 
     Public Sub New()
@@ -22,14 +20,17 @@ Public Class frmHome
 
     End Sub
 
+    'Tests the connection with SQL, SAP and pulls information from SAP that is needed
     Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles Me.Load
         'Need to reset the visibility of the form to not visible
         Me.Visible = False
-
+        DirectCast(My.Application.SplashScreen, frmLoading).UpdateLoadingStatus("Checking SQL Connection...")
         TestSQLConnection()
+        DirectCast(My.Application.SplashScreen, frmLoading).UpdateLoadingStatus("Checking SAP Connection...")
         SAP.TestSAPConnection()
-        SAP.SetCustomerData()
-
+        DirectCast(My.Application.SplashScreen, frmLoading).UpdateLoadingStatus("Retrieving SAP Information...")
+        SAP.GetCustomerData()
+        Me.BringToFront()
     End Sub
 
     'Fires once the data has been pulled from SAP and kept in memory of the application 
@@ -39,6 +40,7 @@ Public Class frmHome
         Me.WindowState = FormWindowState.Maximized
         pnlMain.MdiChildrenDockType = Telerik.WinControls.UI.Docking.DockType.ToolWindow
         PopLoginForm()
+        Me.BringToFront()
     End Sub
 
 
