@@ -130,6 +130,12 @@
     <Compile Include="frmLoading.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmOrderInfoBackup.Designer.vb">
+      <DependentUpon>frmOrderInfoBackup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOrderInfoBackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmOrderInfo.Designer.vb">
       <DependentUpon>frmOrderInfo.vb</DependentUpon>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
       <DependentUpon>frmLoading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOrderInfoBackup.resx">
+      <DependentUpon>frmOrderInfoBackup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOrderInfo.resx">
       <DependentUpon>frmOrderInfo.vb</DependentUpon>

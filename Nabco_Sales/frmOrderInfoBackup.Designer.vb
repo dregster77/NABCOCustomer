@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmOrderInfo
+Partial Class frmOrderInfoBackup
     Inherits Telerik.WinControls.UI.RadForm
 
     'Form overrides dispose to clean up the component list.
@@ -53,6 +53,7 @@ Partial Class frmOrderInfo
         Me.btnShipTP = New Telerik.WinControls.UI.RadButton()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.ddlDistChannelShipTP = New Telerik.WinControls.UI.RadDropDownList()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -72,6 +73,7 @@ Partial Class frmOrderInfo
         Me.btnSoldTP = New Telerik.WinControls.UI.RadButton()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.ddlDistChannelSoldTP = New Telerik.WinControls.UI.RadDropDownList()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.lblModel = New System.Windows.Forms.Label()
@@ -90,8 +92,7 @@ Partial Class frmOrderInfo
         Me.btnCancel = New Telerik.WinControls.UI.RadButton()
         Me.btnEdit = New Telerik.WinControls.UI.RadButton()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
-        Me.txtDistShipTP = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.txtDistSoldTP = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.ddlCustomers = New Telerik.WinControls.UI.RadDropDownList()
         CType(Me.pvOrderInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvOrderInfo.SuspendLayout()
         Me.pvpOrderDetails.SuspendLayout()
@@ -105,6 +106,7 @@ Partial Class frmOrderInfo
         CType(Me.txtAddr1ShipTP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCustShipTP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnShipTP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlDistChannelShipTP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.chkMatchShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
@@ -116,6 +118,7 @@ Partial Class frmOrderInfo
         CType(Me.txtAddr1SoldTP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCustSoldTP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSoldTP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlDistChannelSoldTP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddlSalesOffice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvpDocuments.SuspendLayout()
         CType(Me.RadGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,8 +134,7 @@ Partial Class frmOrderInfo
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDistShipTP, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtDistSoldTP, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlCustomers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -148,7 +150,7 @@ Partial Class frmOrderInfo
         Me.pvOrderInfo.Location = New System.Drawing.Point(0, 0)
         Me.pvOrderInfo.Name = "pvOrderInfo"
         Me.pvOrderInfo.SelectedPage = Me.pvpOrderDetails
-        Me.pvOrderInfo.Size = New System.Drawing.Size(1162, 1061)
+        Me.pvOrderInfo.Size = New System.Drawing.Size(1146, 1001)
         Me.pvOrderInfo.TabIndex = 0
         Me.pvOrderInfo.ViewMode = Telerik.WinControls.UI.PageViewMode.NavigationView
         CType(Me.pvOrderInfo.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).DisplayMode = Telerik.WinControls.UI.NavigationViewDisplayModes.Expanded
@@ -165,7 +167,7 @@ Partial Class frmOrderInfo
         Me.pvpOrderDetails.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
         Me.pvpOrderDetails.Location = New System.Drawing.Point(47, 30)
         Me.pvpOrderDetails.Name = "pvpOrderDetails"
-        Me.pvpOrderDetails.Size = New System.Drawing.Size(1114, 1030)
+        Me.pvpOrderDetails.Size = New System.Drawing.Size(1098, 970)
         Me.pvpOrderDetails.Text = "Sales and Shipping Details"
         Me.pvpOrderDetails.ToolTipText = "Add Sales Office and Shipping Information"
         '
@@ -174,7 +176,6 @@ Partial Class frmOrderInfo
         Me.RadGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadGroupBox2.Controls.Add(Me.txtDistShipTP)
         Me.RadGroupBox2.Controls.Add(Me.txtCustNoShipTP)
         Me.RadGroupBox2.Controls.Add(Me.txtZipShipTP)
         Me.RadGroupBox2.Controls.Add(Me.txtCityShipTP)
@@ -189,6 +190,7 @@ Partial Class frmOrderInfo
         Me.RadGroupBox2.Controls.Add(Me.btnShipTP)
         Me.RadGroupBox2.Controls.Add(Me.Label13)
         Me.RadGroupBox2.Controls.Add(Me.Label14)
+        Me.RadGroupBox2.Controls.Add(Me.ddlDistChannelShipTP)
         Me.RadGroupBox2.Controls.Add(Me.Label15)
         Me.RadGroupBox2.Controls.Add(Me.Label16)
         Me.RadGroupBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -196,14 +198,13 @@ Partial Class frmOrderInfo
         Me.RadGroupBox2.HeaderText = "Ship To Party Info"
         Me.RadGroupBox2.Location = New System.Drawing.Point(9, 316)
         Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(1057, 231)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(1041, 231)
         Me.RadGroupBox2.TabIndex = 21
         Me.RadGroupBox2.Text = "Ship To Party Info"
         '
         'txtCustNoShipTP
         '
         Me.txtCustNoShipTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCustNoShipTP.Enabled = False
         Me.txtCustNoShipTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtCustNoShipTP.Location = New System.Drawing.Point(158, 30)
         Me.txtCustNoShipTP.Name = "txtCustNoShipTP"
@@ -213,17 +214,15 @@ Partial Class frmOrderInfo
         'txtZipShipTP
         '
         Me.txtZipShipTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtZipShipTP.Enabled = False
         Me.txtZipShipTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtZipShipTP.Location = New System.Drawing.Point(535, 173)
         Me.txtZipShipTP.Name = "txtZipShipTP"
-        Me.txtZipShipTP.Size = New System.Drawing.Size(151, 30)
+        Me.txtZipShipTP.Size = New System.Drawing.Size(150, 30)
         Me.txtZipShipTP.TabIndex = 41
         '
         'txtCityShipTP
         '
         Me.txtCityShipTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCityShipTP.Enabled = False
         Me.txtCityShipTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtCityShipTP.Location = New System.Drawing.Point(158, 138)
         Me.txtCityShipTP.Name = "txtCityShipTP"
@@ -233,7 +232,6 @@ Partial Class frmOrderInfo
         'txtCountryShipTP
         '
         Me.txtCountryShipTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCountryShipTP.Enabled = False
         Me.txtCountryShipTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtCountryShipTP.Location = New System.Drawing.Point(158, 173)
         Me.txtCountryShipTP.Name = "txtCountryShipTP"
@@ -243,17 +241,15 @@ Partial Class frmOrderInfo
         'txtRegionShipTP
         '
         Me.txtRegionShipTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtRegionShipTP.Enabled = False
         Me.txtRegionShipTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtRegionShipTP.Location = New System.Drawing.Point(535, 138)
         Me.txtRegionShipTP.Name = "txtRegionShipTP"
-        Me.txtRegionShipTP.Size = New System.Drawing.Size(151, 30)
+        Me.txtRegionShipTP.Size = New System.Drawing.Size(150, 30)
         Me.txtRegionShipTP.TabIndex = 38
         '
         'txtAddr1ShipTP
         '
         Me.txtAddr1ShipTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtAddr1ShipTP.Enabled = False
         Me.txtAddr1ShipTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtAddr1ShipTP.Location = New System.Drawing.Point(158, 102)
         Me.txtAddr1ShipTP.Name = "txtAddr1ShipTP"
@@ -263,7 +259,6 @@ Partial Class frmOrderInfo
         'txtCustShipTP
         '
         Me.txtCustShipTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCustShipTP.Enabled = False
         Me.txtCustShipTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtCustShipTP.Location = New System.Drawing.Point(158, 66)
         Me.txtCustShipTP.Name = "txtCustShipTP"
@@ -322,8 +317,7 @@ Partial Class frmOrderInfo
         Me.btnShipTP.Name = "btnShipTP"
         Me.btnShipTP.Size = New System.Drawing.Size(112, 64)
         Me.btnShipTP.TabIndex = 18
-        Me.btnShipTP.Text = "Find" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Customer" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.btnShipTP.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnShipTP.Text = "Clear"
         '
         'Label13
         '
@@ -346,6 +340,17 @@ Partial Class frmOrderInfo
         Me.Label14.TabIndex = 23
         Me.Label14.Text = "Name:"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ddlDistChannelShipTP
+        '
+        Me.ddlDistChannelShipTP.AutoSize = False
+        Me.ddlDistChannelShipTP.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ddlDistChannelShipTP.Location = New System.Drawing.Point(449, 30)
+        Me.ddlDistChannelShipTP.Name = "ddlDistChannelShipTP"
+        Me.ddlDistChannelShipTP.ReadOnly = True
+        Me.ddlDistChannelShipTP.Size = New System.Drawing.Size(237, 30)
+        Me.ddlDistChannelShipTP.TabIndex = 22
+        Me.ddlDistChannelShipTP.Text = "RadDropDownList1"
         '
         'Label15
         '
@@ -393,21 +398,22 @@ Partial Class frmOrderInfo
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadGroupBox1.Controls.Add(Me.txtDistSoldTP)
+        Me.RadGroupBox1.Controls.Add(Me.ddlCustomers)
         Me.RadGroupBox1.Controls.Add(Me.txtCustNoSoldTP)
         Me.RadGroupBox1.Controls.Add(Me.txtZipSoldTP)
         Me.RadGroupBox1.Controls.Add(Me.txtCitySoldTP)
         Me.RadGroupBox1.Controls.Add(Me.txtCountrySoldTP)
         Me.RadGroupBox1.Controls.Add(Me.txtRegionSoldTP)
-        Me.RadGroupBox1.Controls.Add(Me.btnSoldTP)
         Me.RadGroupBox1.Controls.Add(Me.txtAddr1SoldTP)
         Me.RadGroupBox1.Controls.Add(Me.txtCustSoldTP)
         Me.RadGroupBox1.Controls.Add(Me.Label8)
         Me.RadGroupBox1.Controls.Add(Me.Label7)
         Me.RadGroupBox1.Controls.Add(Me.Label6)
         Me.RadGroupBox1.Controls.Add(Me.Label5)
+        Me.RadGroupBox1.Controls.Add(Me.btnSoldTP)
         Me.RadGroupBox1.Controls.Add(Me.Label4)
         Me.RadGroupBox1.Controls.Add(Me.Label3)
+        Me.RadGroupBox1.Controls.Add(Me.ddlDistChannelSoldTP)
         Me.RadGroupBox1.Controls.Add(Me.Label2)
         Me.RadGroupBox1.Controls.Add(Me.Label22)
         Me.RadGroupBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -415,14 +421,13 @@ Partial Class frmOrderInfo
         Me.RadGroupBox1.HeaderText = "Sold To Party Info"
         Me.RadGroupBox1.Location = New System.Drawing.Point(9, 43)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(1057, 231)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(1041, 231)
         Me.RadGroupBox1.TabIndex = 17
         Me.RadGroupBox1.Text = "Sold To Party Info"
         '
         'txtCustNoSoldTP
         '
         Me.txtCustNoSoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCustNoSoldTP.Enabled = False
         Me.txtCustNoSoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtCustNoSoldTP.Location = New System.Drawing.Point(158, 30)
         Me.txtCustNoSoldTP.Name = "txtCustNoSoldTP"
@@ -432,17 +437,15 @@ Partial Class frmOrderInfo
         'txtZipSoldTP
         '
         Me.txtZipSoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtZipSoldTP.Enabled = False
         Me.txtZipSoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtZipSoldTP.Location = New System.Drawing.Point(535, 173)
         Me.txtZipSoldTP.Name = "txtZipSoldTP"
-        Me.txtZipSoldTP.Size = New System.Drawing.Size(151, 30)
+        Me.txtZipSoldTP.Size = New System.Drawing.Size(150, 30)
         Me.txtZipSoldTP.TabIndex = 41
         '
         'txtCitySoldTP
         '
         Me.txtCitySoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCitySoldTP.Enabled = False
         Me.txtCitySoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtCitySoldTP.Location = New System.Drawing.Point(158, 138)
         Me.txtCitySoldTP.Name = "txtCitySoldTP"
@@ -452,7 +455,6 @@ Partial Class frmOrderInfo
         'txtCountrySoldTP
         '
         Me.txtCountrySoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCountrySoldTP.Enabled = False
         Me.txtCountrySoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtCountrySoldTP.Location = New System.Drawing.Point(158, 173)
         Me.txtCountrySoldTP.Name = "txtCountrySoldTP"
@@ -462,17 +464,15 @@ Partial Class frmOrderInfo
         'txtRegionSoldTP
         '
         Me.txtRegionSoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtRegionSoldTP.Enabled = False
         Me.txtRegionSoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtRegionSoldTP.Location = New System.Drawing.Point(535, 138)
         Me.txtRegionSoldTP.Name = "txtRegionSoldTP"
-        Me.txtRegionSoldTP.Size = New System.Drawing.Size(151, 30)
+        Me.txtRegionSoldTP.Size = New System.Drawing.Size(150, 30)
         Me.txtRegionSoldTP.TabIndex = 38
         '
         'txtAddr1SoldTP
         '
         Me.txtAddr1SoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtAddr1SoldTP.Enabled = False
         Me.txtAddr1SoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtAddr1SoldTP.Location = New System.Drawing.Point(158, 102)
         Me.txtAddr1SoldTP.Name = "txtAddr1SoldTP"
@@ -482,7 +482,6 @@ Partial Class frmOrderInfo
         'txtCustSoldTP
         '
         Me.txtCustSoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCustSoldTP.Enabled = False
         Me.txtCustSoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtCustSoldTP.Location = New System.Drawing.Point(158, 66)
         Me.txtCustSoldTP.Name = "txtCustSoldTP"
@@ -541,9 +540,7 @@ Partial Class frmOrderInfo
         Me.btnSoldTP.Name = "btnSoldTP"
         Me.btnSoldTP.Size = New System.Drawing.Size(112, 64)
         Me.btnSoldTP.TabIndex = 18
-        Me.btnSoldTP.Text = "Find " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Customer"
-        Me.btnSoldTP.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSoldTP.TextWrap = True
+        Me.btnSoldTP.Text = "Clear "
         '
         'Label4
         '
@@ -566,6 +563,17 @@ Partial Class frmOrderInfo
         Me.Label3.TabIndex = 23
         Me.Label3.Text = "Name:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'ddlDistChannelSoldTP
+        '
+        Me.ddlDistChannelSoldTP.AutoSize = False
+        Me.ddlDistChannelSoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ddlDistChannelSoldTP.Location = New System.Drawing.Point(449, 30)
+        Me.ddlDistChannelSoldTP.Name = "ddlDistChannelSoldTP"
+        Me.ddlDistChannelSoldTP.ReadOnly = True
+        Me.ddlDistChannelSoldTP.Size = New System.Drawing.Size(237, 30)
+        Me.ddlDistChannelSoldTP.TabIndex = 22
+        Me.ddlDistChannelSoldTP.Text = "RadDropDownList1"
         '
         'Label2
         '
@@ -812,31 +820,20 @@ Partial Class frmOrderInfo
         Me.RadGridView1.Size = New System.Drawing.Size(991, 489)
         Me.RadGridView1.TabIndex = 0
         '
-        'txtDistShipTP
+        'ddlCustomers
         '
-        Me.txtDistShipTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtDistShipTP.Enabled = False
-        Me.txtDistShipTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.txtDistShipTP.Location = New System.Drawing.Point(449, 30)
-        Me.txtDistShipTP.Name = "txtDistShipTP"
-        Me.txtDistShipTP.Size = New System.Drawing.Size(237, 30)
-        Me.txtDistShipTP.TabIndex = 44
-        '
-        'txtDistSoldTP
-        '
-        Me.txtDistSoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtDistSoldTP.Enabled = False
-        Me.txtDistSoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.txtDistSoldTP.Location = New System.Drawing.Point(449, 30)
-        Me.txtDistSoldTP.Name = "txtDistSoldTP"
-        Me.txtDistSoldTP.Size = New System.Drawing.Size(237, 30)
-        Me.txtDistSoldTP.TabIndex = 45
+        Me.ddlCustomers.AutoSize = False
+        Me.ddlCustomers.DataMember = "COMPANYNAME"
+        Me.ddlCustomers.Location = New System.Drawing.Point(715, 135)
+        Me.ddlCustomers.Name = "ddlCustomers"
+        Me.ddlCustomers.Size = New System.Drawing.Size(202, 30)
+        Me.ddlCustomers.TabIndex = 43
         '
         'frmOrderInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1162, 1061)
+        Me.ClientSize = New System.Drawing.Size(1146, 1001)
         Me.Controls.Add(Me.pvOrderInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmOrderInfo"
@@ -859,6 +856,7 @@ Partial Class frmOrderInfo
         CType(Me.txtAddr1ShipTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCustShipTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnShipTP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlDistChannelShipTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.chkMatchShip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
@@ -870,6 +868,7 @@ Partial Class frmOrderInfo
         CType(Me.txtAddr1SoldTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCustSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlDistChannelSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddlSalesOffice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pvpDocuments.ResumeLayout(False)
         CType(Me.RadGridView2.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
@@ -885,8 +884,7 @@ Partial Class frmOrderInfo
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDistShipTP, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtDistSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlCustomers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -917,6 +915,7 @@ Partial Class frmOrderInfo
     Friend WithEvents btnSoldTP As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label22 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents ddlDistChannelSoldTP As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Label4 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
@@ -937,6 +936,7 @@ Partial Class frmOrderInfo
     Friend WithEvents btnShipTP As Telerik.WinControls.UI.RadButton
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
+    Friend WithEvents ddlDistChannelShipTP As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents txtZipSoldTP As Telerik.WinControls.UI.RadTextBoxControl
@@ -946,7 +946,6 @@ Partial Class frmOrderInfo
     Friend WithEvents txtAddr1SoldTP As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents txtCustNoShipTP As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents txtCustNoSoldTP As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents txtDistShipTP As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents txtDistSoldTP As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents ddlCustomers As Telerik.WinControls.UI.RadDropDownList
 End Class
 

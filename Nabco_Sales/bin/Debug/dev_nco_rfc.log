@@ -276,3 +276,103 @@ RETURN CODE: 20
    at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
    at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
    at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+
+**** Log file opened by process 6312 at 2020-02-24 08:35:19 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.22.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Nabco_Sales.exe
+Working directory: C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1218
+Hostname: WI1DT1335, IP address: 172.31.197.248, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-02-24 08:35:19.972 [Thread 1]
+[ASHOST=172.26.3.13 SYSNR=00 SYSID=UTA USER=idreger PASSWD=******** CLIENT=700 LANG=EN POOL_SIZE=5 MAX_POOL_SIZE=10 IDLE_TIMEOUT=600 NAME=NabTest]
+SAP.Middleware.Connector.RfcInvalidStateException: metadata for function Z_GET_CUSTOMERS not available: FU_NOT_FOUND: Function module Z_GET_CUSTOMERS does not exist
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataNew(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+>> Error entry 2020-02-24 08:35:19.989 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidStateException: metadata for function Z_GET_CUSTOMERS not available: FU_NOT_FOUND: Function module Z_GET_CUSTOMERS does not exist
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataNew(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.CreateFunction(String name)
+
+**** Log file opened by process 1664 at 2020-02-24 08:36:09 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.22.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Nabco_Sales.exe
+Working directory: C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1218
+Hostname: WI1DT1335, IP address: 172.31.197.248, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-02-24 08:36:09.303 [Thread 1]
+[ASHOST=172.26.3.13 SYSNR=00 SYSID=UTA USER=idreger PASSWD=******** CLIENT=700 LANG=EN POOL_SIZE=5 MAX_POOL_SIZE=10 IDLE_TIMEOUT=600 NAME=NabTest]
+SAP.Middleware.Connector.RfcInvalidStateException: metadata for function /Z_GET_CUSTOMERS not available: FU_NOT_FOUND: Function module /Z_GET_CUSTOMERS does not exist
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataNew(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+>> Error entry 2020-02-24 08:36:09.310 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidStateException: metadata for function /Z_GET_CUSTOMERS not available: FU_NOT_FOUND: Function module /Z_GET_CUSTOMERS does not exist
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataNew(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.CreateFunction(String name)
+
+**** Log file opened by process 8760 at 2020-02-24 09:15:30 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.22.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Nabco_Sales.exe
+Working directory: C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1218
+Hostname: WI1DT1335, IP address: 172.31.197.248, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-02-24 09:15:30.061 [Thread 1]
+[ASHOST=172.26.3.13 SYSNR=00 SYSID=UTA USER=idreger PASSWD=******** CLIENT=700 LANG=EN POOL_SIZE=5 MAX_POOL_SIZE=10 IDLE_TIMEOUT=600 NAME=NabTest]
+SAP.Middleware.Connector.RfcInvalidStateException: metadata for function /Z_GET_CUSTOMERS not available: FU_NOT_FOUND: Function module /Z_GET_CUSTOMERS does not exist
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataNew(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+>> Error entry 2020-02-24 09:15:30.067 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidStateException: metadata for function /Z_GET_CUSTOMERS not available: FU_NOT_FOUND: Function module /Z_GET_CUSTOMERS does not exist
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataNew(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.CreateFunction(String name)
+
+**** Log file opened by process 3980 at 2020-02-24 09:16:17 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.22.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Nabco_Sales.exe
+Working directory: C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1218
+Hostname: WI1DT1335, IP address: 172.31.197.248, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-02-24 09:16:17.616 [Thread 1]
+[ASHOST=172.26.3.13 SYSNR=00 SYSID=UTA USER=idreger PASSWD=******** CLIENT=700 LANG=EN POOL_SIZE=5 MAX_POOL_SIZE=10 IDLE_TIMEOUT=600 NAME=NabTest]
+SAP.Middleware.Connector.RfcInvalidStateException: metadata for function /Z_GET_CUSTOMERS not available: FU_NOT_FOUND: Function module /Z_GET_CUSTOMERS does not exist
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataNew(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+>> Error entry 2020-02-24 09:16:17.623 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidStateException: metadata for function /Z_GET_CUSTOMERS not available: FU_NOT_FOUND: Function module /Z_GET_CUSTOMERS does not exist
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadataNew(String name)
+   at SAP.Middleware.Connector.RfcRepository.LookupFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.GetFunctionMetadata(String name)
+   at SAP.Middleware.Connector.RfcRepository.CreateFunction(String name)

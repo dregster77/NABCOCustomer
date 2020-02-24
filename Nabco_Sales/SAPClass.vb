@@ -10,16 +10,15 @@ Public Class SAPClass
     Public Event ConfigurationChanged As RfcDestinationManager.ConfigurationChangeHandler Implements IDestinationConfiguration.ConfigurationChanged
 
     Public Sub GetCustomerData()
-        Dim func As IRfcFunction = REPO.CreateFunction("/SAPXCQM/GET_CUSTOMERS")
+        ' Dim func As IRfcFunction = REPO.CreateFunction("/SAPXCQM/GET_CUSTOMERS")
+        Dim func As IRfcFunction = REPO.CreateFunction("Z_GET_CUSTOMERS ")
         func.Invoke(RFCDEST)
         My.Settings.CustomerDATARaw = ToDataTable(func.GetTable("T_Customer"), "CustomerData")
+
     End Sub
 
     Public Shared Function CleanCustomerData()
         Dim dt As DataTable = My.Settings.CustomerDATARaw
-        'My.Settings.CustomerDataClean = My.Settings.CustomerDATARaw
-        '   Dim temp As New DataTable
-        ' temp = dt
         dt = My.Settings.CustomerDATARaw
         Dim colsToDelete As List(Of DataColumn) = New List(Of DataColumn)()
         For Each col As DataColumn In dt.Columns
@@ -40,6 +39,8 @@ Public Class SAPClass
                     col.Caption = "Region"
                 Case "TELEF1"
                     col.Caption = "Telephone Number"
+                Case "VTWEG"
+                    col.Caption = "Dist Channel"
                 Case Else
                     colsToDelete.Add(col)
             End Select
