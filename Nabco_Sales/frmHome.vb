@@ -63,12 +63,12 @@ Public Class frmHome
     End Sub
 
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
-        Dim frm As New frmOrderInfo
+        Dim frm As New frmOrderInfoOld
         ShowForm(frm)
     End Sub
 
     Private Sub cmdTest_Click(sender As Object, e As EventArgs) Handles cmdTest.Click
-        Dim frm As New frmCustomers
+        Dim frm As New frmOrderInfo
         ShowForm(frm)
     End Sub
 #End Region

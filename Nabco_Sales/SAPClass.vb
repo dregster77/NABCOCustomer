@@ -17,11 +17,11 @@ Public Class SAPClass
 
     End Sub
 
-    Public Shared Function CleanCustomerData()
-        Dim dt As DataTable = My.Settings.CustomerDATARaw
-        dt = My.Settings.CustomerDATARaw
+    Public Shared Function CleanCustomerData(ByVal data As DataTable)
+
+
         Dim colsToDelete As List(Of DataColumn) = New List(Of DataColumn)()
-        For Each col As DataColumn In dt.Columns
+        For Each col As DataColumn In data.Columns
             Select Case col.ColumnName.ToUpper
                 Case "CUSTNR"
                     col.Caption = "Customer Number"
@@ -47,9 +47,9 @@ Public Class SAPClass
         Next
 
         For Each col In colsToDelete
-            dt.Columns.Remove(col)
+            data.Columns.Remove(col)
         Next
-        Return dt
+        Return data
 
     End Function
 
