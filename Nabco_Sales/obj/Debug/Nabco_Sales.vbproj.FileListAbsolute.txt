@@ -40,3 +40,4 @@ C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmC
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmLoading.resources
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.SplashScreen1.resources
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.frmOrderInfoOld.resources
+C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.Form2.resources

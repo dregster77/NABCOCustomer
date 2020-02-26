@@ -38,6 +38,8 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.RadCollapsiblePanel1 = New Telerik.WinControls.UI.RadCollapsiblePanel()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
+        Me.txtUser = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.txtu2 = New Telerik.WinControls.UI.RadTextBoxControl()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,6 +47,8 @@ Partial Class Form1
         Me.RadCollapsiblePanel1.PanelContainer.SuspendLayout()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtUser, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtu2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -167,11 +171,29 @@ Partial Class Form1
         Me.RadGridView1.Size = New System.Drawing.Size(726, 301)
         Me.RadGridView1.TabIndex = 11
         '
+        'txtUser
+        '
+        Me.txtUser.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txtUser.Location = New System.Drawing.Point(39, 124)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(184, 27)
+        Me.txtUser.TabIndex = 12
+        '
+        'txtu2
+        '
+        Me.txtu2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.txtu2.Location = New System.Drawing.Point(39, 168)
+        Me.txtu2.Name = "txtu2"
+        Me.txtu2.Size = New System.Drawing.Size(184, 27)
+        Me.txtu2.TabIndex = 13
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1439, 678)
+        Me.Controls.Add(Me.txtu2)
+        Me.Controls.Add(Me.txtUser)
         Me.Controls.Add(Me.RadGridView1)
         Me.Controls.Add(Me.RadCollapsiblePanel1)
         Me.Controls.Add(Me.Label1)
@@ -190,6 +212,8 @@ Partial Class Form1
         CType(Me.RadCollapsiblePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtUser, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtu2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -207,4 +231,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents RadCollapsiblePanel1 As Telerik.WinControls.UI.RadCollapsiblePanel
     Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents txtUser As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents txtu2 As Telerik.WinControls.UI.RadTextBoxControl
 End Class

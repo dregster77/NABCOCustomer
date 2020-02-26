@@ -4,6 +4,8 @@ Imports System.IO
 Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
 Imports System.Linq
+Imports Telerik.WinControls.Data
+
 Public Class frmOrderInfo
 
 #Region "Form Level"
@@ -13,6 +15,8 @@ Public Class frmOrderInfo
     Private filterDTSold As DataTable
     Private filterDTShip As DataTable
     Private chkToClose As Boolean
+    Private soldFilter As GridViewFilterDescriptorCollection
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -33,8 +37,13 @@ Public Class frmOrderInfo
         Dim navele = TryCast(Me.pvOrderInfo.ViewElement, RadPageViewNavigationViewElement)
         navele.Expand()
         PopDistChannels()
-    End Sub
 
+        PopAutCompleteSold(SAPClass.CleanCustomerData(filterDTSold))
+        RadDropDownList1.AutoCompleteDataSource = My.Settings.CustomerDATARaw
+        RadDropDownList1.AutoCompleteDisplayMember = "COMPANYNAME"
+
+
+    End Sub
 
     Private Sub PopDistChannels()
         Dim view As DataView = My.Settings.CustomerDATARaw.DefaultView
@@ -92,6 +101,7 @@ Public Class frmOrderInfo
             If Results.Count = 1 Then
                 txtCustSoldTP.Text = Results.ElementAt(0)("COMPANYNAME")
                 txtCustNoSoldTP.Text = Results.ElementAt(0)("CUSTNR")
+                '   txtcu
             End If
             gvCustomer.DataSource = SAPClass.CleanCustomerData(Results.CopyToDataTable)
             gvCustomer.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill
@@ -99,7 +109,6 @@ Public Class frmOrderInfo
             MsgBox("No Company matches your search")
         End If
     End Sub
-
 
     Private Sub txtRegionSoldTP_LostFocus(sender As Object, e As EventArgs) Handles txtRegionSoldTP.LostFocus
         FilterSoldParty()
@@ -111,59 +120,90 @@ Public Class frmOrderInfo
 
     Private Sub FilterCustomers(ByVal shipsold As String, ByVal fltrval As String)
         ' Dim res = From filterdtship
+        Dim Results = From ROW In filterDTSold Select ROW
 
-        Dim fltrSTR As String = ""
-
-        If shipsold = "SOLD" Then
-            If txtAddr1SoldTP.Text <> "" Then fltrSTR = " STREET LIKE '" & txtAddr1SoldTP.Text & "' and "
-            If txtCitySoldTP.Text <> "" Then fltrSTR = " CITY LIKE '" & txtCitySoldTP.Text & "' and"
-            If txtCountrySoldTP.Text <> "" Then fltrSTR = " COUNTRY  LIKE '" & txtCountrySoldTP.Text & "' and"
-            If txtCustNoSoldTP.Text <> "" Then fltrSTR = " CUSTNR LIKE '" & txtCustNoSoldTP.Text & "' and"
-            If txtCustSoldTP.Text <> "" Then fltrSTR = " COMPANYNAME LIKE '" & txtCustSoldTP.Text & "' and"
-            If txtRegionSoldTP.Text <> "" Then fltrSTR = " REGION LIKE '" & txtRegionSoldTP.Text & "' and"
-            If txtZipSoldTP.Text <> "" Then fltrSTR = " ZIP LIKE '" & txtZipSoldTP.Text & "' and"
+        If txtCitySoldTP.Text <> "" Then
+            Results = Results.Where(Function(X) X.Field(Of String)("CITY").ToUpper.Contains(txtCitySoldTP.Text.ToUpper))
+        End If
+        If txtRegionSoldTP.Text <> "" Then
+            Results = Results.Where(Function(X) X.Field(Of String)("REGION").ToUpper.Contains(txtRegionSoldTP.Text.ToUpper))
+        End If
+        If txtCountrySoldTP.Text <> "" Then
+            Results = Results.Where(Function(X) X.Field(Of String)("COUNTRY").ToUpper.Contains(txtCountrySoldTP.Text.ToUpper))
+        End If
+        If txtCountrySoldTP.Text <> "" Then
+            Results = Results.Where(Function(X) X.Field(Of String)("COUNTRY").ToUpper.Contains(txtCountrySoldTP.Text.ToUpper))
+        End If
+        If txtZipSoldTP.Text <> "" Then
+            Results = Results.Where(Function(X) X.Field(Of String)("ZIP").ToUpper.Contains(txtZipSoldTP.Text.ToUpper))
+        End If
+        If txtCustSoldTP.Text <> "" Then
+            Results = Results.Where(Function(X) X.Field(Of String)("COMPANYNAME").ToUpper.Contains(txtCustSoldTP.Text.ToUpper))
         End If
 
-        If shipsold = "SHIP" Then
-
-            If txtAddr1ShipTP.Text <> "" Then fltrSTR = " STREET LIKE '" & txtAddr1ShipTP.Text & "' and "
-            If txtCityShipTP.Text <> "" Then fltrSTR = " CITY LIKE '" & txtCityShipTP.Text & "' and"
-            If txtCountryShipTP.Text <> "" Then fltrSTR = " COUNTRY  LIKE '" & txtCountryShipTP.Text & "' and"
-            If txtCustNoShipTP.Text <> "" Then fltrSTR = " CUSTNR LIKE '" & txtCustNoShipTP.Text & "' and"
-            If txtCustShipTP.Text <> "" Then fltrSTR = " COMPANYNAME LIKE '" & txtCustShipTP.Text & "' and"
-            If txtRegionShipTP.Text <> "" Then fltrSTR = " REGION LIKE '" & txtRegionShipTP.Text & "' and"
-            If txtZipShipTP.Text <> "" Then fltrSTR = " ZIP LIKE '" & txtZipShipTP.Text & "' and"
-        End If
-
-        fltrSTR = fltrSTR.Remove(fltrSTR.Length - 4, 4)
-
-        If shipsold = "SHIP" Then
-            filterDTShip.DefaultView.RowFilter = fltrSTR
-            If filterDTShip.DefaultView.Count = 1 Then
-                txtAddr1ShipTP.Text = filterDTShip.DefaultView(0)("STREET")
-                txtCityShipTP.Text = filterDTShip.DefaultView(0)("CITY")
-                txtCountryShipTP.Text = filterDTShip.DefaultView(0)("COUNTRY")
-                txtCustNoShipTP.Text = filterDTShip.DefaultView(0)("CUSTNR")
-                txtRegionShipTP.Text = filterDTShip.DefaultView(0)("REGION")
-                txtZipShipTP.Text = filterDTShip.DefaultView(0)("ZIP")
-                txtCustShipTP.Text = filterDTShip.DefaultView(0)("COMPANYNAME")
-            Else
-                PopAutCompleteShip(filterDTShip)
+        If Results.Count > 0 Then
+            If Results.Count = 1 Then
+                txtCustSoldTP.Text = Results.ElementAt(0)("COMPANYNAME")
+                txtCustNoSoldTP.Text = Results.ElementAt(0)("CUSTNR")
             End If
-        ElseIf shipsold = "SOLD" Then
-            filterDTSold.DefaultView.RowFilter = fltrSTR
-            If filterDTSold.DefaultView.Count = 1 Then
-                txtAddr1SoldTP.Text = filterDTSold.DefaultView(0)("STREET")
-                txtCitySoldTP.Text = filterDTSold.DefaultView(0)("CITY")
-                txtCountrySoldTP.Text = filterDTSold.DefaultView(0)("COUNTRY")
-                txtCustNoSoldTP.Text = filterDTSold.DefaultView(0)("CUSTNR")
-                txtRegionSoldTP.Text = filterDTSold.DefaultView(0)("REGION")
-                txtZipSoldTP.Text = filterDTSold.DefaultView(0)("ZIP")
-                txtCustSoldTP.Text = filterDTSold.DefaultView(0)("COMPANYNAME")
-            Else
-                PopAutCompleteSold(filterDTSold)
-            End If
+            gvCustomer.DataSource = SAPClass.CleanCustomerData(Results.CopyToDataTable)
+            gvCustomer.AutoSizeColumnsMode = GridViewAutoSizeColumnsMode.Fill
+        Else
+            MsgBox("No Company matches your search")
         End If
+        PopAutCompleteSold(SAPClass.CleanCustomerData(Results.CopyToDataTable))
+        'Dim fltrSTR As String = ""
+
+        'If shipsold = "SOLD" Then
+        '    If txtAddr1SoldTP.Text <> "" Then fltrSTR = " STREET LIKE '" & txtAddr1SoldTP.Text & "' and "
+        '    If txtCitySoldTP.Text <> "" Then fltrSTR = " CITY LIKE '" & txtCitySoldTP.Text & "' and"
+        '    If txtCountrySoldTP.Text <> "" Then fltrSTR = " COUNTRY  LIKE '" & txtCountrySoldTP.Text & "' and"
+        '    If txtCustNoSoldTP.Text <> "" Then fltrSTR = " CUSTNR LIKE '" & txtCustNoSoldTP.Text & "' and"
+        '    If txtCustSoldTP.Text <> "" Then fltrSTR = " COMPANYNAME LIKE '" & txtCustSoldTP.Text & "' and"
+        '    If txtRegionSoldTP.Text <> "" Then fltrSTR = " REGION LIKE '" & txtRegionSoldTP.Text & "' and"
+        '    If txtZipSoldTP.Text <> "" Then fltrSTR = " ZIP LIKE '" & txtZipSoldTP.Text & "' and"
+        'End If
+
+        'If shipsold = "SHIP" Then
+
+        '    If txtAddr1ShipTP.Text <> "" Then fltrSTR = " STREET LIKE '" & txtAddr1ShipTP.Text & "' and "
+        '    If txtCityShipTP.Text <> "" Then fltrSTR = " CITY LIKE '" & txtCityShipTP.Text & "' and"
+        '    If txtCountryShipTP.Text <> "" Then fltrSTR = " COUNTRY  LIKE '" & txtCountryShipTP.Text & "' and"
+        '    If txtCustNoShipTP.Text <> "" Then fltrSTR = " CUSTNR LIKE '" & txtCustNoShipTP.Text & "' and"
+        '    If txtCustShipTP.Text <> "" Then fltrSTR = " COMPANYNAME LIKE '" & txtCustShipTP.Text & "' and"
+        '    If txtRegionShipTP.Text <> "" Then fltrSTR = " REGION LIKE '" & txtRegionShipTP.Text & "' and"
+        '    If txtZipShipTP.Text <> "" Then fltrSTR = " ZIP LIKE '" & txtZipShipTP.Text & "' and"
+        'End If
+
+        'fltrSTR = fltrSTR.Remove(fltrSTR.Length - 4, 4)
+
+        'If shipsold = "SHIP" Then
+        '    filterDTShip.DefaultView.RowFilter = fltrSTR
+        '    If filterDTShip.DefaultView.Count = 1 Then
+        '        txtAddr1ShipTP.Text = filterDTShip.DefaultView(0)("STREET")
+        '        txtCityShipTP.Text = filterDTShip.DefaultView(0)("CITY")
+        '        txtCountryShipTP.Text = filterDTShip.DefaultView(0)("COUNTRY")
+        '        txtCustNoShipTP.Text = filterDTShip.DefaultView(0)("CUSTNR")
+        '        txtRegionShipTP.Text = filterDTShip.DefaultView(0)("REGION")
+        '        txtZipShipTP.Text = filterDTShip.DefaultView(0)("ZIP")
+        '        txtCustShipTP.Text = filterDTShip.DefaultView(0)("COMPANYNAME")
+        '    Else
+        '        PopAutCompleteShip(filterDTShip)
+        '    End If
+        'ElseIf shipsold = "SOLD" Then
+        '    filterDTSold.DefaultView.RowFilter = fltrSTR
+        '    If filterDTSold.DefaultView.Count = 1 Then
+        '        txtAddr1SoldTP.Text = filterDTSold.DefaultView(0)("STREET")
+        '        txtCitySoldTP.Text = filterDTSold.DefaultView(0)("CITY")
+        '        txtCountrySoldTP.Text = filterDTSold.DefaultView(0)("COUNTRY")
+        '        txtCustNoSoldTP.Text = filterDTSold.DefaultView(0)("CUSTNR")
+        '        txtRegionSoldTP.Text = filterDTSold.DefaultView(0)("REGION")
+        '        txtZipSoldTP.Text = filterDTSold.DefaultView(0)("ZIP")
+        '        txtCustSoldTP.Text = filterDTSold.DefaultView(0)("COMPANYNAME")
+        '    Else
+        '        PopAutCompleteSold(filterDTSold)
+        '    End If
+        'End If
 
     End Sub
 
@@ -171,7 +211,6 @@ Public Class frmOrderInfo
     'dynamic Txt box filtering
     Private Sub PopAutCompleteSold(ByVal data As DataTable)
         'COMPANYNAME
-
         txtCustSoldTP.AutoCompleteDataSource = data
         txtCustSoldTP.AutoCompleteDisplayMember = "COMPANYNAME"
 
@@ -247,60 +286,42 @@ Public Class frmOrderInfo
     End Sub
 
     Private Sub txtCountryShipTP_LostFocus(sender As Object, e As EventArgs) Handles txtCountryShipTP.LostFocus
-        'If txtCountryShipTP.ListElement.SelectedItem IsNot Nothing Then
-        '    FilterCustomers("SHIP", txtCountryShipTP.ListElement.SelectedItem.Text)
-        'End If
+
     End Sub
 
     Private Sub txtCountrySoldTP_LostFocus(sender As Object, e As EventArgs) Handles txtCountrySoldTP.LostFocus
-        'If txtCountrySoldTP.ListElement.SelectedItem IsNot Nothing Then
-        '    FilterCustomers("SOLD", txtCountrySoldTP.ListElement.SelectedItem.Text)
-        'End If
+
         FilterSoldParty()
     End Sub
 
     Private Sub txtCustNoShipTP_LostFocus(sender As Object, e As EventArgs) Handles txtCustNoShipTP.LostFocus
-        'If txtCustNoShipTP.ListElement.SelectedItem IsNot Nothing Then
-        '    FilterCustomers("SHIP", txtCustNoShipTP.ListElement.SelectedItem.Text)
-        'End If
+
     End Sub
 
     Private Sub txtCustNoSoldTP_LostFocus(sender As Object, e As EventArgs) Handles txtCustNoSoldTP.LostFocus
-        'If txtCustNoSoldTP.ListElement.SelectedItem IsNot Nothing Then
-        '    FilterCustomers("SOLD", txtCustNoSoldTP.ListElement.SelectedItem.Text)
-        'End If
+
         FilterSoldParty()
     End Sub
 
     Private Sub txtCustShipTP_LostFocus(sender As Object, e As EventArgs) Handles txtCustShipTP.LostFocus
-        'If txtCustShipTP.ListElement.SelectedItem IsNot Nothing Then
-        '    FilterCustomers("SHIP", txtCustShipTP.ListElement.SelectedItem.Text)
-        'End If
+
     End Sub
 
     Private Sub txtCustSoldTP_LostFocus(sender As Object, e As EventArgs) Handles txtCustSoldTP.LostFocus
-        'If txtCustSoldTP.ListElement.SelectedItem IsNot Nothing Then
-        '    FilterCustomers("SOLD", txtCustSoldTP.ListElement.SelectedItem.Text)
-        'End If
+
         FilterSoldParty()
     End Sub
 
     Private Sub txtRegionShipTP_LostFocus(sender As Object, e As EventArgs) Handles txtRegionShipTP.LostFocus
-        'If txtRegionShipTP.ListElement.SelectedItem IsNot Nothing Then
-        '    FilterCustomers("SHIP", txtRegionShipTP.ListElement.SelectedItem.Text)
-        'End If
+
     End Sub
 
     Private Sub txtZipShipTP_LostFocus(sender As Object, e As EventArgs) Handles txtZipShipTP.LostFocus
-        'If txtZipShipTP.ListElement.SelectedItem IsNot Nothing Then
-        '    FilterCustomers("SHIP", txtZipShipTP.ListElement.SelectedItem.Text)
-        'End If
+
     End Sub
 
     Private Sub txtZipSoldTP_LostFocus(sender As Object, e As EventArgs) Handles txtZipSoldTP.LostFocus
-        'If txtZipSoldTP.ListElement.SelectedItem IsNot Nothing Then
-        '    FilterCustomers("SOLD", txtZipSoldTP.ListElement.SelectedItem.Text)
-        'End If
+
         FilterSoldParty()
     End Sub
 
@@ -373,6 +394,10 @@ Public Class frmOrderInfo
         gvCustomer.Visible = True
         gvCustomer.Location = Label1.Location
         lblCallingbtn.Text = "sHIP"
+    End Sub
+
+    Private Sub txtCustSoldTP_GotFocus(sender As Object, e As EventArgs) Handles txtCustSoldTP.GotFocus
+        txtCustSoldTP.LoadElementTree()
     End Sub
 
 

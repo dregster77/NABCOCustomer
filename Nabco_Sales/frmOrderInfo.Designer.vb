@@ -85,6 +85,7 @@ Partial Class frmOrderInfo
         Me.ddlSalesOffice = New Telerik.WinControls.UI.RadDropDownList()
         Me.pvpQuoteDetails = New Telerik.WinControls.UI.RadPageViewPage()
         Me.RadGroupBox3 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.RadTextBoxControl8 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
         Me.RadTextBoxControl1 = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.RadTextBoxControl3 = New Telerik.WinControls.UI.RadTextBoxControl()
@@ -101,6 +102,8 @@ Partial Class frmOrderInfo
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label25 = New System.Windows.Forms.Label()
         Me.pvpDocuments = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
+        Me.btnAdd = New Telerik.WinControls.UI.RadButton()
         Me.RadGridView2 = New Telerik.WinControls.UI.RadGridView()
         Me.pvpProducts = New Telerik.WinControls.UI.RadPageViewPage()
         Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
@@ -113,9 +116,7 @@ Partial Class frmOrderInfo
         Me.btnCancel = New Telerik.WinControls.UI.RadButton()
         Me.btnEdit = New Telerik.WinControls.UI.RadButton()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
-        Me.RadTextBoxControl8 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
-        Me.btnAdd = New Telerik.WinControls.UI.RadButton()
+        Me.RadDropDownList1 = New Telerik.WinControls.UI.RadDropDownList()
         CType(Me.pvOrderInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvOrderInfo.SuspendLayout()
         Me.pvpOrderDetails.SuspendLayout()
@@ -150,6 +151,7 @@ Partial Class frmOrderInfo
         Me.pvpQuoteDetails.SuspendLayout()
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox3.SuspendLayout()
+        CType(Me.RadTextBoxControl8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadTextBoxControl3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -159,6 +161,8 @@ Partial Class frmOrderInfo
         CType(Me.RadTextBoxControl7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvpDocuments.SuspendLayout()
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnAdd, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView2.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvpProducts.SuspendLayout()
@@ -172,9 +176,7 @@ Partial Class frmOrderInfo
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControl8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnAdd, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadDropDownList1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -189,8 +191,8 @@ Partial Class frmOrderInfo
         Me.pvOrderInfo.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pvOrderInfo.Location = New System.Drawing.Point(0, 0)
         Me.pvOrderInfo.Name = "pvOrderInfo"
-        Me.pvOrderInfo.SelectedPage = Me.pvpDocuments
-        Me.pvOrderInfo.Size = New System.Drawing.Size(1113, 749)
+        Me.pvOrderInfo.SelectedPage = Me.pvpOrderDetails
+        Me.pvOrderInfo.Size = New System.Drawing.Size(1121, 779)
         Me.pvOrderInfo.TabIndex = 0
         Me.pvOrderInfo.ViewMode = Telerik.WinControls.UI.PageViewMode.NavigationView
         CType(Me.pvOrderInfo.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).DisplayMode = Telerik.WinControls.UI.NavigationViewDisplayModes.Expanded
@@ -209,7 +211,7 @@ Partial Class frmOrderInfo
         Me.pvpOrderDetails.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
         Me.pvpOrderDetails.Location = New System.Drawing.Point(47, 30)
         Me.pvpOrderDetails.Name = "pvpOrderDetails"
-        Me.pvpOrderDetails.Size = New System.Drawing.Size(1065, 718)
+        Me.pvpOrderDetails.Size = New System.Drawing.Size(1073, 748)
         Me.pvpOrderDetails.Text = "Sales and Shipping Details"
         Me.pvpOrderDetails.ToolTipText = "Add Sales Office and Shipping Information"
         '
@@ -241,7 +243,7 @@ Partial Class frmOrderInfo
         Me.gvCustomer.Name = "gvCustomer"
         Me.gvCustomer.ReadOnly = True
         Me.gvCustomer.ShowGroupPanel = False
-        Me.gvCustomer.Size = New System.Drawing.Size(1045, 355)
+        Me.gvCustomer.Size = New System.Drawing.Size(1053, 355)
         Me.gvCustomer.TabIndex = 22
         Me.gvCustomer.Visible = False
         '
@@ -273,7 +275,7 @@ Partial Class frmOrderInfo
         Me.RadGroupBox2.HeaderText = "Ship To Party Info"
         Me.RadGroupBox2.Location = New System.Drawing.Point(9, 316)
         Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(1045, 231)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(1053, 231)
         Me.RadGroupBox2.TabIndex = 21
         Me.RadGroupBox2.Text = "Ship To Party Info"
         '
@@ -483,6 +485,7 @@ Partial Class frmOrderInfo
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
         Me.RadGroupBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadGroupBox1.Controls.Add(Me.RadDropDownList1)
         Me.RadGroupBox1.Controls.Add(Me.btnClearSold)
         Me.RadGroupBox1.Controls.Add(Me.txtCustNoSoldTP)
         Me.RadGroupBox1.Controls.Add(Me.txtZipSoldTP)
@@ -506,7 +509,7 @@ Partial Class frmOrderInfo
         Me.RadGroupBox1.HeaderText = "Sold To Party Info"
         Me.RadGroupBox1.Location = New System.Drawing.Point(9, 43)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(1045, 231)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(1053, 231)
         Me.RadGroupBox1.TabIndex = 17
         Me.RadGroupBox1.Text = "Sold To Party Info"
         '
@@ -762,6 +765,15 @@ Partial Class frmOrderInfo
         Me.RadGroupBox3.Size = New System.Drawing.Size(1045, 586)
         Me.RadGroupBox3.TabIndex = 18
         '
+        'RadTextBoxControl8
+        '
+        Me.RadTextBoxControl8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.RadTextBoxControl8.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.RadTextBoxControl8.Location = New System.Drawing.Point(158, 221)
+        Me.RadTextBoxControl8.Name = "RadTextBoxControl8"
+        Me.RadTextBoxControl8.Size = New System.Drawing.Size(300, 30)
+        Me.RadTextBoxControl8.TabIndex = 44
+        '
         'RadButton1
         '
         Me.RadButton1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -925,6 +937,48 @@ Partial Class frmOrderInfo
         Me.pvpDocuments.Size = New System.Drawing.Size(1065, 718)
         Me.pvpDocuments.Text = "Upload Documents"
         Me.pvpDocuments.ToolTipText = "Upload PO an Supporting Documents"
+        '
+        'RadButton3
+        '
+        Me.RadButton3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.RadButton3.Enabled = False
+        Me.RadButton3.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadButton3.Image = Global.Nabco_Sales.My.Resources.Resources.bin
+        Me.RadButton3.Location = New System.Drawing.Point(256, 5)
+        Me.RadButton3.Name = "RadButton3"
+        Me.RadButton3.Size = New System.Drawing.Size(112, 32)
+        Me.RadButton3.TabIndex = 15
+        Me.RadButton3.Text = "Delete"
+        Me.RadButton3.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.Nabco_Sales.My.Resources.Resources.bin
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Delete"
+        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
+        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
+        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
+        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdd.Image = Global.Nabco_Sales.My.Resources.Resources.add
+        Me.btnAdd.Location = New System.Drawing.Point(18, 5)
+        Me.btnAdd.Margin = New System.Windows.Forms.Padding(5)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(112, 32)
+        Me.btnAdd.TabIndex = 16
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        CType(Me.btnAdd.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.Nabco_Sales.My.Resources.Resources.add
+        CType(Me.btnAdd.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        CType(Me.btnAdd.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Add"
+        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
+        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
+        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
+        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
         '
         'RadGridView2
         '
@@ -1100,62 +1154,20 @@ Partial Class frmOrderInfo
         Me.RadGridView1.Size = New System.Drawing.Size(991, 489)
         Me.RadGridView1.TabIndex = 0
         '
-        'RadTextBoxControl8
+        'RadDropDownList1
         '
-        Me.RadTextBoxControl8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadTextBoxControl8.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.RadTextBoxControl8.Location = New System.Drawing.Point(158, 221)
-        Me.RadTextBoxControl8.Name = "RadTextBoxControl8"
-        Me.RadTextBoxControl8.Size = New System.Drawing.Size(300, 30)
-        Me.RadTextBoxControl8.TabIndex = 44
-        '
-        'RadButton3
-        '
-        Me.RadButton3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.RadButton3.Enabled = False
-        Me.RadButton3.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton3.Image = Global.Nabco_Sales.My.Resources.Resources.bin
-        Me.RadButton3.Location = New System.Drawing.Point(256, 5)
-        Me.RadButton3.Name = "RadButton3"
-        Me.RadButton3.Size = New System.Drawing.Size(112, 32)
-        Me.RadButton3.TabIndex = 15
-        Me.RadButton3.Text = "Delete"
-        Me.RadButton3.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.Nabco_Sales.My.Resources.Resources.bin
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Delete"
-        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
-        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
-        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
-        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Image = Global.Nabco_Sales.My.Resources.Resources.add
-        Me.btnAdd.Location = New System.Drawing.Point(18, 5)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(112, 32)
-        Me.btnAdd.TabIndex = 16
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.btnAdd.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.Nabco_Sales.My.Resources.Resources.add
-        CType(Me.btnAdd.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.btnAdd.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Add"
-        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
-        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
-        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
-        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
+        Me.RadDropDownList1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.RadDropDownList1.Location = New System.Drawing.Point(715, 102)
+        Me.RadDropDownList1.Name = "RadDropDownList1"
+        Me.RadDropDownList1.Size = New System.Drawing.Size(283, 20)
+        Me.RadDropDownList1.TabIndex = 44
+        Me.RadDropDownList1.Text = "RadDropDownList1"
         '
         'frmOrderInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1113, 749)
+        Me.ClientSize = New System.Drawing.Size(1121, 779)
         Me.Controls.Add(Me.pvOrderInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmOrderInfo"
@@ -1185,6 +1197,7 @@ Partial Class frmOrderInfo
         CType(Me.chkMatchShip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
+        Me.RadGroupBox1.PerformLayout()
         CType(Me.btnClearSold, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCustNoSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtZipSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1199,6 +1212,7 @@ Partial Class frmOrderInfo
         Me.pvpQuoteDetails.ResumeLayout(False)
         CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox3.ResumeLayout(False)
+        CType(Me.RadTextBoxControl8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadTextBoxControl3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1208,6 +1222,8 @@ Partial Class frmOrderInfo
         CType(Me.RadTextBoxControl7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pvpDocuments.ResumeLayout(False)
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnAdd, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView2.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pvpProducts.ResumeLayout(False)
@@ -1221,9 +1237,7 @@ Partial Class frmOrderInfo
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControl8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnAdd, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadDropDownList1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1308,5 +1322,6 @@ Partial Class frmOrderInfo
     Friend WithEvents RadTextBoxControl8 As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
     Friend WithEvents btnAdd As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadDropDownList1 As Telerik.WinControls.UI.RadDropDownList
 End Class
 

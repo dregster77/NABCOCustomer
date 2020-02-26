@@ -1,8 +1,11 @@
 ﻿Imports Nabco_Sales.SQLMod
 Imports System.ComponentModel
 Imports System.IO
+Imports Telerik.WinControls.UI
 
 Public Class Form1
+
+    Dim tempdt As DataTable
     Private sql2 As New TestSQLControl
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim opf As New OpenFileDialog
@@ -58,13 +61,39 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
-
+        tempdt = New DataTable
         TestSQLConnection()
         My.Settings.Sap_User = "idreger"
         LoadGridLayout(RadGridView1, Me.Name)
+        SQL = "select * from t_user"
+        SetRS(RS)
+        If RS.Read Then
+
+            tempdt.Load(RS)
+        End If
+        CloseRS(RS)
+
+        txtUser.AutoCompleteDataSource = tempdt
+        txtUser.AutoCompleteDisplayMember = "user_name"
+        txtUser.AutoCompleteMode = AutoCompleteMode.SuggestAppend
+
+        Dim autoCompleteItems As RadListDataItemCollection = Me.txtu2.AutoCompleteItems
+        autoCompleteItems.Add(New RadListDataItem("Luke"))
+        autoCompleteItems.Add(New RadListDataItem("Max"))
+        autoCompleteItems.Add(New RadListDataItem("Adam"))
+        autoCompleteItems.Add(New RadListDataItem("Henry"))
+        autoCompleteItems.Add(New RadListDataItem("Jack"))
+        autoCompleteItems.Add(New RadListDataItem("Ben"))
+        autoCompleteItems.Add(New RadListDataItem("Tyler"))
+        autoCompleteItems.Add(New RadListDataItem("Ethan"))
+        autoCompleteItems.Add(New RadListDataItem("David"))
+        autoCompleteItems.Add(New RadListDataItem("Mike"))
+
     End Sub
 
     Private Sub Form1_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         SaveGridLayout(RadGridView1, Me.Name)
     End Sub
+
+
 End Class

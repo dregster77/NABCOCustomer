@@ -72,9 +72,9 @@ Public Class frmCustomers
             Exit Sub
         Else
             If callingBtn = "SOLD" Then
-                frmOrderInfoOld.SETSOLDDETIALS(gvCustomer.SelectedRows(0))
+                'frmOrderInfoOld.SETSOLDDETIALS(gvCustomer.SelectedRows(0))
             Else
-                frmOrderInfoOld.SETSOLDDETIALS(gvCustomer.SelectedRows(0))
+                ' frmOrderInfoOld.SETSOLDDETIALS(gvCustomer.SelectedRows(0))
             End If
         End If
         Me.Close()
@@ -86,9 +86,9 @@ Public Class frmCustomers
             Exit Sub
         Else
             If callingBtn = "SOLD" Then
-                frmOrderInfoOld.SETSOLDDETIALS(gvCustomer.SelectedRows(0))
+                ' frmOrderInfoOld.SETSOLDDETIALS(gvCustomer.SelectedRows(0))
             Else
-                frmOrderInfoOld.SETSOLDDETIALS(gvCustomer.SelectedRows(0))
+                ' frmOrderInfoOld.SETSOLDDETIALS(gvCustomer.SelectedRows(0))
             End If
         End If
         Me.Close()
