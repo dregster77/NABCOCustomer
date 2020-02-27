@@ -23,11 +23,11 @@ Partial Class frmTier
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTier))
         Me.tabControl = New Telerik.WinControls.UI.RadPageView()
         Me.tabTier = New Telerik.WinControls.UI.RadPageViewPage()
@@ -86,10 +86,10 @@ Partial Class frmTier
         'tabTier
         '
         Me.tabTier.Controls.Add(Me.pnlTier)
-        Me.tabTier.ItemSize = New System.Drawing.SizeF(384.0!, 39.0!)
-        Me.tabTier.Location = New System.Drawing.Point(10, 48)
+        Me.tabTier.ItemSize = New System.Drawing.SizeF(384.0!, 43.0!)
+        Me.tabTier.Location = New System.Drawing.Point(10, 52)
         Me.tabTier.Name = "tabTier"
-        Me.tabTier.Size = New System.Drawing.Size(782, 347)
+        Me.tabTier.Size = New System.Drawing.Size(782, 343)
         Me.tabTier.Text = "Tiers"
         Me.tabTier.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         Me.tabTier.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
@@ -100,7 +100,7 @@ Partial Class frmTier
         Me.pnlTier.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlTier.Location = New System.Drawing.Point(0, 0)
         Me.pnlTier.Name = "pnlTier"
-        Me.pnlTier.Size = New System.Drawing.Size(782, 347)
+        Me.pnlTier.Size = New System.Drawing.Size(782, 343)
         Me.pnlTier.TabIndex = 0
         '
         'grdTier
@@ -125,32 +125,32 @@ Partial Class frmTier
         Me.grdTier.MasterTemplate.AllowEditRow = False
         Me.grdTier.MasterTemplate.AllowRowHeaderContextMenu = False
         Me.grdTier.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn1.EnableExpressionEditor = False
-        GridViewTextBoxColumn1.HeaderText = "tier_id"
-        GridViewTextBoxColumn1.IsVisible = False
-        GridViewTextBoxColumn1.Name = "tier_id"
-        GridViewTextBoxColumn1.Width = 55
-        GridViewTextBoxColumn2.EnableExpressionEditor = False
-        GridViewTextBoxColumn2.HeaderText = "Tier level"
-        GridViewTextBoxColumn2.Name = "tier_level"
-        GridViewTextBoxColumn2.Width = 269
-        GridViewTextBoxColumn3.EnableExpressionEditor = False
-        GridViewTextBoxColumn3.HeaderText = "Multiplier"
-        GridViewTextBoxColumn3.Name = "multiplier"
-        GridViewTextBoxColumn3.Width = 287
-        GridViewTextBoxColumn4.HeaderText = "Last Edit By"
-        GridViewTextBoxColumn4.Name = "fullname"
-        GridViewTextBoxColumn4.Width = 204
-        Me.grdTier.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4})
+        GridViewTextBoxColumn5.EnableExpressionEditor = False
+        GridViewTextBoxColumn5.HeaderText = "tier_id"
+        GridViewTextBoxColumn5.IsVisible = False
+        GridViewTextBoxColumn5.Name = "tier_id"
+        GridViewTextBoxColumn5.Width = 55
+        GridViewTextBoxColumn6.EnableExpressionEditor = False
+        GridViewTextBoxColumn6.HeaderText = "Tier level"
+        GridViewTextBoxColumn6.Name = "tier_level"
+        GridViewTextBoxColumn6.Width = 270
+        GridViewTextBoxColumn7.EnableExpressionEditor = False
+        GridViewTextBoxColumn7.HeaderText = "Multiplier"
+        GridViewTextBoxColumn7.Name = "multiplier"
+        GridViewTextBoxColumn7.Width = 288
+        GridViewTextBoxColumn8.HeaderText = "Last Edit By"
+        GridViewTextBoxColumn8.Name = "fullname"
+        GridViewTextBoxColumn8.Width = 205
+        Me.grdTier.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8})
         Me.grdTier.MasterTemplate.EnableGrouping = False
         Me.grdTier.MasterTemplate.EnableSorting = False
         Me.grdTier.MasterTemplate.SearchRowPosition = Telerik.WinControls.UI.SystemRowPosition.Bottom
-        Me.grdTier.MasterTemplate.ViewDefinition = TableViewDefinition1
+        Me.grdTier.MasterTemplate.ViewDefinition = TableViewDefinition2
         Me.grdTier.Name = "grdTier"
         Me.grdTier.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.grdTier.ReadOnly = True
         Me.grdTier.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.grdTier.Size = New System.Drawing.Size(782, 347)
+        Me.grdTier.Size = New System.Drawing.Size(782, 343)
         Me.grdTier.TabIndex = 4
         Me.grdTier.ThemeName = "Crystal"
         '
@@ -158,10 +158,10 @@ Partial Class frmTier
         '
         Me.tabEdit.Controls.Add(Me.pnlEdit)
         Me.tabEdit.Font = New System.Drawing.Font("Arial Narrow", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tabEdit.ItemSize = New System.Drawing.SizeF(405.0!, 39.0!)
-        Me.tabEdit.Location = New System.Drawing.Point(10, 48)
+        Me.tabEdit.ItemSize = New System.Drawing.SizeF(405.0!, 43.0!)
+        Me.tabEdit.Location = New System.Drawing.Point(10, 52)
         Me.tabEdit.Name = "tabEdit"
-        Me.tabEdit.Size = New System.Drawing.Size(629, 392)
+        Me.tabEdit.Size = New System.Drawing.Size(782, 343)
         Me.tabEdit.Text = "Details"
         Me.tabEdit.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -175,7 +175,7 @@ Partial Class frmTier
         Me.pnlEdit.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlEdit.Location = New System.Drawing.Point(0, 0)
         Me.pnlEdit.Name = "pnlEdit"
-        Me.pnlEdit.Size = New System.Drawing.Size(629, 392)
+        Me.pnlEdit.Size = New System.Drawing.Size(782, 343)
         Me.pnlEdit.TabIndex = 0
         '
         'txtTierLevel

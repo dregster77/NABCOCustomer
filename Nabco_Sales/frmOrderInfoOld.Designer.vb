@@ -59,6 +59,11 @@ Partial Class frmOrderInfoOld
         Me.Label1 = New System.Windows.Forms.Label()
         Me.chkMatchShip = New Telerik.WinControls.UI.RadCheckBox()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.ddlZipSold = New Telerik.WinControls.UI.RadDropDownList()
+        Me.ddlRegionSold = New Telerik.WinControls.UI.RadDropDownList()
+        Me.ddlCountrySold = New Telerik.WinControls.UI.RadDropDownList()
+        Me.ddlCitySold = New Telerik.WinControls.UI.RadDropDownList()
+        Me.ddlAddr1Sold = New Telerik.WinControls.UI.RadDropDownList()
         Me.ddlCustSold = New Telerik.WinControls.UI.RadDropDownList()
         Me.txtDistSoldTP = New Telerik.WinControls.UI.RadTextBoxControl()
         Me.txtCustNoSoldTP = New Telerik.WinControls.UI.RadTextBoxControl()
@@ -87,11 +92,6 @@ Partial Class frmOrderInfoOld
         Me.btnCancel = New Telerik.WinControls.UI.RadButton()
         Me.btnEdit = New Telerik.WinControls.UI.RadButton()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
-        Me.ddlAddr1Sold = New Telerik.WinControls.UI.RadDropDownList()
-        Me.ddlCitySold = New Telerik.WinControls.UI.RadDropDownList()
-        Me.ddlCountrySold = New Telerik.WinControls.UI.RadDropDownList()
-        Me.ddlRegionSold = New Telerik.WinControls.UI.RadDropDownList()
-        Me.ddlZipSold = New Telerik.WinControls.UI.RadDropDownList()
         CType(Me.pvOrderInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvOrderInfo.SuspendLayout()
         Me.pvpOrderDetails.SuspendLayout()
@@ -109,6 +109,11 @@ Partial Class frmOrderInfoOld
         CType(Me.chkMatchShip, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
+        CType(Me.ddlZipSold, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlRegionSold, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlCountrySold, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlCitySold, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlAddr1Sold, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddlCustSold, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDistSoldTP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCustNoSoldTP, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -128,11 +133,6 @@ Partial Class frmOrderInfoOld
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ddlAddr1Sold, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ddlCitySold, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ddlCountrySold, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ddlRegionSold, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ddlZipSold, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -148,7 +148,7 @@ Partial Class frmOrderInfoOld
         Me.pvOrderInfo.Location = New System.Drawing.Point(0, 0)
         Me.pvOrderInfo.Name = "pvOrderInfo"
         Me.pvOrderInfo.SelectedPage = Me.pvpOrderDetails
-        Me.pvOrderInfo.Size = New System.Drawing.Size(1178, 1100)
+        Me.pvOrderInfo.Size = New System.Drawing.Size(1194, 1100)
         Me.pvOrderInfo.TabIndex = 0
         Me.pvOrderInfo.ViewMode = Telerik.WinControls.UI.PageViewMode.NavigationView
         CType(Me.pvOrderInfo.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).DisplayMode = Telerik.WinControls.UI.NavigationViewDisplayModes.Expanded
@@ -165,7 +165,7 @@ Partial Class frmOrderInfoOld
         Me.pvpOrderDetails.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
         Me.pvpOrderDetails.Location = New System.Drawing.Point(47, 30)
         Me.pvpOrderDetails.Name = "pvpOrderDetails"
-        Me.pvpOrderDetails.Size = New System.Drawing.Size(1130, 1069)
+        Me.pvpOrderDetails.Size = New System.Drawing.Size(1146, 1069)
         Me.pvpOrderDetails.Text = "Sales and Shipping Details"
         Me.pvpOrderDetails.ToolTipText = "Add Sales Office and Shipping Information"
         '
@@ -196,7 +196,7 @@ Partial Class frmOrderInfoOld
         Me.RadGroupBox2.HeaderText = "Ship To Party Info"
         Me.RadGroupBox2.Location = New System.Drawing.Point(9, 316)
         Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(1073, 231)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(1089, 231)
         Me.RadGroupBox2.TabIndex = 21
         Me.RadGroupBox2.Text = "Ship To Party Info"
         '
@@ -425,12 +425,68 @@ Partial Class frmOrderInfoOld
         Me.RadGroupBox1.HeaderText = "Sold To Party Info"
         Me.RadGroupBox1.Location = New System.Drawing.Point(9, 43)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(1073, 231)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(1089, 231)
         Me.RadGroupBox1.TabIndex = 17
         Me.RadGroupBox1.Text = "Sold To Party Info"
         '
+        'ddlZipSold
+        '
+        Me.ddlZipSold.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ddlZipSold.AutoSize = False
+        Me.ddlZipSold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.ddlZipSold.Location = New System.Drawing.Point(535, 173)
+        Me.ddlZipSold.Name = "ddlZipSold"
+        Me.ddlZipSold.Size = New System.Drawing.Size(151, 30)
+        Me.ddlZipSold.TabIndex = 52
+        Me.ddlZipSold.Text = "Filter by Zip"
+        '
+        'ddlRegionSold
+        '
+        Me.ddlRegionSold.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ddlRegionSold.AutoSize = False
+        Me.ddlRegionSold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.ddlRegionSold.Location = New System.Drawing.Point(535, 138)
+        Me.ddlRegionSold.Name = "ddlRegionSold"
+        Me.ddlRegionSold.Size = New System.Drawing.Size(151, 30)
+        Me.ddlRegionSold.TabIndex = 51
+        Me.ddlRegionSold.Text = "Filter by Region"
+        '
+        'ddlCountrySold
+        '
+        Me.ddlCountrySold.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ddlCountrySold.AutoSize = False
+        Me.ddlCountrySold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.ddlCountrySold.Location = New System.Drawing.Point(158, 170)
+        Me.ddlCountrySold.Name = "ddlCountrySold"
+        Me.ddlCountrySold.Size = New System.Drawing.Size(250, 30)
+        Me.ddlCountrySold.TabIndex = 49
+        Me.ddlCountrySold.Text = "Filter by Country "
+        '
+        'ddlCitySold
+        '
+        Me.ddlCitySold.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ddlCitySold.AutoSize = False
+        Me.ddlCitySold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.ddlCitySold.Location = New System.Drawing.Point(158, 135)
+        Me.ddlCitySold.Name = "ddlCitySold"
+        Me.ddlCitySold.Size = New System.Drawing.Size(250, 30)
+        Me.ddlCitySold.TabIndex = 48
+        Me.ddlCitySold.Text = "Filter by City"
+        '
+        'ddlAddr1Sold
+        '
+        Me.ddlAddr1Sold.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ddlAddr1Sold.AutoSize = False
+        Me.ddlAddr1Sold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.ddlAddr1Sold.Location = New System.Drawing.Point(158, 100)
+        Me.ddlAddr1Sold.Name = "ddlAddr1Sold"
+        Me.ddlAddr1Sold.Size = New System.Drawing.Size(528, 30)
+        Me.ddlAddr1Sold.TabIndex = 47
+        Me.ddlAddr1Sold.Text = "Filter by Address"
+        '
         'ddlCustSold
         '
+        Me.ddlCustSold.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.ddlCustSold.AutoSize = False
         Me.ddlCustSold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.ddlCustSold.Location = New System.Drawing.Point(158, 65)
@@ -442,8 +498,8 @@ Partial Class frmOrderInfoOld
         'txtDistSoldTP
         '
         Me.txtDistSoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtDistSoldTP.Enabled = False
         Me.txtDistSoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtDistSoldTP.IsReadOnly = True
         Me.txtDistSoldTP.Location = New System.Drawing.Point(449, 30)
         Me.txtDistSoldTP.Name = "txtDistSoldTP"
         Me.txtDistSoldTP.Size = New System.Drawing.Size(237, 30)
@@ -452,7 +508,6 @@ Partial Class frmOrderInfoOld
         'txtCustNoSoldTP
         '
         Me.txtCustNoSoldTP.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.txtCustNoSoldTP.Enabled = False
         Me.txtCustNoSoldTP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txtCustNoSoldTP.Location = New System.Drawing.Point(158, 30)
         Me.txtCustNoSoldTP.Name = "txtCustNoSoldTP"
@@ -782,61 +837,11 @@ Partial Class frmOrderInfoOld
         Me.RadGridView1.Size = New System.Drawing.Size(991, 489)
         Me.RadGridView1.TabIndex = 0
         '
-        'ddlAddr1Sold
-        '
-        Me.ddlAddr1Sold.AutoSize = False
-        Me.ddlAddr1Sold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.ddlAddr1Sold.Location = New System.Drawing.Point(158, 100)
-        Me.ddlAddr1Sold.Name = "ddlAddr1Sold"
-        Me.ddlAddr1Sold.Size = New System.Drawing.Size(528, 30)
-        Me.ddlAddr1Sold.TabIndex = 47
-        Me.ddlAddr1Sold.Text = "Select A Customer"
-        '
-        'ddlCitySold
-        '
-        Me.ddlCitySold.AutoSize = False
-        Me.ddlCitySold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.ddlCitySold.Location = New System.Drawing.Point(158, 135)
-        Me.ddlCitySold.Name = "ddlCitySold"
-        Me.ddlCitySold.Size = New System.Drawing.Size(250, 30)
-        Me.ddlCitySold.TabIndex = 48
-        Me.ddlCitySold.Text = "Select A Customer"
-        '
-        'ddlCountrySold
-        '
-        Me.ddlCountrySold.AutoSize = False
-        Me.ddlCountrySold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.ddlCountrySold.Location = New System.Drawing.Point(158, 170)
-        Me.ddlCountrySold.Name = "ddlCountrySold"
-        Me.ddlCountrySold.Size = New System.Drawing.Size(250, 30)
-        Me.ddlCountrySold.TabIndex = 49
-        Me.ddlCountrySold.Text = "Select A Customer"
-        '
-        'ddlRegionSold
-        '
-        Me.ddlRegionSold.AutoSize = False
-        Me.ddlRegionSold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.ddlRegionSold.Location = New System.Drawing.Point(535, 138)
-        Me.ddlRegionSold.Name = "ddlRegionSold"
-        Me.ddlRegionSold.Size = New System.Drawing.Size(151, 30)
-        Me.ddlRegionSold.TabIndex = 51
-        Me.ddlRegionSold.Text = "Select A Customer"
-        '
-        'ddlZipSold
-        '
-        Me.ddlZipSold.AutoSize = False
-        Me.ddlZipSold.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.ddlZipSold.Location = New System.Drawing.Point(535, 173)
-        Me.ddlZipSold.Name = "ddlZipSold"
-        Me.ddlZipSold.Size = New System.Drawing.Size(151, 30)
-        Me.ddlZipSold.TabIndex = 52
-        Me.ddlZipSold.Text = "Select A Customer"
-        '
         'frmOrderInfoOld
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1178, 1100)
+        Me.ClientSize = New System.Drawing.Size(1194, 1100)
         Me.Controls.Add(Me.pvOrderInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmOrderInfoOld"
@@ -863,6 +868,11 @@ Partial Class frmOrderInfoOld
         CType(Me.chkMatchShip, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
+        CType(Me.ddlZipSold, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlRegionSold, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlCountrySold, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlCitySold, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlAddr1Sold, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddlCustSold, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDistSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCustNoSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
@@ -882,11 +892,6 @@ Partial Class frmOrderInfoOld
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ddlAddr1Sold, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ddlCitySold, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ddlCountrySold, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ddlRegionSold, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ddlZipSold, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

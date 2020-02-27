@@ -11,6 +11,7 @@ Public Class frmCustomers
 
 
     Private Sub frmOrder_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         ' gvCustomer.DataSource = My.Settings.CustomerDATA
         dt = New DataTable
         dt = ConvertToRead()
