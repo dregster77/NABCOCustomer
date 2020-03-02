@@ -63,7 +63,7 @@ Public Class frmHome
     End Sub
 
     Private Sub RadButton2_Click(sender As Object, e As EventArgs) Handles RadButton2.Click
-        Dim frm As New frmOrderInfoOld
+        Dim frm As New Form2
         ShowForm(frm)
     End Sub
 
