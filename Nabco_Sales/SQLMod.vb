@@ -5,6 +5,7 @@ Module SQLMod
     Public Const CONSTR As String = "Data Source=Nabco-td;Initial Catalog= NabcoSales;User ID= sa;Password=2SZvW9hDY7_KJC"
     Public DR As DataTableReader
     Public RS As SqlDataReader
+    Public Params As New List(Of SqlParameter)
 
     'Checking the Connection to the database to insure there is a proper connection 
     Public Sub TestSQLConnection()
@@ -22,25 +23,8 @@ Module SQLMod
         End Try
     End Sub
 
-    ''This will pull the data using a sql call establish then will return a datatable that you can read from 
-    'Public Sub GetData(ByRef DT As DataTable)
-    '    Dim connection As New SqlConnection(CONSTR)
-    '    Dim command As New SqlCommand(SQL, connection)
-    '    Dim rdr As SqlDataReader
-    '    Try
-    '        connection.Open()
-    '        rdr = command.ExecuteReader()
-    '        DT.Load(rdr)
-    '        command.Dispose()
-    '        command = Nothing
-    '        connection.Dispose()
-    '        connection = Nothing
-    '    Catch ex As Exception
-    '        MsgBox(ex.Message)
-    '    End Try
-    'End Sub
 
-    'Opening the connection to the database and then also making sure that the connection 
+
     'is closed once the reader is complete
     Public Sub SetRS(ByRef LocalRS As SqlDataReader)
         Dim connection As New SqlConnection(CONSTR)
@@ -59,18 +43,23 @@ Module SQLMod
     End Sub
 
     'executes and update,delete, or insert statement and you may have it send back the id of the record that you just updated. 
-    Public Function Execute(Optional ByRef Identity As Int32 = 0) As Integer
+    Public Function Execute(Optional ByRef Identity As Int32 = 0, Optional ByVal UseParms As Boolean = False) As Integer
         Try
             Dim connection As New SqlConnection(CONSTR)
             Dim command As New SqlCommand(SQL, connection)
 
+            'open the database connection
             connection.Open()
+            If UseParms = True Then
+                Params.ForEach(Sub(p) command.Parameters.Add(p))
+                Params.Clear()
+
+            End If
 
             Execute = command.ExecuteNonQuery()
 
             command.CommandText = "select @@identity"
             Identity = Val("" & command.ExecuteScalar())
-
             command.Dispose()
             command = Nothing
             connection.Dispose()
@@ -84,6 +73,11 @@ Module SQLMod
         End Try
 
     End Function
+
+    Public Sub AddParam(Name As String, Value As Object)
+        Dim NewParam As New SqlParameter(Name, Value)
+        Params.Add(NewParam)
+    End Sub
 
 
 

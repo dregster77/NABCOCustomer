@@ -71,6 +71,11 @@ Public Class frmHome
         Dim frm As New frmOrderInfo
         ShowForm(frm)
     End Sub
+
+    Private Sub frmHome_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        Application.Exit()
+    End Sub
+
 #End Region
 
 #Region "Subs & Functions"
@@ -132,6 +137,8 @@ Public Class frmHome
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+
 
 
 

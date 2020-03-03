@@ -141,9 +141,9 @@ Partial Class frmSwingDoor
         Me.tabReview = New Telerik.WinControls.UI.RadTabbedFormControlTab()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.RadGroupBox1 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.btnSubmitOrder = New Telerik.WinControls.UI.RadButton()
+        Me.chkConfig = New System.Windows.Forms.CheckBox()
         Me.Label21 = New System.Windows.Forms.Label()
-        Me.RadToggleButton1 = New Telerik.WinControls.UI.RadToggleButton()
         Me.txtPrice = New Telerik.WinControls.UI.RadTextBox()
         Me.txtSubTotal = New Telerik.WinControls.UI.RadTextBox()
         Me.txtAddedPrices = New Telerik.WinControls.UI.RadTextBox()
@@ -207,7 +207,7 @@ Partial Class frmSwingDoor
         Me.Panel4.SuspendLayout()
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox1.SuspendLayout()
-        CType(Me.RadToggleButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnSubmitOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPrice, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtSubTotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtAddedPrices, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -354,7 +354,7 @@ Partial Class frmSwingDoor
         Me.txtUnit.Location = New System.Drawing.Point(135, 175)
         Me.txtUnit.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
         Me.txtUnit.Name = "txtUnit"
-        Me.txtUnit.Size = New System.Drawing.Size(100, 29)
+        Me.txtUnit.Size = New System.Drawing.Size(216, 29)
         Me.txtUnit.TabIndex = 4
         '
         'ddlFinish
@@ -1234,9 +1234,9 @@ Partial Class frmSwingDoor
         'RadGroupBox1
         '
         Me.RadGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox1.Controls.Add(Me.CheckBox1)
+        Me.RadGroupBox1.Controls.Add(Me.btnSubmitOrder)
+        Me.RadGroupBox1.Controls.Add(Me.chkConfig)
         Me.RadGroupBox1.Controls.Add(Me.Label21)
-        Me.RadGroupBox1.Controls.Add(Me.RadToggleButton1)
         Me.RadGroupBox1.Controls.Add(Me.txtPrice)
         Me.RadGroupBox1.Controls.Add(Me.txtSubTotal)
         Me.RadGroupBox1.Controls.Add(Me.txtAddedPrices)
@@ -1257,13 +1257,25 @@ Partial Class frmSwingDoor
         Me.RadGroupBox1.TabIndex = 13
         Me.RadGroupBox1.Text = "Pricing Information"
         '
-        'CheckBox1
+        'btnSubmitOrder
         '
-        Me.CheckBox1.Location = New System.Drawing.Point(166, 233)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(44, 54)
-        Me.CheckBox1.TabIndex = 26
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.btnSubmitOrder.Enabled = False
+        Me.btnSubmitOrder.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold)
+        Me.btnSubmitOrder.Image = Global.Nabco_Sales.My.Resources.Resources.page_save
+        Me.btnSubmitOrder.Location = New System.Drawing.Point(166, 293)
+        Me.btnSubmitOrder.Name = "btnSubmitOrder"
+        Me.btnSubmitOrder.Size = New System.Drawing.Size(188, 62)
+        Me.btnSubmitOrder.TabIndex = 27
+        Me.btnSubmitOrder.Text = "Submit Order"
+        Me.btnSubmitOrder.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'chkConfig
+        '
+        Me.chkConfig.Location = New System.Drawing.Point(166, 233)
+        Me.chkConfig.Name = "chkConfig"
+        Me.chkConfig.Size = New System.Drawing.Size(44, 54)
+        Me.chkConfig.TabIndex = 26
+        Me.chkConfig.UseVisualStyleBackColor = True
         '
         'Label21
         '
@@ -1275,17 +1287,6 @@ Partial Class frmSwingDoor
         Me.Label21.TabIndex = 25
         Me.Label21.Text = "I have reviewed this Configuration:"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'RadToggleButton1
-        '
-        Me.RadToggleButton1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.RadToggleButton1.Image = Global.Nabco_Sales.My.Resources.Resources.page_save
-        Me.RadToggleButton1.Location = New System.Drawing.Point(165, 293)
-        Me.RadToggleButton1.Name = "RadToggleButton1"
-        Me.RadToggleButton1.Size = New System.Drawing.Size(188, 62)
-        Me.RadToggleButton1.TabIndex = 24
-        Me.RadToggleButton1.Text = "Submit Order"
-        Me.RadToggleButton1.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtPrice
         '
@@ -1502,7 +1503,7 @@ Partial Class frmSwingDoor
         CType(Me.RadGroupBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox1.ResumeLayout(False)
         Me.RadGroupBox1.PerformLayout()
-        CType(Me.RadToggleButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnSubmitOrder, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtPrice, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtSubTotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtAddedPrices, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1594,9 +1595,8 @@ Partial Class frmSwingDoor
     Friend WithEvents Label9 As Label
     Friend WithEvents Panel4 As Panel
     Friend WithEvents RadGroupBox1 As Telerik.WinControls.UI.RadGroupBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents chkConfig As CheckBox
     Friend WithEvents Label21 As Label
-    Friend WithEvents RadToggleButton1 As Telerik.WinControls.UI.RadToggleButton
     Friend WithEvents txtPrice As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents txtSubTotal As Telerik.WinControls.UI.RadTextBox
     Friend WithEvents txtAddedPrices As Telerik.WinControls.UI.RadTextBox
@@ -1614,5 +1614,6 @@ Partial Class frmSwingDoor
     Friend WithEvents Label22 As Label
     Friend WithEvents lblModel As Label
     Friend WithEvents lblColor As Label
+    Friend WithEvents btnSubmitOrder As Telerik.WinControls.UI.RadButton
 End Class
 

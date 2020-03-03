@@ -41,3 +41,4 @@ C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Nabco_Sales.exe.
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Nabco_Sales.exe
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Nabco_Sales.pdb
 C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\bin\Debug\Nabco_Sales.xml
+C:\Users\idreger\source\repos\Nabco_Sales\Nabco_Sales\obj\Debug\Nabco_Sales.vbprojAssemblyReference.cache

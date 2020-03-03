@@ -4,6 +4,7 @@ Imports System.Windows.Forms
 Imports Microsoft.VisualBasic
 Imports Microsoft.VisualBasic.CompilerServices
 Imports Telerik.WinControls.UI
+Imports Microsoft.Office.Interop
 
 Public Class frmSwingDoor
     Private LoadingSpecs As Boolean
@@ -713,9 +714,9 @@ Endfun:
         PopOrderReview &= "Overlap: " & txtOverlap.Value & NL
         PopOrderReview &= "Reveal: " & txtLHReveal.Value & "*"
         Return PopOrderReview
-
-
     End Function
+
+
 
     Private Sub ddlPivot_SelectedIndexChanged(ByVal sender As Object, ByVal e As Telerik.WinControls.UI.Data.PositionChangedEventArgs) Handles ddlPivot.SelectedIndexChanged
         If ddlPivot.SelectedIndex > 0 Then
@@ -776,4 +777,100 @@ Endfun:
             txtRHDoorW.Value = txtLHDoorW.Value
         End If
     End Sub
+
+    Private Sub btnSubmitOrder_Click(sender As Object, e As EventArgs)
+        Dim xlApp As Object = CreateObject("Excel.Application")
+        Dim excelApp As Excel.Application = xlApp
+
+        Dim xlWorkBook As Excel.Workbook
+        Dim xlWorkSheet As Excel.Worksheet
+
+        Try
+
+            SQL = "Select fert, baseprice from t_fert where Model = '" & ddlModel.SelectedItem.Text & "' and " &
+                 " application = '" & ddlapplication.SelectedItem.Text & "' and  " &
+                 " finish = '" & ddlFinish.SelectedItem.Text & "'"
+            SetRS(RS)
+            If RS.Read Then
+                btnSubmitOrder.Tag = Trim("" & RS("fert"))
+            End If
+
+            Dim sfile As String = Application.StartupPath & "\SwingBom.xlsm"
+
+            'put data to TextBox
+            xlWorkBook = excelApp.Workbooks.Open(sfile)
+            xlWorkSheet = xlWorkBook.Worksheets("Inputs")
+            xlWorkSheet.Range("SalesOrderNumber").Value = "232704" 'Need to know where these are created
+            xlWorkSheet.Range("ItemNumber").Value = "10" ''Need to know where these are created 
+            xlWorkSheet.Range("FertNumber").Value = btnSubmitOrder.Tag
+            xlWorkSheet.Range("QuantityOfUnits").Value = txtQuant.Value
+            xlWorkSheet.Range("UnitIdentification").Value = txtUnit.Text
+            xlWorkSheet.Range("JobName").Value = "Wood Country FG"
+            xlWorkSheet.Range("Model").Value = ddlModel.SelectedItem.Text
+
+            xlWorkSheet.Range("LHPanel").Value = ddlSwing1.SelectedItem.Text
+            xlWorkSheet.Range("RHPanel").Value = IIf(ddlSwing2.Visible = False, "None", ddlSwing2.SelectedItem.Text)
+            xlWorkSheet.Range("Panic").Value = IIf(chkPanic.Checked, "True", "False")
+            xlWorkSheet.Range("Finish").Value = ddlFinish.SelectedItem.Text
+            xlWorkSheet.Range("LHDoorOpening").Value = txtLHDoorW.Value
+            xlWorkSheet.Range("RHDoorOpening").Value = txtRHDoorW.Value
+            xlWorkSheet.Range("LHOverlap").Value = txtOverlap.Value
+
+            xlWorkSheet.Range("RHOverlap").Value = txtOverlap.Value
+            xlWorkSheet.Range("CenterDivider").Value = txtCenterJamb.Value
+            xlWorkSheet.Range("HeaderLength").Value = txtHeaderLength.Value
+            xlWorkSheet.Range("Pivot").Value = ddlPivot.SelectedItem.Text
+            xlWorkSheet.Range("LHReveal").Value = txtLHReveal.Value
+            xlWorkSheet.Range("RHReveal").Value = txtRHReveal.Value
+            xlWorkSheet.Range("MtgBracket").Value = IIf(ddlMountingBracket.Visible = False, "None", ddlMountingBracket.SelectedItem.Text)
+            xlWorkSheet.Range("EntryDate").Value = Today.Date.ToString
+            excelApp.Run("QuickRun") 'runs the bom macro
+            Dim filepath As String = Application.StartupPath & "\OrderInfo\" & "JobName-OrderNum.xlsm" 'need to modify this once i figure out where we get this ifo
+            xlWorkBook.Close(False)
+            excelApp.Quit()
+            SaveExcelFiletoSQL(filepath)
+        Catch ex As Exception
+        Finally
+            GC.Collect()
+            Dim xlHWND As Integer = xlApp.hwnd
+            Dim ProcIDXL As Integer = 0
+            GetWindowThreadProcessId(xlHWND, ProcIDXL)
+            Dim xproc As Process = Process.GetProcessById(ProcIDXL)
+
+            xlApp.Quit()
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(xlApp)
+            xlApp = Nothing
+            If Not xproc.HasExited Then
+                xproc.Kill()
+            End If
+        End Try
+    End Sub
+
+    Private Sub SaveExcelFiletoSQL(ByVal excelfile As String)
+
+        Try
+            Dim buf = File.ReadAllBytes(excelfile)
+            Dim ms As MemoryStream = New MemoryStream(buf)
+            AddParam("@xlfile", buf)
+            SQL = "Insert into t_orders (sap_cust_id, xlfile, filename) values (" &
+                "'value1', @xlfile, 'JobName-Order1')"
+
+            Execute(, True)
+        Catch ex As Exception
+            MsgBox(ex.Message,, "SaveExcelFiletoSQL")
+        Finally
+            ' CloseRS(RS)
+        End Try
+    End Sub
+
+    Private Sub chkConfig_CheckedChanged(sender As Object, e As EventArgs) Handles chkConfig.CheckedChanged
+        If chkConfig.CheckState = CheckState.Checked Then
+            btnSubmitOrder.Enabled = True
+        Else
+            btnSubmitOrder.Enabled = False
+        End If
+    End Sub
+
+    Private Declare Auto Function GetWindowThreadProcessId Lib "user32.dll" (ByVal hwnd As IntPtr,
+            ByRef lpdwProcessId As Integer) As Integer
 End Class
