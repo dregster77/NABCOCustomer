@@ -22,21 +22,21 @@ Partial Class frmOrderInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem5 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewCommandColumn1 As Telerik.WinControls.UI.GridViewCommandColumn = New Telerik.WinControls.UI.GridViewCommandColumn()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim RadListDataItem6 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem7 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem8 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem9 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem10 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim GridViewTextBoxColumn10 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewCommandColumn2 As Telerik.WinControls.UI.GridViewCommandColumn = New Telerik.WinControls.UI.GridViewCommandColumn()
+        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmOrderInfo))
-        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition3 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn9 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.pvOrderInfo = New Telerik.WinControls.UI.RadPageView()
         Me.pvpOrderDetails = New Telerik.WinControls.UI.RadPageViewPage()
         Me.lblCallingbtn = New System.Windows.Forms.Label()
@@ -189,8 +189,8 @@ Partial Class frmOrderInfo
         Me.pvOrderInfo.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.pvOrderInfo.Location = New System.Drawing.Point(0, 0)
         Me.pvOrderInfo.Name = "pvOrderInfo"
-        Me.pvOrderInfo.SelectedPage = Me.pvpQuoteDetails
-        Me.pvOrderInfo.Size = New System.Drawing.Size(1145, 869)
+        Me.pvOrderInfo.SelectedPage = Me.pvpProducts
+        Me.pvOrderInfo.Size = New System.Drawing.Size(1153, 899)
         Me.pvOrderInfo.TabIndex = 0
         Me.pvOrderInfo.ViewMode = Telerik.WinControls.UI.PageViewMode.NavigationView
         CType(Me.pvOrderInfo.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).DisplayMode = Telerik.WinControls.UI.NavigationViewDisplayModes.Expanded
@@ -209,7 +209,7 @@ Partial Class frmOrderInfo
         Me.pvpOrderDetails.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
         Me.pvpOrderDetails.Location = New System.Drawing.Point(47, 30)
         Me.pvpOrderDetails.Name = "pvpOrderDetails"
-        Me.pvpOrderDetails.Size = New System.Drawing.Size(1097, 838)
+        Me.pvpOrderDetails.Size = New System.Drawing.Size(1105, 868)
         Me.pvpOrderDetails.Text = "Sales and Shipping Details"
         Me.pvpOrderDetails.ToolTipText = "Add Sales Office and Shipping Information"
         '
@@ -237,11 +237,11 @@ Partial Class frmOrderInfo
         Me.gvCustomer.MasterTemplate.AllowDeleteRow = False
         Me.gvCustomer.MasterTemplate.AllowDragToGroup = False
         Me.gvCustomer.MasterTemplate.AllowEditRow = False
-        Me.gvCustomer.MasterTemplate.ViewDefinition = TableViewDefinition1
+        Me.gvCustomer.MasterTemplate.ViewDefinition = TableViewDefinition5
         Me.gvCustomer.Name = "gvCustomer"
         Me.gvCustomer.ReadOnly = True
         Me.gvCustomer.ShowGroupPanel = False
-        Me.gvCustomer.Size = New System.Drawing.Size(1077, 355)
+        Me.gvCustomer.Size = New System.Drawing.Size(1085, 355)
         Me.gvCustomer.TabIndex = 22
         Me.gvCustomer.Visible = False
         '
@@ -273,7 +273,7 @@ Partial Class frmOrderInfo
         Me.RadGroupBox2.HeaderText = "Ship To Party Info"
         Me.RadGroupBox2.Location = New System.Drawing.Point(9, 316)
         Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(1077, 231)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(1085, 231)
         Me.RadGroupBox2.TabIndex = 21
         Me.RadGroupBox2.Text = "Ship To Party Info"
         '
@@ -506,7 +506,7 @@ Partial Class frmOrderInfo
         Me.RadGroupBox1.HeaderText = "Sold To Party Info"
         Me.RadGroupBox1.Location = New System.Drawing.Point(9, 43)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(1077, 231)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(1085, 231)
         Me.RadGroupBox1.TabIndex = 17
         Me.RadGroupBox1.Text = "Sold To Party Info"
         '
@@ -706,16 +706,16 @@ Partial Class frmOrderInfo
         'ddlSalesOffice
         '
         Me.ddlSalesOffice.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        RadListDataItem1.Text = "R000"
-        RadListDataItem2.Text = "R001"
-        RadListDataItem3.Text = "R002"
-        RadListDataItem4.Text = "R004"
-        RadListDataItem5.Text = "R005"
-        Me.ddlSalesOffice.Items.Add(RadListDataItem1)
-        Me.ddlSalesOffice.Items.Add(RadListDataItem2)
-        Me.ddlSalesOffice.Items.Add(RadListDataItem3)
-        Me.ddlSalesOffice.Items.Add(RadListDataItem4)
-        Me.ddlSalesOffice.Items.Add(RadListDataItem5)
+        RadListDataItem6.Text = "R000"
+        RadListDataItem7.Text = "R001"
+        RadListDataItem8.Text = "R002"
+        RadListDataItem9.Text = "R004"
+        RadListDataItem10.Text = "R005"
+        Me.ddlSalesOffice.Items.Add(RadListDataItem6)
+        Me.ddlSalesOffice.Items.Add(RadListDataItem7)
+        Me.ddlSalesOffice.Items.Add(RadListDataItem8)
+        Me.ddlSalesOffice.Items.Add(RadListDataItem9)
+        Me.ddlSalesOffice.Items.Add(RadListDataItem10)
         Me.ddlSalesOffice.Location = New System.Drawing.Point(167, 10)
         Me.ddlSalesOffice.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
         Me.ddlSalesOffice.Name = "ddlSalesOffice"
@@ -987,14 +987,14 @@ Partial Class frmOrderInfo
         '
         '
         Me.RadGridView2.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn1.HeaderText = "Document Name "
-        GridViewTextBoxColumn1.Name = "Part"
-        GridViewTextBoxColumn1.Width = 857
-        GridViewCommandColumn1.HeaderText = "View PDF"
-        GridViewCommandColumn1.Name = "column1"
-        GridViewCommandColumn1.Width = 177
-        Me.RadGridView2.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewCommandColumn1})
-        Me.RadGridView2.MasterTemplate.ViewDefinition = TableViewDefinition2
+        GridViewTextBoxColumn10.HeaderText = "Document Name "
+        GridViewTextBoxColumn10.Name = "Part"
+        GridViewTextBoxColumn10.Width = 857
+        GridViewCommandColumn2.HeaderText = "View PDF"
+        GridViewCommandColumn2.Name = "column1"
+        GridViewCommandColumn2.Width = 177
+        Me.RadGridView2.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn10, GridViewCommandColumn2})
+        Me.RadGridView2.MasterTemplate.ViewDefinition = TableViewDefinition6
         Me.RadGridView2.Name = "RadGridView2"
         Me.RadGridView2.Size = New System.Drawing.Size(1054, 662)
         Me.RadGridView2.TabIndex = 1
@@ -1004,9 +1004,9 @@ Partial Class frmOrderInfo
         Me.pvpProducts.Controls.Add(Me.RadPageView1)
         Me.pvpProducts.Image = Global.Nabco_Sales.My.Resources.Resources.tag_blue_add
         Me.pvpProducts.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
-        Me.pvpProducts.Location = New System.Drawing.Point(237, 30)
+        Me.pvpProducts.Location = New System.Drawing.Point(47, 30)
         Me.pvpProducts.Name = "pvpProducts"
-        Me.pvpProducts.Size = New System.Drawing.Size(844, 730)
+        Me.pvpProducts.Size = New System.Drawing.Size(1105, 868)
         Me.pvpProducts.Text = "Products"
         Me.pvpProducts.ToolTipText = "Add Products to Order"
         '
@@ -1025,6 +1025,7 @@ Partial Class frmOrderInfo
         '
         Me.RadPageViewPage1.Controls.Add(Me.Panel1)
         Me.RadPageViewPage1.Controls.Add(Me.RadGridView1)
+        Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(945.0!, 28.0!)
         Me.RadPageViewPage1.Location = New System.Drawing.Point(10, 37)
         Me.RadPageViewPage1.Name = "RadPageViewPage1"
         Me.RadPageViewPage1.Size = New System.Drawing.Size(991, 616)
@@ -1133,20 +1134,20 @@ Partial Class frmOrderInfo
         '
         '
         Me.RadGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn2.HeaderText = "Part "
-        GridViewTextBoxColumn2.Name = "Part"
-        GridViewTextBoxColumn2.Width = 243
-        GridViewTextBoxColumn3.HeaderText = "Cost"
-        GridViewTextBoxColumn3.Name = "Cost"
-        GridViewTextBoxColumn3.Width = 243
-        GridViewTextBoxColumn4.HeaderText = "Description"
-        GridViewTextBoxColumn4.Name = "column3"
-        GridViewTextBoxColumn4.Width = 243
-        GridViewTextBoxColumn5.HeaderText = "Unit ID"
-        GridViewTextBoxColumn5.Name = "column4"
-        GridViewTextBoxColumn5.Width = 244
-        Me.RadGridView1.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4, GridViewTextBoxColumn5})
-        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition3
+        GridViewTextBoxColumn6.HeaderText = "Part "
+        GridViewTextBoxColumn6.Name = "Part"
+        GridViewTextBoxColumn6.Width = 243
+        GridViewTextBoxColumn7.HeaderText = "Cost"
+        GridViewTextBoxColumn7.Name = "Cost"
+        GridViewTextBoxColumn7.Width = 243
+        GridViewTextBoxColumn8.HeaderText = "Description"
+        GridViewTextBoxColumn8.Name = "column3"
+        GridViewTextBoxColumn8.Width = 243
+        GridViewTextBoxColumn9.HeaderText = "Unit ID"
+        GridViewTextBoxColumn9.Name = "column4"
+        GridViewTextBoxColumn9.Width = 244
+        Me.RadGridView1.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9})
+        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition4
         Me.RadGridView1.Name = "RadGridView1"
         Me.RadGridView1.Size = New System.Drawing.Size(991, 489)
         Me.RadGridView1.TabIndex = 0
@@ -1155,7 +1156,7 @@ Partial Class frmOrderInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1145, 869)
+        Me.ClientSize = New System.Drawing.Size(1153, 899)
         Me.Controls.Add(Me.pvOrderInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmOrderInfo"

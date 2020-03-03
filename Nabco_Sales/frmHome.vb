@@ -76,6 +76,11 @@ Public Class frmHome
         Application.Exit()
     End Sub
 
+    Public Sub OpenNewSwing()
+        Dim frm As frmSwingDoor
+        ShowForm(frm)
+
+    End Sub
 #End Region
 
 #Region "Subs & Functions"

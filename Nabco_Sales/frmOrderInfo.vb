@@ -28,9 +28,9 @@ Public Class frmOrderInfo
     Private Sub frmOrderInfo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'load a fresh datatable with customers
         dtFilterSold = New DataTable
-        dtFilterSold = My.Settings.CustomerDataClean.Copy()
+        dtFilterSold = My.Settings.CustomerDATARaw.Copy()
         dtFilterShip = New DataTable
-        dtFilterShip = My.Settings.CustomerDataClean.Copy()
+        dtFilterShip = My.Settings.CustomerDATARaw.Copy()
         'TestingLinqQuery()
 
         'force the pageview to be expanded
@@ -236,6 +236,14 @@ Public Class frmOrderInfo
         gvCustomer.Visible = True
         gvCustomer.Location = Label1.Location
         lblCallingbtn.Text = "SHIP"
+    End Sub
+
+    Private Sub mnuSlider_Click(sender As Object, e As EventArgs) Handles mnuSlider.Click
+
+    End Sub
+
+    Private Sub mnuSwinger_Click(sender As Object, e As EventArgs) Handles mnuSwinger.Click
+        frmHome.OpenNewSwing()
     End Sub
 
 
