@@ -7,6 +7,8 @@ Imports Telerik.WinControls.UI
 Imports Microsoft.Office.Interop
 
 Public Class frmSwingDoor
+
+
     Private LoadingSpecs As Boolean
     Private SkipPop As Boolean
 
@@ -874,7 +876,4 @@ Endfun:
     Private Declare Auto Function GetWindowThreadProcessId Lib "user32.dll" (ByVal hwnd As IntPtr,
             ByRef lpdwProcessId As Integer) As Integer
 
-    Private Sub tabModel_Paint(sender As Object, e As PaintEventArgs) Handles tabModel.Paint
-
-    End Sub
 End Class

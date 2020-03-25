@@ -124,10 +124,39 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form2.Designer.vb">
+    <Compile Include="Developing\frmHomeNew.Designer.vb">
+      <DependentUpon>frmHomeNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developing\frmHomeNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Developing\frmCustomerPricing.Designer.vb">
+      <DependentUpon>frmCustomerPricing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Developing\frmCustomerPricing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuoteLookup.Designer.vb">
+      <DependentUpon>frmQuoteLookup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuoteLookup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSwingers.Designer.vb">
+      <DependentUpon>frmSwingers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSwingers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="OldForms\Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form2.vb">
+    <Compile Include="OldForms\Form2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLoading.Designer.vb">
@@ -142,10 +171,10 @@
     <Compile Include="frmOrderInfo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmOrderInfoOld.Designer.vb">
+    <Compile Include="OldForms\frmOrderInfoOld.Designer.vb">
       <DependentUpon>frmOrderInfoOld.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmOrderInfoOld.vb">
+    <Compile Include="OldForms\frmOrderInfoOld.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="OldForms\frmWaitTest.Designer.vb">
@@ -166,9 +195,9 @@
     <Compile Include="frmCustomers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IFfcTableExtension.vb" />
+    <Compile Include="Class_Modules\IFfcTableExtension.vb" />
     <Compile Include="OldForms\Program.vb" />
-    <Compile Include="SAPClass.vb" />
+    <Compile Include="Class_Modules\SAPClass.vb" />
     <Compile Include="OldForms\frmSplash.Designer.vb">
       <DependentUpon>frmSplash.vb</DependentUpon>
     </Compile>
@@ -181,18 +210,18 @@
     <Compile Include="SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestSQLControl.vb" />
-    <Compile Include="SQLMod.vb" />
-    <Compile Include="Form1.Designer.vb">
+    <Compile Include="Class_Modules\TestSQLControl.vb" />
+    <Compile Include="Class_Modules\SQLMod.vb" />
+    <Compile Include="OldForms\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="OldForms\Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHomeOld.vb">
+    <Compile Include="OldForms\frmHomeOld.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHomeOld.Designer.vb">
+    <Compile Include="OldForms\frmHomeOld.Designer.vb">
       <DependentUpon>frmHomeOld.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
@@ -213,11 +242,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -235,7 +259,7 @@
     <Compile Include="frmSwingDoor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SupportMod.vb" />
+    <Compile Include="Class_Modules\SupportMod.vb" />
     <Compile Include="frmTier.Designer.vb">
       <DependentUpon>frmTier.vb</DependentUpon>
     </Compile>
@@ -244,10 +268,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="Developing\frmHomeNew.resx">
+      <DependentUpon>frmHomeNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Developing\frmCustomerPricing.resx">
+      <DependentUpon>frmCustomerPricing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuoteLookup.resx">
+      <DependentUpon>frmQuoteLookup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSwingers.resx">
+      <DependentUpon>frmSwingers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OldForms\Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
+    <EmbeddedResource Include="OldForms\Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoading.resx">
@@ -256,7 +292,7 @@
     <EmbeddedResource Include="frmOrderInfo.resx">
       <DependentUpon>frmOrderInfo.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmOrderInfoOld.resx">
+    <EmbeddedResource Include="OldForms\frmOrderInfoOld.resx">
       <DependentUpon>frmOrderInfoOld.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OldForms\frmWaitTest.resx">
@@ -265,7 +301,7 @@
     <EmbeddedResource Include="frmWait.resx">
       <DependentUpon>frmWait.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHomeOld.resx">
+    <EmbeddedResource Include="OldForms\frmHomeOld.resx">
       <DependentUpon>frmHomeOld.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDB.resx">
@@ -277,9 +313,9 @@
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTier.resx">
       <DependentUpon>frmTier.vb</DependentUpon>
@@ -315,17 +351,26 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="SwingBom.xlsm">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\report_magnify.png" />
+    <None Include="Resources\select_by_difference.png" />
+    <None Include="Resources\report_add.png" />
     <None Include="Resources\tag_blue_add.png" />
     <None Include="Resources\script.png" />
     <None Include="Resources\lorry.png" />
     <None Include="Resources\inbox_upload.png" />
-    <None Include="Resources\google_custom_search.png" />
+    <None Include="Resources\search.png" />
     <None Include="Resources\arrow_refresh.png" />
+    <None Include="Resources\door.png" />
+    <None Include="Resources\application_cascade.png" />
+    <None Include="Resources\application_form.png" />
+    <None Include="Resources\application_view_list.png" />
+    <None Include="Resources\application_form_magnify.png" />
+    <None Include="Resources\04_Save_24x24.png" />
+    <None Include="Resources\disk.png" />
+    <None Include="Resources\application_form_edit.png" />
+    <None Include="Resources\error.png" />
     <Content Include="Resources\nabcogt_logo_DEr_icon.ico" />
     <None Include="Resources\page_save.png" />
     <None Include="Resources\LHI-CLHI.png" />
@@ -457,5 +502,6 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -6,6 +6,23 @@ Imports System.Xml
 Imports Telerik.WinControls.UI
 
 Module SupportMod
+
+    'Using this to set multiple controls visibility at once 
+    Public Sub Set_Visibility(ByVal vis As Boolean, ParamArray optControl As Control())
+        Dim tempcontrol As Control
+        For Each tempcontrol In optControl
+            tempcontrol.Visible = vis
+        Next
+    End Sub
+
+    'Using to set multiple controls as enable or disabled
+    Public Sub Set_Enabled(ByVal enabled As Boolean, ParamArray optControl As Control())
+        Dim tempcontrol As Control
+        For Each tempcontrol In optControl
+            tempcontrol.Visible = enabled
+        Next
+    End Sub
+
     Public Sub ClearGrid(ByRef GRD As RadGridView)
         GRD.Rows.Clear()
         GRD.Columns.Clear()
@@ -87,5 +104,7 @@ Module SupportMod
             CloseRS(RS)
         End Try
     End Sub
+
+
 
 End Module

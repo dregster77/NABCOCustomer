@@ -8,9 +8,12 @@ Imports Telerik.WinControls.Data
 
 Public Class frmOrderInfo
 
-#Region "Form Level"
-    Public searchrowinfo As GridViewRowInfo
 
+#Region "Form Level"
+
+    Public QuoteID As Integer
+    Private _New_Existing As Boolean
+    Public searchrowinfo As GridViewRowInfo
     ' Private custDT As DataTable
     Private dtFilterSold As DataTable
     Private dtFilterShip As DataTable
@@ -37,9 +40,33 @@ Public Class frmOrderInfo
         Dim navele = TryCast(Me.pvOrderInfo.ViewElement, RadPageViewNavigationViewElement)
         navele.Expand()
         PopDistChannels()
-
+        NewQuote()
+        txtSapEntryDate.Text = Today.ToShortDateString
         '   FilterData(True)
         '  FilterData(False)
+        If QuoteID > 0 Then
+
+        End If
+    End Sub
+
+
+    Private Sub NewQuote()
+        Try
+            Dim newquotenum As Integer
+
+            SQL = "INSERT INTO t_quote (user_id, status) values('" & My.Settings.User_ID & "',1) "
+            Execute(newquotenum)
+            txtQuoteNum.Text = newquotenum
+
+        Catch ex As Exception
+            MsgBox(ex.Message, "NewQuote")
+        Finally
+        End Try
+
+
+    End Sub
+
+    Private Sub FindQuote()
 
     End Sub
 
@@ -56,11 +83,6 @@ Public Class frmOrderInfo
 
     End Sub
 #End Region
-
-#Region "Sales and Shipping Details"
-
-
-#Region "Population and Filtering Logic"
 
     Private Sub FilterData(ByVal shipsold As Boolean) 'true ship false sold
 
@@ -104,12 +126,41 @@ Public Class frmOrderInfo
         End If
 
         If IIf(shipsold, txtCustShipTP.Text, txtCustSoldTP.Text) <> "" Then
-            gvCustomer.FilterDescriptors.Add("COMPNAYNAME", FilterOperator.StartsWith, IIf(shipsold, txtCustShipTP.Text, txtCustSoldTP.Text))
+            gvCustomer.FilterDescriptors.Add("COMPANYNAME", FilterOperator.StartsWith, IIf(shipsold, txtCustShipTP.Text, txtCustSoldTP.Text))
         End If
         gvCustomer.EnableFiltering = True
         gvCustomer.ShowFilteringRow = False
-        gvCustomer.Refresh()
+        ReadableColumnHeaders()
+        ' gvCustomer.Refresh()
     End Sub
+
+    Private Sub ReadableColumnHeaders()
+        For Each col In gvCustomer.Columns
+            Select Case col.HeaderText
+                Case "CUSTNR"
+                    col.HeaderText = "Customer Number"
+                Case "COMPANYNAME"
+                    col.HeaderText = "Company Name"
+                Case "CITY"
+                    col.HeaderText = "City"
+                Case "STREET"
+                    col.HeaderText = "Street"
+                Case "ZIP"
+                    col.HeaderText = "ZIP"
+                Case "COUNTRY"
+                    col.HeaderText = "Country"
+                Case "REGION"
+                    col.HeaderText = "Region"
+                Case "TELEF1"
+                    col.HeaderText = "Telephone Number"
+                Case "VTWEG"
+                    col.HeaderText = "Dist Channel"
+                Case Else
+                    col.IsVisible = False
+            End Select
+        Next
+    End Sub
+
 
     Private Function ConvertToRead(ByVal DT As DataTable) As DataTable
         '   Dim temp As New DataTable
@@ -147,12 +198,6 @@ Public Class frmOrderInfo
         Return DT
     End Function
 
-    Private Sub PopData(ByVal data As DataTable, ByVal shipsold As Boolean)  'false= sold; true =ship
-
-
-
-    End Sub
-#End Region
 
     Private Sub chkMatchShip_ToggleStateChanged(sender As Object, args As StateChangedEventArgs) Handles chkMatchShip.ToggleStateChanged
         If chkMatchShip.Checked = True Then
@@ -238,27 +283,36 @@ Public Class frmOrderInfo
         lblCallingbtn.Text = "SHIP"
     End Sub
 
-    Private Sub mnuSlider_Click(sender As Object, e As EventArgs) Handles mnuSlider.Click
+    Private Sub pvOrderInfo_SelectedPageChanging(sender As Object, e As RadPageViewCancelEventArgs) Handles pvOrderInfo.SelectedPageChanging
+        'If pvOrderInfo.SelectedPage Is 
+    End Sub
 
+    Private Sub btnSaveOrder_Click(sender As Object, e As EventArgs) Handles btnSaveOrder.Click
+
+        SaveOrder()
     End Sub
 
     Private Sub mnuSwinger_Click(sender As Object, e As EventArgs) Handles mnuSwinger.Click
-        frmHome.OpenNewSwing()
+        SaveOrder()
+        Dim frm As New frmSwingers
+        frmHome.ShowForm(frm)
     End Sub
 
+    Public Sub SaveOrder()
+        Try
+            SQL = "Update t_quote set " &
+                "customer_po= '" & txtCustPO.Text & "', " &
+                "job_name= '" & txtJobName.Text & "', " &
+                "shipping_method= '" & ddlShippingMethod.SelectedItem.Text & "', " &
+                "customer_contact= '" & txtCustContact.Text & "', " &
+                "ship_cust_num '" & txtCustNoShipTP.Text & "', " &
+                "sold_cust_num= '" & txtCustNoSoldTP.Text & "')"
+            Execute()
+        Catch ex As Exception
+            MsgBox(ex.Message, "Save Order")
+        Finally
+            CloseRS(RS)
+        End Try
+    End Sub
 
-
-#End Region
-
-#Region "Quote Details"
-
-#End Region
-
-#Region "Upload PO and Documents"
-
-#End Region
-
-#Region "Products"
-
-#End Region
 End Class

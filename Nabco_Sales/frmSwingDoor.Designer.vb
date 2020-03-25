@@ -231,7 +231,7 @@ Partial Class frmSwingDoor
         Me.tabparenttab.ShowItemToolTips = False
         Me.tabparenttab.ShowNewTabButton = False
         Me.tabparenttab.ShowTabCloseButton = False
-        Me.tabparenttab.Size = New System.Drawing.Size(1033, 662)
+        Me.tabparenttab.Size = New System.Drawing.Size(1272, 795)
         Me.tabparenttab.TabIndex = 0
         Me.tabparenttab.Text = "Swing Door"
         '
@@ -242,7 +242,7 @@ Partial Class frmSwingDoor
         Me.tabModel.Controls.Add(Me.lblFormName)
         Me.tabModel.Location = New System.Drawing.Point(1, 31)
         Me.tabModel.Name = "tabModel"
-        Me.tabModel.Size = New System.Drawing.Size(1031, 630)
+        Me.tabModel.Size = New System.Drawing.Size(1270, 763)
         Me.tabModel.Tag = "0"
         Me.tabModel.Text = "Model"
         '
@@ -499,7 +499,7 @@ Partial Class frmSwingDoor
         Me.tabApplication.Enabled = False
         Me.tabApplication.Location = New System.Drawing.Point(1, 31)
         Me.tabApplication.Name = "tabApplication"
-        Me.tabApplication.Size = New System.Drawing.Size(1031, 630)
+        Me.tabApplication.Size = New System.Drawing.Size(1270, 763)
         Me.tabApplication.Tag = "1"
         Me.tabApplication.Text = "Application"
         '
@@ -686,7 +686,7 @@ Partial Class frmSwingDoor
         Me.tabDimensions.Enabled = False
         Me.tabDimensions.Location = New System.Drawing.Point(1, 31)
         Me.tabDimensions.Name = "tabDimensions"
-        Me.tabDimensions.Size = New System.Drawing.Size(1031, 630)
+        Me.tabDimensions.Size = New System.Drawing.Size(1270, 763)
         Me.tabDimensions.Text = "Specifications"
         '
         'pnlSpecs
@@ -1054,7 +1054,7 @@ Partial Class frmSwingDoor
         Me.tabAccessories.Enabled = False
         Me.tabAccessories.Location = New System.Drawing.Point(1, 31)
         Me.tabAccessories.Name = "tabAccessories"
-        Me.tabAccessories.Size = New System.Drawing.Size(1031, 630)
+        Me.tabAccessories.Size = New System.Drawing.Size(1270, 763)
         Me.tabAccessories.Tag = "2"
         Me.tabAccessories.Text = "Accessories"
         '
@@ -1218,7 +1218,7 @@ Partial Class frmSwingDoor
         Me.tabReview.Enabled = False
         Me.tabReview.Location = New System.Drawing.Point(1, 31)
         Me.tabReview.Name = "tabReview"
-        Me.tabReview.Size = New System.Drawing.Size(1031, 630)
+        Me.tabReview.Size = New System.Drawing.Size(1270, 763)
         Me.tabReview.Tag = "3"
         Me.tabReview.Text = "Review"
         '
@@ -1437,7 +1437,7 @@ Partial Class frmSwingDoor
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1033, 662)
+        Me.ClientSize = New System.Drawing.Size(1272, 795)
         Me.Controls.Add(Me.tabparenttab)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frmSwingDoor"

@@ -327,7 +327,7 @@ Partial Class frmOrderInfoOld
         'btnShipTP
         '
         Me.btnShipTP.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShipTP.Image = Global.Nabco_Sales.My.Resources.Resources.google_custom_search
+        Me.btnShipTP.Image = Global.Nabco_Sales.My.Resources.Resources.search
         Me.btnShipTP.Location = New System.Drawing.Point(715, 30)
         Me.btnShipTP.Name = "btnShipTP"
         Me.btnShipTP.Size = New System.Drawing.Size(112, 64)
@@ -517,7 +517,7 @@ Partial Class frmOrderInfoOld
         'btnSoldTP
         '
         Me.btnSoldTP.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSoldTP.Image = Global.Nabco_Sales.My.Resources.Resources.google_custom_search
+        Me.btnSoldTP.Image = Global.Nabco_Sales.My.Resources.Resources.search
         Me.btnSoldTP.Location = New System.Drawing.Point(715, 30)
         Me.btnSoldTP.Name = "btnSoldTP"
         Me.btnSoldTP.Size = New System.Drawing.Size(112, 64)

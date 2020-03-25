@@ -22,25 +22,48 @@ Partial Class frmOrderInfo
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim RadListDataItem6 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem7 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem8 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem9 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim RadListDataItem10 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
-        Dim GridViewTextBoxColumn10 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewCommandColumn2 As Telerik.WinControls.UI.GridViewCommandColumn = New Telerik.WinControls.UI.GridViewCommandColumn()
-        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmOrderInfo))
+        Dim RadListDataItem12 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem13 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem14 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem15 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem16 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem17 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem1 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem2 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem3 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem4 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim RadListDataItem5 As Telerik.WinControls.UI.RadListDataItem = New Telerik.WinControls.UI.RadListDataItem()
+        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewCommandColumn2 As Telerik.WinControls.UI.GridViewCommandColumn = New Telerik.WinControls.UI.GridViewCommandColumn()
+        Dim TableViewDefinition5 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmOrderInfo))
         Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn9 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition4 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn10 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition6 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.pvOrderInfo = New Telerik.WinControls.UI.RadPageView()
+        Me.pvpQuoteDetails = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadGroupBox3 = New Telerik.WinControls.UI.RadGroupBox()
+        Me.txtSapEntryDate = New Telerik.WinControls.UI.RadDateTimePicker()
+        Me.ddlShippingMethod = New Telerik.WinControls.UI.RadDropDownList()
+        Me.txtCustContact = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.txtQuoteNum = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.txtCustPO = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.txtJobName = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.txtSapOrderNum = New Telerik.WinControls.UI.RadTextBoxControl()
+        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.pvpOrderDetails = New Telerik.WinControls.UI.RadPageViewPage()
         Me.lblCallingbtn = New System.Windows.Forms.Label()
-        Me.gvCustomer = New Telerik.WinControls.UI.RadGridView()
         Me.RadGroupBox2 = New Telerik.WinControls.UI.RadGroupBox()
         Me.btnClearShip = New Telerik.WinControls.UI.RadButton()
         Me.txtCustNoShipTP = New Telerik.WinControls.UI.RadTextBoxControl()
@@ -83,44 +106,34 @@ Partial Class frmOrderInfo
         Me.Label22 = New System.Windows.Forms.Label()
         Me.lblModel = New System.Windows.Forms.Label()
         Me.ddlSalesOffice = New Telerik.WinControls.UI.RadDropDownList()
-        Me.pvpQuoteDetails = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.RadGroupBox3 = New Telerik.WinControls.UI.RadGroupBox()
-        Me.RadTextBoxControl8 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadButton1 = New Telerik.WinControls.UI.RadButton()
-        Me.RadTextBoxControl1 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControl3 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControl4 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControl5 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControl6 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.RadTextBoxControl7 = New Telerik.WinControls.UI.RadTextBoxControl()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.RadButton2 = New Telerik.WinControls.UI.RadButton()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.gvCustomer = New Telerik.WinControls.UI.RadGridView()
         Me.pvpDocuments = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
-        Me.btnAdd = New Telerik.WinControls.UI.RadButton()
         Me.RadGridView2 = New Telerik.WinControls.UI.RadGridView()
         Me.pvpProducts = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
-        Me.RadPageViewPage1 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.RadDropDownButton1 = New Telerik.WinControls.UI.RadDropDownButton()
         Me.mnuSlider = New Telerik.WinControls.UI.RadMenuItem()
         Me.mnuSwinger = New Telerik.WinControls.UI.RadMenuItem()
         Me.btnDelete = New Telerik.WinControls.UI.RadButton()
-        Me.btnCancel = New Telerik.WinControls.UI.RadButton()
         Me.btnEdit = New Telerik.WinControls.UI.RadButton()
         Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
+        Me.btnSaveOrder = New Telerik.WinControls.UI.RadButton()
+        Me.RadButton3 = New Telerik.WinControls.UI.RadButton()
         CType(Me.pvOrderInfo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvOrderInfo.SuspendLayout()
+        Me.pvpQuoteDetails.SuspendLayout()
+        CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadGroupBox3.SuspendLayout()
+        CType(Me.txtSapEntryDate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ddlShippingMethod, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtCustContact, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtQuoteNum, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtCustPO, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtJobName, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtSapOrderNum, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvpOrderDetails.SuspendLayout()
-        CType(Me.gvCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.gvCustomer.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadGroupBox2.SuspendLayout()
         CType(Me.btnClearShip, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -147,69 +160,275 @@ Partial Class frmOrderInfo
         CType(Me.btnSoldTP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddlDistChannelSoldTP, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ddlSalesOffice, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.pvpQuoteDetails.SuspendLayout()
-        CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadGroupBox3.SuspendLayout()
-        CType(Me.RadTextBoxControl8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControl1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControl3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControl4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControl5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControl6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadTextBoxControl7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvCustomer.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvpDocuments.SuspendLayout()
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnAdd, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView2.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pvpProducts.SuspendLayout()
-        CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.RadPageView1.SuspendLayout()
-        Me.RadPageViewPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.RadDropDownButton1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnDelete, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnCancel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnSaveOrder, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pvOrderInfo
         '
-        Me.pvOrderInfo.Controls.Add(Me.pvpOrderDetails)
+        Me.pvOrderInfo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pvOrderInfo.Controls.Add(Me.pvpQuoteDetails)
+        Me.pvOrderInfo.Controls.Add(Me.pvpOrderDetails)
         Me.pvOrderInfo.Controls.Add(Me.pvpDocuments)
         Me.pvOrderInfo.Controls.Add(Me.pvpProducts)
         Me.pvOrderInfo.DefaultPage = Me.pvpOrderDetails
-        Me.pvOrderInfo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pvOrderInfo.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.pvOrderInfo.Location = New System.Drawing.Point(0, 0)
+        Me.pvOrderInfo.Location = New System.Drawing.Point(0, 55)
         Me.pvOrderInfo.Name = "pvOrderInfo"
-        Me.pvOrderInfo.SelectedPage = Me.pvpProducts
-        Me.pvOrderInfo.Size = New System.Drawing.Size(1153, 899)
+        Me.pvOrderInfo.SelectedPage = Me.pvpQuoteDetails
+        Me.pvOrderInfo.Size = New System.Drawing.Size(1288, 793)
         Me.pvOrderInfo.TabIndex = 0
         Me.pvOrderInfo.ViewMode = Telerik.WinControls.UI.PageViewMode.NavigationView
         CType(Me.pvOrderInfo.GetChildAt(0), Telerik.WinControls.UI.RadPageViewNavigationViewElement).DisplayMode = Telerik.WinControls.UI.NavigationViewDisplayModes.Expanded
         '
+        'pvpQuoteDetails
+        '
+        Me.pvpQuoteDetails.Controls.Add(Me.RadGroupBox3)
+        Me.pvpQuoteDetails.Image = Global.Nabco_Sales.My.Resources.Resources.script
+        Me.pvpQuoteDetails.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
+        Me.pvpQuoteDetails.Location = New System.Drawing.Point(47, 30)
+        Me.pvpQuoteDetails.Name = "pvpQuoteDetails"
+        Me.pvpQuoteDetails.Size = New System.Drawing.Size(1240, 762)
+        Me.pvpQuoteDetails.Text = "Quote Details"
+        Me.pvpQuoteDetails.ToolTipText = "Quote Details"
+        '
+        'RadGroupBox3
+        '
+        Me.RadGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
+        Me.RadGroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadGroupBox3.Controls.Add(Me.txtSapEntryDate)
+        Me.RadGroupBox3.Controls.Add(Me.ddlShippingMethod)
+        Me.RadGroupBox3.Controls.Add(Me.txtCustContact)
+        Me.RadGroupBox3.Controls.Add(Me.txtQuoteNum)
+        Me.RadGroupBox3.Controls.Add(Me.txtCustPO)
+        Me.RadGroupBox3.Controls.Add(Me.txtJobName)
+        Me.RadGroupBox3.Controls.Add(Me.txtSapOrderNum)
+        Me.RadGroupBox3.Controls.Add(Me.RadButton1)
+        Me.RadGroupBox3.Controls.Add(Me.Label18)
+        Me.RadGroupBox3.Controls.Add(Me.Label19)
+        Me.RadGroupBox3.Controls.Add(Me.Label20)
+        Me.RadGroupBox3.Controls.Add(Me.RadButton2)
+        Me.RadGroupBox3.Controls.Add(Me.Label21)
+        Me.RadGroupBox3.Controls.Add(Me.Label23)
+        Me.RadGroupBox3.Controls.Add(Me.Label24)
+        Me.RadGroupBox3.Controls.Add(Me.Label25)
+        Me.RadGroupBox3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadGroupBox3.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office
+        Me.RadGroupBox3.HeaderText = ""
+        Me.RadGroupBox3.Location = New System.Drawing.Point(3, 3)
+        Me.RadGroupBox3.Name = "RadGroupBox3"
+        Me.RadGroupBox3.Size = New System.Drawing.Size(1256, 914)
+        Me.RadGroupBox3.TabIndex = 18
+        '
+        'txtSapEntryDate
+        '
+        Me.txtSapEntryDate.AutoSize = False
+        Me.txtSapEntryDate.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtSapEntryDate.Location = New System.Drawing.Point(158, 220)
+        Me.txtSapEntryDate.Name = "txtSapEntryDate"
+        Me.txtSapEntryDate.ReadOnly = True
+        Me.txtSapEntryDate.Size = New System.Drawing.Size(300, 30)
+        Me.txtSapEntryDate.TabIndex = 46
+        Me.txtSapEntryDate.TabStop = False
+        Me.txtSapEntryDate.Text = "Tuesday, March 24, 2020"
+        Me.txtSapEntryDate.Value = New Date(2020, 3, 24, 15, 58, 48, 343)
+        '
+        'ddlShippingMethod
+        '
+        Me.ddlShippingMethod.AutoSize = False
+        Me.ddlShippingMethod.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RadListDataItem12.Text = "Bestway Standard"
+        RadListDataItem13.Text = "Bestway Expedited"
+        RadListDataItem14.Text = "CHR West"
+        RadListDataItem15.Text = "CHR East"
+        RadListDataItem16.Text = "Customer Pick "
+        RadListDataItem17.Text = "Customer Arranged"
+        Me.ddlShippingMethod.Items.Add(RadListDataItem12)
+        Me.ddlShippingMethod.Items.Add(RadListDataItem13)
+        Me.ddlShippingMethod.Items.Add(RadListDataItem14)
+        Me.ddlShippingMethod.Items.Add(RadListDataItem15)
+        Me.ddlShippingMethod.Items.Add(RadListDataItem16)
+        Me.ddlShippingMethod.Items.Add(RadListDataItem17)
+        Me.ddlShippingMethod.Location = New System.Drawing.Point(158, 113)
+        Me.ddlShippingMethod.Name = "ddlShippingMethod"
+        Me.ddlShippingMethod.ReadOnly = True
+        Me.ddlShippingMethod.Size = New System.Drawing.Size(300, 30)
+        Me.ddlShippingMethod.TabIndex = 45
+        '
+        'txtCustContact
+        '
+        Me.txtCustContact.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtCustContact.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtCustContact.Location = New System.Drawing.Point(158, 149)
+        Me.txtCustContact.Name = "txtCustContact"
+        Me.txtCustContact.Size = New System.Drawing.Size(300, 30)
+        Me.txtCustContact.TabIndex = 44
+        '
+        'txtQuoteNum
+        '
+        Me.txtQuoteNum.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtQuoteNum.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtQuoteNum.Location = New System.Drawing.Point(158, 6)
+        Me.txtQuoteNum.Name = "txtQuoteNum"
+        Me.txtQuoteNum.Size = New System.Drawing.Size(300, 30)
+        Me.txtQuoteNum.TabIndex = 2
+        '
+        'txtCustPO
+        '
+        Me.txtCustPO.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtCustPO.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtCustPO.Location = New System.Drawing.Point(158, 42)
+        Me.txtCustPO.Name = "txtCustPO"
+        Me.txtCustPO.Size = New System.Drawing.Size(300, 30)
+        Me.txtCustPO.TabIndex = 6
+        '
+        'txtJobName
+        '
+        Me.txtJobName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtJobName.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtJobName.Location = New System.Drawing.Point(158, 77)
+        Me.txtJobName.Name = "txtJobName"
+        Me.txtJobName.Size = New System.Drawing.Size(300, 30)
+        Me.txtJobName.TabIndex = 8
+        '
+        'txtSapOrderNum
+        '
+        Me.txtSapOrderNum.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.txtSapOrderNum.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txtSapOrderNum.IsReadOnly = True
+        Me.txtSapOrderNum.Location = New System.Drawing.Point(158, 184)
+        Me.txtSapOrderNum.Name = "txtSapOrderNum"
+        Me.txtSapOrderNum.Size = New System.Drawing.Size(300, 30)
+        Me.txtSapOrderNum.TabIndex = 4
+        '
+        'RadButton1
+        '
+        Me.RadButton1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadButton1.Image = Global.Nabco_Sales.My.Resources.Resources.arrow_refresh
+        Me.RadButton1.Location = New System.Drawing.Point(715, 114)
+        Me.RadButton1.Name = "RadButton1"
+        Me.RadButton1.Size = New System.Drawing.Size(112, 64)
+        Me.RadButton1.TabIndex = 43
+        Me.RadButton1.Text = "Clear"
+        '
+        'Label18
+        '
+        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(11, 79)
+        Me.Label18.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(139, 30)
+        Me.Label18.TabIndex = 32
+        Me.Label18.Text = "Job Name:"
+        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label19
+        '
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(15, 114)
+        Me.Label19.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(135, 30)
+        Me.Label19.TabIndex = 30
+        Me.Label19.Text = "Shipping Method:"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label20
+        '
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(7, 41)
+        Me.Label20.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(143, 30)
+        Me.Label20.TabIndex = 28
+        Me.Label20.Text = "Customer PO:"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RadButton2
+        '
+        Me.RadButton2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadButton2.Image = Global.Nabco_Sales.My.Resources.Resources.search
+        Me.RadButton2.Location = New System.Drawing.Point(715, 6)
+        Me.RadButton2.Name = "RadButton2"
+        Me.RadButton2.Size = New System.Drawing.Size(112, 64)
+        Me.RadButton2.TabIndex = 18
+        Me.RadButton2.Text = "Search"
+        '
+        'Label21
+        '
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(7, 220)
+        Me.Label21.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(143, 30)
+        Me.Label21.TabIndex = 25
+        Me.Label21.Text = "SAP Entry Date:"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label23
+        '
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(7, 184)
+        Me.Label23.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(143, 30)
+        Me.Label23.TabIndex = 23
+        Me.Label23.Text = "SAP Order #:"
+        Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label24
+        '
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(11, 149)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(139, 30)
+        Me.Label24.TabIndex = 20
+        Me.Label24.Text = "Customer Contact:"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label25
+        '
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(7, 6)
+        Me.Label25.Margin = New System.Windows.Forms.Padding(5, 30, 5, 0)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(143, 30)
+        Me.Label25.TabIndex = 17
+        Me.Label25.Text = "Quote Number:"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'pvpOrderDetails
         '
         Me.pvpOrderDetails.Controls.Add(Me.lblCallingbtn)
-        Me.pvpOrderDetails.Controls.Add(Me.gvCustomer)
         Me.pvpOrderDetails.Controls.Add(Me.RadGroupBox2)
         Me.pvpOrderDetails.Controls.Add(Me.Label1)
         Me.pvpOrderDetails.Controls.Add(Me.chkMatchShip)
         Me.pvpOrderDetails.Controls.Add(Me.RadGroupBox1)
         Me.pvpOrderDetails.Controls.Add(Me.lblModel)
         Me.pvpOrderDetails.Controls.Add(Me.ddlSalesOffice)
+        Me.pvpOrderDetails.Controls.Add(Me.gvCustomer)
         Me.pvpOrderDetails.Image = Global.Nabco_Sales.My.Resources.Resources.lorry
         Me.pvpOrderDetails.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
         Me.pvpOrderDetails.Location = New System.Drawing.Point(47, 30)
         Me.pvpOrderDetails.Name = "pvpOrderDetails"
-        Me.pvpOrderDetails.Size = New System.Drawing.Size(1105, 868)
+        Me.pvpOrderDetails.Size = New System.Drawing.Size(1240, 762)
         Me.pvpOrderDetails.Text = "Sales and Shipping Details"
         Me.pvpOrderDetails.ToolTipText = "Add Sales Office and Shipping Information"
         '
@@ -224,26 +443,6 @@ Partial Class frmOrderInfo
         Me.lblCallingbtn.Text = "Match for Ship To:"
         Me.lblCallingbtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.lblCallingbtn.Visible = False
-        '
-        'gvCustomer
-        '
-        Me.gvCustomer.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gvCustomer.Location = New System.Drawing.Point(9, 605)
-        '
-        '
-        '
-        Me.gvCustomer.MasterTemplate.AllowAddNewRow = False
-        Me.gvCustomer.MasterTemplate.AllowDeleteRow = False
-        Me.gvCustomer.MasterTemplate.AllowDragToGroup = False
-        Me.gvCustomer.MasterTemplate.AllowEditRow = False
-        Me.gvCustomer.MasterTemplate.ViewDefinition = TableViewDefinition5
-        Me.gvCustomer.Name = "gvCustomer"
-        Me.gvCustomer.ReadOnly = True
-        Me.gvCustomer.ShowGroupPanel = False
-        Me.gvCustomer.Size = New System.Drawing.Size(1085, 355)
-        Me.gvCustomer.TabIndex = 22
-        Me.gvCustomer.Visible = False
         '
         'RadGroupBox2
         '
@@ -273,7 +472,7 @@ Partial Class frmOrderInfo
         Me.RadGroupBox2.HeaderText = "Ship To Party Info"
         Me.RadGroupBox2.Location = New System.Drawing.Point(9, 316)
         Me.RadGroupBox2.Name = "RadGroupBox2"
-        Me.RadGroupBox2.Size = New System.Drawing.Size(1085, 231)
+        Me.RadGroupBox2.Size = New System.Drawing.Size(1038, 231)
         Me.RadGroupBox2.TabIndex = 21
         Me.RadGroupBox2.Text = "Ship To Party Info"
         '
@@ -397,7 +596,7 @@ Partial Class frmOrderInfo
         'btnShipTP
         '
         Me.btnShipTP.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnShipTP.Image = Global.Nabco_Sales.My.Resources.Resources.google_custom_search
+        Me.btnShipTP.Image = Global.Nabco_Sales.My.Resources.Resources.search
         Me.btnShipTP.Location = New System.Drawing.Point(715, 30)
         Me.btnShipTP.Name = "btnShipTP"
         Me.btnShipTP.Size = New System.Drawing.Size(112, 64)
@@ -506,7 +705,7 @@ Partial Class frmOrderInfo
         Me.RadGroupBox1.HeaderText = "Sold To Party Info"
         Me.RadGroupBox1.Location = New System.Drawing.Point(9, 43)
         Me.RadGroupBox1.Name = "RadGroupBox1"
-        Me.RadGroupBox1.Size = New System.Drawing.Size(1085, 231)
+        Me.RadGroupBox1.Size = New System.Drawing.Size(1038, 231)
         Me.RadGroupBox1.TabIndex = 17
         Me.RadGroupBox1.Text = "Sold To Party Info"
         '
@@ -630,7 +829,7 @@ Partial Class frmOrderInfo
         'btnSoldTP
         '
         Me.btnSoldTP.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSoldTP.Image = Global.Nabco_Sales.My.Resources.Resources.google_custom_search
+        Me.btnSoldTP.Image = Global.Nabco_Sales.My.Resources.Resources.search
         Me.btnSoldTP.Location = New System.Drawing.Point(715, 30)
         Me.btnSoldTP.Name = "btnSoldTP"
         Me.btnSoldTP.Size = New System.Drawing.Size(112, 64)
@@ -706,276 +905,52 @@ Partial Class frmOrderInfo
         'ddlSalesOffice
         '
         Me.ddlSalesOffice.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        RadListDataItem6.Text = "R000"
-        RadListDataItem7.Text = "R001"
-        RadListDataItem8.Text = "R002"
-        RadListDataItem9.Text = "R004"
-        RadListDataItem10.Text = "R005"
-        Me.ddlSalesOffice.Items.Add(RadListDataItem6)
-        Me.ddlSalesOffice.Items.Add(RadListDataItem7)
-        Me.ddlSalesOffice.Items.Add(RadListDataItem8)
-        Me.ddlSalesOffice.Items.Add(RadListDataItem9)
-        Me.ddlSalesOffice.Items.Add(RadListDataItem10)
+        RadListDataItem1.Text = "R000"
+        RadListDataItem2.Text = "R001"
+        RadListDataItem3.Text = "R002"
+        RadListDataItem4.Text = "R004"
+        RadListDataItem5.Text = "R005"
+        Me.ddlSalesOffice.Items.Add(RadListDataItem1)
+        Me.ddlSalesOffice.Items.Add(RadListDataItem2)
+        Me.ddlSalesOffice.Items.Add(RadListDataItem3)
+        Me.ddlSalesOffice.Items.Add(RadListDataItem4)
+        Me.ddlSalesOffice.Items.Add(RadListDataItem5)
         Me.ddlSalesOffice.Location = New System.Drawing.Point(167, 10)
         Me.ddlSalesOffice.Margin = New System.Windows.Forms.Padding(5, 10, 5, 0)
         Me.ddlSalesOffice.Name = "ddlSalesOffice"
         Me.ddlSalesOffice.Size = New System.Drawing.Size(250, 27)
         Me.ddlSalesOffice.TabIndex = 1
         '
-        'pvpQuoteDetails
+        'gvCustomer
         '
-        Me.pvpQuoteDetails.Controls.Add(Me.RadGroupBox3)
-        Me.pvpQuoteDetails.Image = Global.Nabco_Sales.My.Resources.Resources.script
-        Me.pvpQuoteDetails.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
-        Me.pvpQuoteDetails.Location = New System.Drawing.Point(47, 30)
-        Me.pvpQuoteDetails.Name = "pvpQuoteDetails"
-        Me.pvpQuoteDetails.Size = New System.Drawing.Size(1097, 838)
-        Me.pvpQuoteDetails.Text = "Quote Details"
-        Me.pvpQuoteDetails.ToolTipText = "Quote Details"
-        '
-        'RadGroupBox3
-        '
-        Me.RadGroupBox3.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping
-        Me.RadGroupBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.gvCustomer.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadGroupBox3.Controls.Add(Me.RadTextBoxControl8)
-        Me.RadGroupBox3.Controls.Add(Me.RadButton1)
-        Me.RadGroupBox3.Controls.Add(Me.RadTextBoxControl1)
-        Me.RadGroupBox3.Controls.Add(Me.RadTextBoxControl3)
-        Me.RadGroupBox3.Controls.Add(Me.RadTextBoxControl4)
-        Me.RadGroupBox3.Controls.Add(Me.RadTextBoxControl5)
-        Me.RadGroupBox3.Controls.Add(Me.RadTextBoxControl6)
-        Me.RadGroupBox3.Controls.Add(Me.RadTextBoxControl7)
-        Me.RadGroupBox3.Controls.Add(Me.Label18)
-        Me.RadGroupBox3.Controls.Add(Me.Label19)
-        Me.RadGroupBox3.Controls.Add(Me.Label20)
-        Me.RadGroupBox3.Controls.Add(Me.RadButton2)
-        Me.RadGroupBox3.Controls.Add(Me.Label21)
-        Me.RadGroupBox3.Controls.Add(Me.Label23)
-        Me.RadGroupBox3.Controls.Add(Me.Label24)
-        Me.RadGroupBox3.Controls.Add(Me.Label25)
-        Me.RadGroupBox3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadGroupBox3.GroupBoxStyle = Telerik.WinControls.UI.RadGroupBoxStyle.Office
-        Me.RadGroupBox3.HeaderText = ""
-        Me.RadGroupBox3.Location = New System.Drawing.Point(3, 3)
-        Me.RadGroupBox3.Name = "RadGroupBox3"
-        Me.RadGroupBox3.Size = New System.Drawing.Size(1077, 586)
-        Me.RadGroupBox3.TabIndex = 18
+        Me.gvCustomer.Location = New System.Drawing.Point(9, 553)
         '
-        'RadTextBoxControl8
         '
-        Me.RadTextBoxControl8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadTextBoxControl8.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.RadTextBoxControl8.Location = New System.Drawing.Point(158, 221)
-        Me.RadTextBoxControl8.Name = "RadTextBoxControl8"
-        Me.RadTextBoxControl8.Size = New System.Drawing.Size(300, 30)
-        Me.RadTextBoxControl8.TabIndex = 44
         '
-        'RadButton1
-        '
-        Me.RadButton1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton1.Image = Global.Nabco_Sales.My.Resources.Resources.arrow_refresh
-        Me.RadButton1.Location = New System.Drawing.Point(715, 114)
-        Me.RadButton1.Name = "RadButton1"
-        Me.RadButton1.Size = New System.Drawing.Size(112, 64)
-        Me.RadButton1.TabIndex = 43
-        Me.RadButton1.Text = "Clear"
-        '
-        'RadTextBoxControl1
-        '
-        Me.RadTextBoxControl1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadTextBoxControl1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.RadTextBoxControl1.Location = New System.Drawing.Point(158, 6)
-        Me.RadTextBoxControl1.Name = "RadTextBoxControl1"
-        Me.RadTextBoxControl1.Size = New System.Drawing.Size(300, 30)
-        Me.RadTextBoxControl1.TabIndex = 2
-        '
-        'RadTextBoxControl3
-        '
-        Me.RadTextBoxControl3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadTextBoxControl3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.RadTextBoxControl3.Location = New System.Drawing.Point(158, 114)
-        Me.RadTextBoxControl3.Name = "RadTextBoxControl3"
-        Me.RadTextBoxControl3.Size = New System.Drawing.Size(300, 30)
-        Me.RadTextBoxControl3.TabIndex = 6
-        '
-        'RadTextBoxControl4
-        '
-        Me.RadTextBoxControl4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadTextBoxControl4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.RadTextBoxControl4.Location = New System.Drawing.Point(158, 149)
-        Me.RadTextBoxControl4.Name = "RadTextBoxControl4"
-        Me.RadTextBoxControl4.Size = New System.Drawing.Size(300, 30)
-        Me.RadTextBoxControl4.TabIndex = 8
-        '
-        'RadTextBoxControl5
-        '
-        Me.RadTextBoxControl5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadTextBoxControl5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.RadTextBoxControl5.Location = New System.Drawing.Point(158, 185)
-        Me.RadTextBoxControl5.Name = "RadTextBoxControl5"
-        Me.RadTextBoxControl5.Size = New System.Drawing.Size(300, 30)
-        Me.RadTextBoxControl5.TabIndex = 7
-        '
-        'RadTextBoxControl6
-        '
-        Me.RadTextBoxControl6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadTextBoxControl6.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.RadTextBoxControl6.Location = New System.Drawing.Point(158, 78)
-        Me.RadTextBoxControl6.Name = "RadTextBoxControl6"
-        Me.RadTextBoxControl6.Size = New System.Drawing.Size(300, 30)
-        Me.RadTextBoxControl6.TabIndex = 5
-        '
-        'RadTextBoxControl7
-        '
-        Me.RadTextBoxControl7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.RadTextBoxControl7.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.RadTextBoxControl7.Location = New System.Drawing.Point(158, 42)
-        Me.RadTextBoxControl7.Name = "RadTextBoxControl7"
-        Me.RadTextBoxControl7.Size = New System.Drawing.Size(300, 30)
-        Me.RadTextBoxControl7.TabIndex = 4
-        '
-        'Label18
-        '
-        Me.Label18.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(11, 151)
-        Me.Label18.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(139, 30)
-        Me.Label18.TabIndex = 32
-        Me.Label18.Text = "Job Name:"
-        Me.Label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label19
-        '
-        Me.Label19.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(15, 186)
-        Me.Label19.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(135, 30)
-        Me.Label19.TabIndex = 30
-        Me.Label19.Text = "Shipping Method:"
-        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label20
-        '
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(7, 113)
-        Me.Label20.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(143, 30)
-        Me.Label20.TabIndex = 28
-        Me.Label20.Text = "Customer PO:"
-        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'RadButton2
-        '
-        Me.RadButton2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton2.Image = Global.Nabco_Sales.My.Resources.Resources.google_custom_search
-        Me.RadButton2.Location = New System.Drawing.Point(715, 6)
-        Me.RadButton2.Name = "RadButton2"
-        Me.RadButton2.Size = New System.Drawing.Size(112, 64)
-        Me.RadButton2.TabIndex = 18
-        Me.RadButton2.Text = "Search"
-        '
-        'Label21
-        '
-        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(7, 78)
-        Me.Label21.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(143, 30)
-        Me.Label21.TabIndex = 25
-        Me.Label21.Text = "SAP Entry Date:"
-        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label23
-        '
-        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(7, 42)
-        Me.Label23.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(143, 30)
-        Me.Label23.TabIndex = 23
-        Me.Label23.Text = "SAP Order #:"
-        Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label24
-        '
-        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(11, 221)
-        Me.Label24.Margin = New System.Windows.Forms.Padding(5, 5, 5, 0)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(139, 30)
-        Me.Label24.TabIndex = 20
-        Me.Label24.Text = "Customer Contact:"
-        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'Label25
-        '
-        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(7, 6)
-        Me.Label25.Margin = New System.Windows.Forms.Padding(5, 30, 5, 0)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(143, 30)
-        Me.Label25.TabIndex = 17
-        Me.Label25.Text = "Quote Number:"
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.gvCustomer.MasterTemplate.AllowAddNewRow = False
+        Me.gvCustomer.MasterTemplate.AllowDeleteRow = False
+        Me.gvCustomer.MasterTemplate.AllowDragToGroup = False
+        Me.gvCustomer.MasterTemplate.AllowEditRow = False
+        Me.gvCustomer.MasterTemplate.ViewDefinition = TableViewDefinition4
+        Me.gvCustomer.Name = "gvCustomer"
+        Me.gvCustomer.ReadOnly = True
+        Me.gvCustomer.ShowGroupPanel = False
+        Me.gvCustomer.Size = New System.Drawing.Size(1038, 355)
+        Me.gvCustomer.TabIndex = 22
+        Me.gvCustomer.Visible = False
         '
         'pvpDocuments
         '
-        Me.pvpDocuments.Controls.Add(Me.RadButton3)
-        Me.pvpDocuments.Controls.Add(Me.btnAdd)
         Me.pvpDocuments.Controls.Add(Me.RadGridView2)
-        Me.pvpDocuments.Image = Global.Nabco_Sales.My.Resources.Resources.inbox_upload
+        Me.pvpDocuments.Image = Global.Nabco_Sales.My.Resources.Resources.report_add
         Me.pvpDocuments.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
         Me.pvpDocuments.Location = New System.Drawing.Point(47, 30)
         Me.pvpDocuments.Name = "pvpDocuments"
-        Me.pvpDocuments.Size = New System.Drawing.Size(1065, 718)
+        Me.pvpDocuments.Size = New System.Drawing.Size(1240, 762)
         Me.pvpDocuments.Text = "Upload Documents"
         Me.pvpDocuments.ToolTipText = "Upload PO an Supporting Documents"
-        '
-        'RadButton3
-        '
-        Me.RadButton3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.RadButton3.Enabled = False
-        Me.RadButton3.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadButton3.Image = Global.Nabco_Sales.My.Resources.Resources.bin
-        Me.RadButton3.Location = New System.Drawing.Point(256, 5)
-        Me.RadButton3.Name = "RadButton3"
-        Me.RadButton3.Size = New System.Drawing.Size(112, 32)
-        Me.RadButton3.TabIndex = 15
-        Me.RadButton3.Text = "Delete"
-        Me.RadButton3.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.Nabco_Sales.My.Resources.Resources.bin
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.RadButton3.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Delete"
-        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
-        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
-        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
-        CType(Me.RadButton3.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdd.Image = Global.Nabco_Sales.My.Resources.Resources.add
-        Me.btnAdd.Location = New System.Drawing.Point(18, 5)
-        Me.btnAdd.Margin = New System.Windows.Forms.Padding(5)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(112, 32)
-        Me.btnAdd.TabIndex = 16
-        Me.btnAdd.Text = "Add"
-        Me.btnAdd.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.btnAdd.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.Nabco_Sales.My.Resources.Resources.add
-        CType(Me.btnAdd.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.btnAdd.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Add"
-        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
-        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
-        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
-        CType(Me.btnAdd.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
         '
         'RadGridView2
         '
@@ -987,60 +962,39 @@ Partial Class frmOrderInfo
         '
         '
         Me.RadGridView2.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn10.HeaderText = "Document Name "
-        GridViewTextBoxColumn10.Name = "Part"
-        GridViewTextBoxColumn10.Width = 857
+        GridViewTextBoxColumn6.HeaderText = "Document Name "
+        GridViewTextBoxColumn6.Name = "Part"
+        GridViewTextBoxColumn6.Width = 1002
         GridViewCommandColumn2.HeaderText = "View PDF"
         GridViewCommandColumn2.Name = "column1"
-        GridViewCommandColumn2.Width = 177
-        Me.RadGridView2.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn10, GridViewCommandColumn2})
-        Me.RadGridView2.MasterTemplate.ViewDefinition = TableViewDefinition6
+        GridViewCommandColumn2.Width = 207
+        Me.RadGridView2.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn6, GridViewCommandColumn2})
+        Me.RadGridView2.MasterTemplate.ViewDefinition = TableViewDefinition5
         Me.RadGridView2.Name = "RadGridView2"
-        Me.RadGridView2.Size = New System.Drawing.Size(1054, 662)
+        Me.RadGridView2.Size = New System.Drawing.Size(1229, 706)
         Me.RadGridView2.TabIndex = 1
         '
         'pvpProducts
         '
-        Me.pvpProducts.Controls.Add(Me.RadPageView1)
+        Me.pvpProducts.Controls.Add(Me.Panel1)
+        Me.pvpProducts.Controls.Add(Me.RadGridView1)
         Me.pvpProducts.Image = Global.Nabco_Sales.My.Resources.Resources.tag_blue_add
         Me.pvpProducts.ItemSize = New System.Drawing.SizeF(46.0!, 46.0!)
         Me.pvpProducts.Location = New System.Drawing.Point(47, 30)
         Me.pvpProducts.Name = "pvpProducts"
-        Me.pvpProducts.Size = New System.Drawing.Size(1105, 868)
+        Me.pvpProducts.Size = New System.Drawing.Size(1240, 762)
         Me.pvpProducts.Text = "Products"
         Me.pvpProducts.ToolTipText = "Add Products to Order"
-        '
-        'RadPageView1
-        '
-        Me.RadPageView1.Controls.Add(Me.RadPageViewPage1)
-        Me.RadPageView1.Location = New System.Drawing.Point(3, 3)
-        Me.RadPageView1.Name = "RadPageView1"
-        Me.RadPageView1.SelectedPage = Me.RadPageViewPage1
-        Me.RadPageView1.Size = New System.Drawing.Size(1012, 664)
-        Me.RadPageView1.TabIndex = 0
-        CType(Me.RadPageView1.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ItemFitMode = Telerik.WinControls.UI.StripViewItemFitMode.Fill
-        CType(Me.RadPageView1.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).ShowItemCloseButton = False
-        '
-        'RadPageViewPage1
-        '
-        Me.RadPageViewPage1.Controls.Add(Me.Panel1)
-        Me.RadPageViewPage1.Controls.Add(Me.RadGridView1)
-        Me.RadPageViewPage1.ItemSize = New System.Drawing.SizeF(945.0!, 28.0!)
-        Me.RadPageViewPage1.Location = New System.Drawing.Point(10, 37)
-        Me.RadPageViewPage1.Name = "RadPageViewPage1"
-        Me.RadPageViewPage1.Size = New System.Drawing.Size(991, 616)
-        Me.RadPageViewPage1.Text = "Product Details"
         '
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.RadDropDownButton1)
         Me.Panel1.Controls.Add(Me.btnDelete)
-        Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Controls.Add(Me.btnEdit)
-        Me.Panel1.Location = New System.Drawing.Point(3, 76)
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(988, 42)
-        Me.Panel1.TabIndex = 14
+        Me.Panel1.Size = New System.Drawing.Size(1003, 42)
+        Me.Panel1.TabIndex = 16
         '
         'RadDropDownButton1
         '
@@ -1058,11 +1012,13 @@ Partial Class frmOrderInfo
         '
         Me.mnuSlider.Name = "mnuSlider"
         Me.mnuSlider.Text = "Slider"
+        Me.mnuSlider.UseCompatibleTextRendering = False
         '
         'mnuSwinger
         '
         Me.mnuSwinger.Name = "mnuSwinger"
         Me.mnuSwinger.Text = "Swinger"
+        Me.mnuSwinger.UseCompatibleTextRendering = False
         '
         'btnDelete
         '
@@ -1085,27 +1041,6 @@ Partial Class frmOrderInfo
         CType(Me.btnDelete.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
         CType(Me.btnDelete.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
         '
-        'btnCancel
-        '
-        Me.btnCancel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Image = CType(resources.GetObject("btnCancel.Image"), System.Drawing.Image)
-        Me.btnCancel.Location = New System.Drawing.Point(125, 5)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(112, 32)
-        Me.btnCancel.TabIndex = 13
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCancel.Visible = False
-        CType(Me.btnCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
-        CType(Me.btnCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.btnCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Cancel"
-        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
-        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
-        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
-        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
-        '
         'btnEdit
         '
         Me.btnEdit.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -1119,7 +1054,7 @@ Partial Class frmOrderInfo
         Me.btnEdit.TabIndex = 10
         Me.btnEdit.Text = "Edit"
         Me.btnEdit.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.btnEdit.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
+        CType(Me.btnEdit.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
         CType(Me.btnEdit.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
         CType(Me.btnEdit.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Edit"
         CType(Me.btnEdit.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
@@ -1129,34 +1064,60 @@ Partial Class frmOrderInfo
         '
         'RadGridView1
         '
-        Me.RadGridView1.Location = New System.Drawing.Point(0, 124)
+        Me.RadGridView1.Location = New System.Drawing.Point(3, 51)
         '
         '
         '
+        Me.RadGridView1.MasterTemplate.AllowDragToGroup = False
         Me.RadGridView1.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn6.HeaderText = "Part "
-        GridViewTextBoxColumn6.Name = "Part"
-        GridViewTextBoxColumn6.Width = 243
-        GridViewTextBoxColumn7.HeaderText = "Cost"
-        GridViewTextBoxColumn7.Name = "Cost"
-        GridViewTextBoxColumn7.Width = 243
-        GridViewTextBoxColumn8.HeaderText = "Description"
-        GridViewTextBoxColumn8.Name = "column3"
-        GridViewTextBoxColumn8.Width = 243
-        GridViewTextBoxColumn9.HeaderText = "Unit ID"
-        GridViewTextBoxColumn9.Name = "column4"
-        GridViewTextBoxColumn9.Width = 244
-        Me.RadGridView1.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9})
-        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition4
+        GridViewTextBoxColumn7.HeaderText = "Part "
+        GridViewTextBoxColumn7.Name = "Part"
+        GridViewTextBoxColumn7.Width = 246
+        GridViewTextBoxColumn8.HeaderText = "Cost"
+        GridViewTextBoxColumn8.Name = "Cost"
+        GridViewTextBoxColumn8.Width = 246
+        GridViewTextBoxColumn9.HeaderText = "Description"
+        GridViewTextBoxColumn9.Name = "column3"
+        GridViewTextBoxColumn9.Width = 246
+        GridViewTextBoxColumn10.HeaderText = "Unit ID"
+        GridViewTextBoxColumn10.Name = "column4"
+        GridViewTextBoxColumn10.Width = 247
+        Me.RadGridView1.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn7, GridViewTextBoxColumn8, GridViewTextBoxColumn9, GridViewTextBoxColumn10})
+        Me.RadGridView1.MasterTemplate.ViewDefinition = TableViewDefinition6
         Me.RadGridView1.Name = "RadGridView1"
-        Me.RadGridView1.Size = New System.Drawing.Size(991, 489)
-        Me.RadGridView1.TabIndex = 0
+        Me.RadGridView1.Size = New System.Drawing.Size(1003, 812)
+        Me.RadGridView1.TabIndex = 15
+        '
+        'btnSaveOrder
+        '
+        Me.btnSaveOrder.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.btnSaveOrder.Image = Global.Nabco_Sales.My.Resources.Resources.disk
+        Me.btnSaveOrder.Location = New System.Drawing.Point(12, 2)
+        Me.btnSaveOrder.Name = "btnSaveOrder"
+        Me.btnSaveOrder.Size = New System.Drawing.Size(150, 47)
+        Me.btnSaveOrder.TabIndex = 1
+        Me.btnSaveOrder.Text = "Save Order"
+        Me.btnSaveOrder.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'RadButton3
+        '
+        Me.RadButton3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.RadButton3.Image = Global.Nabco_Sales.My.Resources.Resources.disk
+        Me.RadButton3.Location = New System.Drawing.Point(185, 2)
+        Me.RadButton3.Name = "RadButton3"
+        Me.RadButton3.Size = New System.Drawing.Size(150, 47)
+        Me.RadButton3.TabIndex = 2
+        Me.RadButton3.Text = "Save to Nabco"
+        Me.RadButton3.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.RadButton3.TextWrap = True
         '
         'frmOrderInfo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1153, 899)
+        Me.ClientSize = New System.Drawing.Size(1320, 950)
+        Me.Controls.Add(Me.RadButton3)
+        Me.Controls.Add(Me.btnSaveOrder)
         Me.Controls.Add(Me.pvOrderInfo)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmOrderInfo"
@@ -1167,10 +1128,20 @@ Partial Class frmOrderInfo
         Me.Text = "Order"
         CType(Me.pvOrderInfo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pvOrderInfo.ResumeLayout(False)
+        Me.pvpQuoteDetails.ResumeLayout(False)
+        CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadGroupBox3.ResumeLayout(False)
+        CType(Me.txtSapEntryDate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ddlShippingMethod, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtCustContact, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtQuoteNum, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtCustPO, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtJobName, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtSapOrderNum, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pvpOrderDetails.ResumeLayout(False)
         Me.pvpOrderDetails.PerformLayout()
-        CType(Me.gvCustomer.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.gvCustomer, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGroupBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadGroupBox2.ResumeLayout(False)
         CType(Me.btnClearShip, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1197,34 +1168,20 @@ Partial Class frmOrderInfo
         CType(Me.btnSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddlDistChannelSoldTP, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ddlSalesOffice, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.pvpQuoteDetails.ResumeLayout(False)
-        CType(Me.RadGroupBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadGroupBox3.ResumeLayout(False)
-        CType(Me.RadTextBoxControl8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControl1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControl3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControl4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControl5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControl6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadTextBoxControl7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadButton2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvCustomer.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvCustomer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pvpDocuments.ResumeLayout(False)
-        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnAdd, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView2.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pvpProducts.ResumeLayout(False)
-        CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.RadPageView1.ResumeLayout(False)
-        Me.RadPageViewPage1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         CType(Me.RadDropDownButton1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnDelete, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnCancel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnSaveOrder, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadButton3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1237,16 +1194,6 @@ Partial Class frmOrderInfo
     Friend WithEvents pvpProducts As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents lblModel As Label
     Friend WithEvents ddlSalesOffice As Telerik.WinControls.UI.RadDropDownList
-    Friend WithEvents RadPageView1 As Telerik.WinControls.UI.RadPageView
-    Friend WithEvents RadPageViewPage1 As Telerik.WinControls.UI.RadPageViewPage
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents RadDropDownButton1 As Telerik.WinControls.UI.RadDropDownButton
-    Friend WithEvents mnuSlider As Telerik.WinControls.UI.RadMenuItem
-    Friend WithEvents mnuSwinger As Telerik.WinControls.UI.RadMenuItem
-    Friend WithEvents btnDelete As Telerik.WinControls.UI.RadButton
-    Friend WithEvents btnCancel As Telerik.WinControls.UI.RadButton
-    Friend WithEvents btnEdit As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
     Friend WithEvents RadGridView2 As Telerik.WinControls.UI.RadGridView
     Friend WithEvents Label1 As Label
     Friend WithEvents chkMatchShip As Telerik.WinControls.UI.RadCheckBox
@@ -1292,12 +1239,10 @@ Partial Class frmOrderInfo
     Friend WithEvents lblCallingbtn As Label
     Friend WithEvents RadGroupBox3 As Telerik.WinControls.UI.RadGroupBox
     Friend WithEvents RadButton1 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents RadTextBoxControl1 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControl3 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControl4 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControl5 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControl6 As Telerik.WinControls.UI.RadTextBoxControl
-    Friend WithEvents RadTextBoxControl7 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents txtQuoteNum As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents txtCustPO As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents txtJobName As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents txtSapOrderNum As Telerik.WinControls.UI.RadTextBoxControl
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
@@ -1306,8 +1251,17 @@ Partial Class frmOrderInfo
     Friend WithEvents Label23 As Label
     Friend WithEvents Label24 As Label
     Friend WithEvents Label25 As Label
-    Friend WithEvents RadTextBoxControl8 As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents txtCustContact As Telerik.WinControls.UI.RadTextBoxControl
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents RadDropDownButton1 As Telerik.WinControls.UI.RadDropDownButton
+    Friend WithEvents mnuSlider As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents mnuSwinger As Telerik.WinControls.UI.RadMenuItem
+    Friend WithEvents btnDelete As Telerik.WinControls.UI.RadButton
+    Friend WithEvents btnEdit As Telerik.WinControls.UI.RadButton
+    Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents btnSaveOrder As Telerik.WinControls.UI.RadButton
+    Friend WithEvents ddlShippingMethod As Telerik.WinControls.UI.RadDropDownList
     Friend WithEvents RadButton3 As Telerik.WinControls.UI.RadButton
-    Friend WithEvents btnAdd As Telerik.WinControls.UI.RadButton
+    Friend WithEvents txtSapEntryDate As Telerik.WinControls.UI.RadDateTimePicker
 End Class
 

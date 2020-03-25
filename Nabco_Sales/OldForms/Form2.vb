@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports Microsoft.Office.Interop
+Imports Telerik.WinControls.UI
 
 Public Class Form2
 
@@ -93,6 +94,25 @@ Public Class Form2
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
-        TestSQLConnection()
+
+        '  Dim stripelement As RadPageViewNavigationViewElement = TryCast(Me.pvMasterSwinger.ViewElement, RadPageViewNavigationViewElement)
+        '   Dim btnSave As RadPageViewButtonElement = New RadPageViewButtonElement
+        '   btnSave.Image = My.Resources._04_Save_24x24
+        '    stripelement.ItemContainer.ButtonsPanel.Children.Insert(0, btnSave)
+
+
+        ' TestSQLConnection()
+    End Sub
+
+
+    Private Sub btnSave_Click(sender As Object, e As EventArgs)
+        '       MsgBox("Save Complete!")
+    End Sub
+
+    Private Sub pvMasterSwinger_SelectedPageChanging(sender As Object, e As RadPageViewCancelEventArgs) Handles pvMasterSwinger.SelectedPageChanging
+        If pvMasterSwinger.SelectedPage Is pvSave Then
+            MsgBox("Save Complete!!!")
+            pvMasterSwinger.SelectedPage = pvpModel
+        End If
     End Sub
 End Class

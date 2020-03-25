@@ -23,11 +23,11 @@ Partial Class frmTier
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim GridViewTextBoxColumn5 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn6 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn7 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim GridViewTextBoxColumn8 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
-        Dim TableViewDefinition2 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
+        Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn4 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTier))
         Me.tabControl = New Telerik.WinControls.UI.RadPageView()
         Me.tabTier = New Telerik.WinControls.UI.RadPageViewPage()
@@ -45,8 +45,8 @@ Partial Class frmTier
         Me.btnDelete = New Telerik.WinControls.UI.RadButton()
         Me.btnAdd = New Telerik.WinControls.UI.RadButton()
         Me.btnSave = New Telerik.WinControls.UI.RadButton()
-        Me.btnCancel = New Telerik.WinControls.UI.RadButton()
         Me.btnEdit = New Telerik.WinControls.UI.RadButton()
+        Me.btnCancel = New Telerik.WinControls.UI.RadButton()
         CType(Me.tabControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tabControl.SuspendLayout()
         Me.tabTier.SuspendLayout()
@@ -60,8 +60,9 @@ Partial Class frmTier
         CType(Me.btnDelete, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAdd, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnSave, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnCancel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnEdit.SuspendLayout()
+        CType(Me.btnCancel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -77,7 +78,7 @@ Partial Class frmTier
         Me.tabControl.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tabControl.Location = New System.Drawing.Point(0, 45)
         Me.tabControl.Name = "tabControl"
-        Me.tabControl.SelectedPage = Me.tabTier
+        Me.tabControl.SelectedPage = Me.tabEdit
         Me.tabControl.Size = New System.Drawing.Size(803, 406)
         Me.tabControl.TabIndex = 4
         CType(Me.tabControl.GetChildAt(0), Telerik.WinControls.UI.RadPageViewStripElement).StripButtons = Telerik.WinControls.UI.StripViewButtons.None
@@ -125,27 +126,27 @@ Partial Class frmTier
         Me.grdTier.MasterTemplate.AllowEditRow = False
         Me.grdTier.MasterTemplate.AllowRowHeaderContextMenu = False
         Me.grdTier.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
-        GridViewTextBoxColumn5.EnableExpressionEditor = False
-        GridViewTextBoxColumn5.HeaderText = "tier_id"
-        GridViewTextBoxColumn5.IsVisible = False
-        GridViewTextBoxColumn5.Name = "tier_id"
-        GridViewTextBoxColumn5.Width = 55
-        GridViewTextBoxColumn6.EnableExpressionEditor = False
-        GridViewTextBoxColumn6.HeaderText = "Tier level"
-        GridViewTextBoxColumn6.Name = "tier_level"
-        GridViewTextBoxColumn6.Width = 270
-        GridViewTextBoxColumn7.EnableExpressionEditor = False
-        GridViewTextBoxColumn7.HeaderText = "Multiplier"
-        GridViewTextBoxColumn7.Name = "multiplier"
-        GridViewTextBoxColumn7.Width = 288
-        GridViewTextBoxColumn8.HeaderText = "Last Edit By"
-        GridViewTextBoxColumn8.Name = "fullname"
-        GridViewTextBoxColumn8.Width = 205
-        Me.grdTier.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn5, GridViewTextBoxColumn6, GridViewTextBoxColumn7, GridViewTextBoxColumn8})
+        GridViewTextBoxColumn1.EnableExpressionEditor = False
+        GridViewTextBoxColumn1.HeaderText = "tier_id"
+        GridViewTextBoxColumn1.IsVisible = False
+        GridViewTextBoxColumn1.Name = "tier_id"
+        GridViewTextBoxColumn1.Width = 55
+        GridViewTextBoxColumn2.EnableExpressionEditor = False
+        GridViewTextBoxColumn2.HeaderText = "Tier level"
+        GridViewTextBoxColumn2.Name = "tier_level"
+        GridViewTextBoxColumn2.Width = 270
+        GridViewTextBoxColumn3.EnableExpressionEditor = False
+        GridViewTextBoxColumn3.HeaderText = "Multiplier"
+        GridViewTextBoxColumn3.Name = "multiplier"
+        GridViewTextBoxColumn3.Width = 288
+        GridViewTextBoxColumn4.HeaderText = "Last Edit By"
+        GridViewTextBoxColumn4.Name = "fullname"
+        GridViewTextBoxColumn4.Width = 205
+        Me.grdTier.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3, GridViewTextBoxColumn4})
         Me.grdTier.MasterTemplate.EnableGrouping = False
         Me.grdTier.MasterTemplate.EnableSorting = False
         Me.grdTier.MasterTemplate.SearchRowPosition = Telerik.WinControls.UI.SystemRowPosition.Bottom
-        Me.grdTier.MasterTemplate.ViewDefinition = TableViewDefinition2
+        Me.grdTier.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.grdTier.Name = "grdTier"
         Me.grdTier.Padding = New System.Windows.Forms.Padding(0, 0, 0, 1)
         Me.grdTier.ReadOnly = True
@@ -233,7 +234,6 @@ Partial Class frmTier
         Me.Panel1.Controls.Add(Me.btnDelete)
         Me.Panel1.Controls.Add(Me.btnAdd)
         Me.Panel1.Controls.Add(Me.btnSave)
-        Me.Panel1.Controls.Add(Me.btnCancel)
         Me.Panel1.Controls.Add(Me.btnEdit)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -287,7 +287,7 @@ Partial Class frmTier
         Me.btnSave.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnSave.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.btnSave.Image = CType(resources.GetObject("btnSave.Image"), System.Drawing.Image)
+        Me.btnSave.Image = Global.Nabco_Sales.My.Resources.Resources._04_Save_24x24
         Me.btnSave.Location = New System.Drawing.Point(8, 5)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(110, 32)
@@ -295,7 +295,7 @@ Partial Class frmTier
         Me.btnSave.Text = "Save"
         Me.btnSave.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSave.Visible = False
-        CType(Me.btnSave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        CType(Me.btnSave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = Global.Nabco_Sales.My.Resources.Resources._04_Save_24x24
         CType(Me.btnSave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
         CType(Me.btnSave.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Save"
         CType(Me.btnSave.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
@@ -303,31 +303,11 @@ Partial Class frmTier
         CType(Me.btnSave.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
         CType(Me.btnSave.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
         '
-        'btnCancel
-        '
-        Me.btnCancel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancel.Image = CType(resources.GetObject("btnCancel.Image"), System.Drawing.Image)
-        Me.btnCancel.Location = New System.Drawing.Point(125, 5)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(112, 32)
-        Me.btnCancel.TabIndex = 13
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCancel.Visible = False
-        CType(Me.btnCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
-        CType(Me.btnCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.btnCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Cancel"
-        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
-        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
-        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
-        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
-        '
         'btnEdit
         '
         Me.btnEdit.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnEdit.Controls.Add(Me.btnCancel)
         Me.btnEdit.Enabled = False
         Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEdit.Image = CType(resources.GetObject("btnEdit.Image"), System.Drawing.Image)
@@ -337,13 +317,34 @@ Partial Class frmTier
         Me.btnEdit.TabIndex = 10
         Me.btnEdit.Text = "Edit"
         Me.btnEdit.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
-        CType(Me.btnEdit.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image2"), System.Drawing.Image)
+        CType(Me.btnEdit.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image1"), System.Drawing.Image)
         CType(Me.btnEdit.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
         CType(Me.btnEdit.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Edit"
         CType(Me.btnEdit.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
         CType(Me.btnEdit.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
         CType(Me.btnEdit.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
         CType(Me.btnEdit.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCancel.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.Image = CType(resources.GetObject("btnCancel.Image"), System.Drawing.Image)
+        Me.btnCancel.Location = New System.Drawing.Point(0, 0)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(112, 32)
+        Me.btnCancel.TabIndex = 13
+        Me.btnCancel.Text = "Cancel"
+        Me.btnCancel.TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCancel.Visible = False
+        CType(Me.btnCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Image = CType(resources.GetObject("resource.Image"), System.Drawing.Image)
+        CType(Me.btnCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).TextAlignment = System.Drawing.ContentAlignment.MiddleRight
+        CType(Me.btnCancel.GetChildAt(0), Telerik.WinControls.UI.RadButtonElement).Text = "Cancel"
+        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ImageScaling = Telerik.WinControls.Enumerations.ImageScaling.None
+        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).CustomFontSize = 15.0!
+        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).Padding = New System.Windows.Forms.Padding(10, 1, 1, 1)
+        CType(Me.btnCancel.GetChildAt(0).GetChildAt(1).GetChildAt(0), Telerik.WinControls.Primitives.ImagePrimitive).ClipDrawing = False
         '
         'frmTier
         '
@@ -377,8 +378,9 @@ Partial Class frmTier
         CType(Me.btnDelete, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnAdd, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnSave, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnCancel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnEdit, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.btnEdit.ResumeLayout(False)
+        CType(Me.btnCancel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

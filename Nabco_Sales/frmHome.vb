@@ -57,8 +57,8 @@ Public Class frmHome
         ShowForm(frm)
     End Sub
 
-    Private Sub btnSwingDoor_Click(sender As Object, e As EventArgs) Handles btnSwingDoor.Click
-        Dim frm As New frmSwingDoor
+    Private Sub btnSwingDoor_Click(sender As Object, e As EventArgs) Handles btnNewOrder.Click
+        Dim frm As New frmOrderInfo
         ShowForm(frm)
     End Sub
 
@@ -68,8 +68,9 @@ Public Class frmHome
     End Sub
 
     Private Sub cmdTest_Click(sender As Object, e As EventArgs) Handles cmdTest.Click
-        Dim frm As New frmOrderInfo
-        ShowForm(frm)
+        showDesktopAlert("Working?", "Making sure that the new desktop alert is working for the applicaiton", True)
+        ' ' Dim frm As New frmSwingers
+        'ShowForm(frm)
     End Sub
 
     Private Sub frmHome_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
@@ -77,13 +78,29 @@ Public Class frmHome
     End Sub
 
     Public Sub OpenNewSwing()
-        Dim frm As frmSwingDoor
+        Dim frm As frmSwingers
         ShowForm(frm)
 
     End Sub
 #End Region
 
 #Region "Subs & Functions"
+
+    Public Sub showDesktopAlert(ByRef Caption As String, ByRef Content As String, Optional isError As Boolean = False, Optional img As Image = Nothing)
+        dskAlert.CaptionText = Caption
+        dskAlert.ContentText = Content
+        If img IsNot Nothing Then
+            dskAlert.ContentImage = img
+        End If
+        If isError = True Then
+            dskAlert.ContentImage = My.Resources._error
+
+        End If
+        dskAlert.ShowOptionsButton = False
+        dskAlert.ShowPinButton = False
+        dskAlert.Show()
+    End Sub
+
 
     Public Sub Login()
 
@@ -142,6 +159,11 @@ Public Class frmHome
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub btnFindOrder_Click(sender As Object, e As EventArgs) Handles btnFindOrder.Click
+        frmQuoteLookup.ShowDialog()
+    End Sub
+
 
 
 
