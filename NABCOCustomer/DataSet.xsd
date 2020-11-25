@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString1 (MySettings)" PropertyReference="ApplicationSettings.NabcoCustomer.My.MySettings.GlobalReference.Default.ConnectionString1" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ZPTRS_SO_INT_LOGTableAdapter" GeneratorDataComponentClassName="ZPTRS_SO_INT_LOGTableAdapter" Name="ZPTRS_SO_INT_LOG" UserDataComponentName="ZPTRS_SO_INT_LOGTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString1 (MySettings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "MANDT", "ID", "FILE_TYP", "FILENAME", "MESSAGE", "ERDAT", "UZEIT" FROM "SAPERP"."ZPTRS_SO_INT_LOG"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MANDT" DataSetColumn="MANDT" />
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="FILE_TYP" DataSetColumn="FILE_TYP" />
+              <Mapping SourceColumn="FILENAME" DataSetColumn="FILENAME" />
+              <Mapping SourceColumn="MESSAGE" DataSetColumn="MESSAGE" />
+              <Mapping SourceColumn="ERDAT" DataSetColumn="ERDAT" />
+              <Mapping SourceColumn="UZEIT" DataSetColumn="UZEIT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ZPTRS_SO_INT_LOG" msprop:Generator_TableClassName="ZPTRS_SO_INT_LOGDataTable" msprop:Generator_TableVarName="tableZPTRS_SO_INT_LOG" msprop:Generator_RowChangedName="ZPTRS_SO_INT_LOGRowChanged" msprop:Generator_TablePropName="ZPTRS_SO_INT_LOG" msprop:Generator_RowDeletingName="ZPTRS_SO_INT_LOGRowDeleting" msprop:Generator_RowChangingName="ZPTRS_SO_INT_LOGRowChanging" msprop:Generator_RowEvHandlerName="ZPTRS_SO_INT_LOGRowChangeEventHandler" msprop:Generator_RowDeletedName="ZPTRS_SO_INT_LOGRowDeleted" msprop:Generator_RowClassName="ZPTRS_SO_INT_LOGRow" msprop:Generator_UserTableName="ZPTRS_SO_INT_LOG" msprop:Generator_RowEvArgName="ZPTRS_SO_INT_LOGRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MANDT" msprop:Generator_ColumnVarNameInTable="columnMANDT" msprop:Generator_ColumnPropNameInRow="MANDT" msprop:Generator_ColumnPropNameInTable="MANDTColumn" msprop:Generator_UserColumnName="MANDT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FILE_TYP" msprop:Generator_ColumnVarNameInTable="columnFILE_TYP" msprop:Generator_ColumnPropNameInRow="FILE_TYP" msprop:Generator_ColumnPropNameInTable="FILE_TYPColumn" msprop:Generator_UserColumnName="FILE_TYP">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FILENAME" msprop:Generator_ColumnVarNameInTable="columnFILENAME" msprop:Generator_ColumnPropNameInRow="FILENAME" msprop:Generator_ColumnPropNameInTable="FILENAMEColumn" msprop:Generator_UserColumnName="FILENAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MESSAGE" msprop:Generator_ColumnVarNameInTable="columnMESSAGE" msprop:Generator_ColumnPropNameInRow="MESSAGE" msprop:Generator_ColumnPropNameInTable="MESSAGEColumn" msprop:Generator_UserColumnName="MESSAGE">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="127" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ERDAT" msprop:Generator_ColumnVarNameInTable="columnERDAT" msprop:Generator_ColumnPropNameInRow="ERDAT" msprop:Generator_ColumnPropNameInTable="ERDATColumn" msprop:Generator_UserColumnName="ERDAT" type="xs:dateTime" />
+              <xs:element name="UZEIT" msprop:Generator_ColumnVarNameInTable="columnUZEIT" msprop:Generator_ColumnPropNameInRow="UZEIT" msprop:Generator_ColumnPropNameInTable="UZEITColumn" msprop:Generator_UserColumnName="UZEIT" type="xs:duration" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ZPTRS_SO_INT_LOG" />
+      <xs:field xpath="mstns:MANDT" />
+      <xs:field xpath="mstns:ID" />
+      <xs:field xpath="mstns:FILE_TYP" />
+      <xs:field xpath="mstns:FILENAME" />
+      <xs:field xpath="mstns:MESSAGE" />
+      <xs:field xpath="mstns:ERDAT" />
+      <xs:field xpath="mstns:UZEIT" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
