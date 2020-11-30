@@ -59,7 +59,7 @@ Module SupportMod
             SQL = "Select * From t_settings where sap_username = '" & My.Settings.Sap_User & "'" &
             " and grid_name = '" & GRD.Name.ToUpper & "' " &
             " and form_name  = '" & frmnme.ToUpper & "'"
-            SetRS(RS)
+            SRS(RS)
             If RS.Read Then
                 Dim xmlString As String = ""
                 xmlString = RS("grid_layout")
@@ -70,7 +70,7 @@ Module SupportMod
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
-            CloseRS(RS)
+            CRS(RS)
         End Try
     End Sub
 
@@ -101,7 +101,7 @@ Module SupportMod
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
-            CloseRS(RS)
+            CRS(RS)
         End Try
     End Sub
 
