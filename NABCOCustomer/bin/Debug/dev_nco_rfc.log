@@ -892,3 +892,19 @@ RETURN CODE: 20
    at SAP.Middleware.Connector.RfcDestination.SetAttributeValues()
    at SAP.Middleware.Connector.RfcDestination.get_SystemAttributes()
    at SAP.Middleware.Connector.RfcRepository.GetRepositoryForDestination(RfcDestination destination)
+
+**** Log file opened by process 14180 at 2020-12-01 13:43:02 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.22.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1218
+Hostname: WI1DT1335, IP address: 172.31.198.113, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-01 13:43:03.047 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidStateException: destination configuration already initialized
+   at SAP.Middleware.Connector.RfcDestinationManager.RegisterDestinationConfiguration(IDestinationConfiguration config)

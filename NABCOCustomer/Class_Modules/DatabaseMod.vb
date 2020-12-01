@@ -90,7 +90,7 @@ Module DatabaseMod
             connection = Nothing
             Return Identity
         Catch ex As Exception
-            MsgBox(ex.Message,, "Execute")
+            MsgBox(SQL & "    " & ex.Message,, "Execute")
             Identity = Nothing
             SqlConnection.ClearAllPools()
             Return 0

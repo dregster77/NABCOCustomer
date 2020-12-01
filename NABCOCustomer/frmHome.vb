@@ -6,8 +6,8 @@ Imports Telerik.WinControls.UI
 
 Public Class frmHome
     Inherits Telerik.WinControls.UI.RadForm
-    Dim DTSQL, DTSAP, DTDiff As DataTable
-
+    Dim DTSQL, DTSAP As DataTable
+    Dim tmr As New Stopwatch
     'Private Declare Function SetParent Lib "user32" (ByVal hWndChild As IntPtr, ByVal hWndNewParent As IntPtr) As Integer
     'Private Declare Function FindWindow Lib "user32" Alias "FindWindowA" (ByVal lpClassName As String, ByVal lpWindowName As String) As IntPtr
     Public SAP As New SAPClass
@@ -24,23 +24,19 @@ Public Class frmHome
 
     'Tests the connection with SQL, SAP and pulls information from SAP that is needed
     Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         Try
 
 
             'Need to reset the visibility of the form to not visible
             Me.Visible = False
-            DirectCast(My.Application.SplashScreen, frmLoading).UpdateLoadingStatus("Checking SQL Connection...")
+            '   DirectCast(My.Application.SplashScreen, frmLoading).UpdateLoadingStatus("Checking SQL Connection...")
             CheckSQLConnection()
-            'DirectCast(My.Application.SplashScreen, frmLoading).UpdateLoadingStatus("Checking SQL Connection...")
-            'TestSQLConnection()
-            DirectCast(My.Application.SplashScreen, frmLoading).UpdateLoadingStatus("Checking SAP Connection...")
             SAP.TestSAPConnection()
-            DirectCast(My.Application.SplashScreen, frmLoading).UpdateLoadingStatus("Retrieving SQL Information...")
             PopSQLCustomers()
-            DirectCast(My.Application.SplashScreen, frmLoading).UpdateLoadingStatus("Retrieving SAP Information...")
             SAP.GetCustomerData()
             DTSAP = My.Settings.CustomerDATARaw
-
+            Compare()
             Me.BringToFront()
         Catch ex As Exception
             MsgBox(ex.ToString)
@@ -48,43 +44,84 @@ Public Class frmHome
     End Sub
 
     Private Sub Compare()
-        DTDiff = New DataTable
-        DTDiff.Columns.Add("RowID")
-        DTDiff.Columns.Add("customer_ID")
-        DTDiff.Columns.Add("Matched")
+
         rowID = 0
+        Dim cntr As Integer = 0
+        Dim updateRow As Boolean = False
+        Dim str As String
+        SQL = ""
+        'StartWatch()
+
+        SQL = "update t_customer set update_staus = 0"
+        Execute()
+        str = ""
         For Each row In DTSAP.Rows
+            updateRow = False
+            'look to see if there is a customer with that sap id and distribution channel
             Dim dr As DataRow() = DTSQL.Select("IDSAP='" & row("CustNR") & "' AND DISTRIBUTION_CHANNEL = '" & row("VTWEG") & "'")
             If dr.Length > 0 Then
-                If row("companyname") = dr(0)("customer_Name") And row("street") = dr(0)("street_address") Then
-                    DTDiff.Rows.Add(rowID, dr(0)("customer_ID"), "YES")
+
+                If row("companyname") <> dr(0)("customer_Name") And row("street") <> dr(0)("street_address") And row("city") <> dr(0)("city") And row("region") <> dr(0)("region") And
+                    row("zip") <> dr(0)("zip") And row("country") <> dr(0)("country") Then
+                    cntr += 1 : rowID += 1
+                    SQL &= "Update t_customer set " &
+                        "customer_Name = '" & Replace(row("companyname"), "'", "''") & "' ," &
+                        "street_address = '" & Replace(row("street"), "'", "''") & "'  ," &
+                        "city = '" & Replace(row("city"), "'", "''") & "'  ," &
+                        "region = '" & Replace(row("region"), "'", "''") & "'  ," &
+                        "zip = '" & Replace(row("zip"), "'", "''") & "'  ," &
+                        "country = '" & Replace(row("country"), "'", "''") & "'  ," &
+                        "lst_update = '" & Today.Date & "', " &
+                        "SAP_Change_Date = " & IIf(Microsoft.VisualBasic.Left(Replace(row("change_date"), "'", "''"), 1) = "0", "Null", "'" & Replace(row("change_date"), "'", "''") & "'") & "  " &
+                        " where customer_id = " & dr(0)("customer_Id") & " " & vbCr
                 Else
-                    DTDiff.Rows.Add(rowID, row("custNR"), "Not")
+                    str &= dr(0)("customer_id") & ", "
                 End If
-                'If row("") Then
-                '        DTDiff.Rows.Add(dr("customer"))
-                '    End If
+
+            Else
+                If Len(SQL) > 0 Then Execute()
+                rowID += 1
+                cntr += 1
+                SQL &= "Insert into t_customer (customer_name, idsap, distribution_channel, update_status, street_address, city, region, zip, country, lst_update, sap_change_date) values (" &
+                    "'" & Replace(row("companyname"), "'", "''") & "' ," &
+                    "'" & Replace(row("CustNR"), "'", "''") & "'  ," &
+                     "'" & Replace(row("VTWEG"), "'", "''") & "'  ," &
+                     "1  ," &
+                     "'" & Replace(row("street"), "'", "''") & "'  ," &
+                     "'" & Replace(row("city"), "'", "''") & "'  ," &
+                     "'" & Replace(row("region"), "'", "''") & "'  ," &
+                     "'" & Replace(row("zip"), "'", "''") & "'  ," &
+                     "'" & Replace(row("country"), "'", "''") & "'  ," &
+                     "'" & Today.Date & "'  ," &
+                      IIf(Microsoft.VisualBasic.Left(Replace(row("change_date"), "'", "''"), 1) = "0", "Null", "'" & Replace(row("change_date"), "'", "''") & "'") & ")" & vbCr
+                Execute()
             End If
-            rowID += 1
+            If cntr = 10 Then
+                Execute()
+                cntr = 0
+                SQL = ""
+            End If
         Next
-        gv_Progress.DataSource = DTDiff
+        If Len(SQL) > 0 Then Execute()
+        Dim rowinfo As GridViewRowInfo = gv_Progress.Rows.AddNew
+        rowinfo.Cells("update_Time").Value = DateTime.Now
+        rowinfo.Cells("records_updated").Value = rowID
+
+
+
     End Sub
 
     'Fires once the data has been pulled from SAP and kept in memory of the application 
-    Private Sub frmHome_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+    Private Sub FrmHome_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Me.Visible = True
         Me.IsMdiContainer = True
         Me.WindowState = FormWindowState.Maximized
 
-        gv_SAP.DataSource = My.Settings.CustomerDATARaw
-        'pnlMain.MdiChildrenDockType = Telerik.WinControls.UI.Docking.DockType.ToolWindow
-        ' PopLoginForm()
         Me.BringToFront()
-
+        Timer1.Start()
     End Sub
 
     Private Sub PopSQLCustomers()
-        'gv_SQL.BeginUpdate()
         DTSQL = New DataTable
         DTSQL.Columns.Add("rowID")
         DTSQL.Columns.Add("customer_id")
@@ -115,31 +152,11 @@ Public Class frmHome
         Finally
             CRS(RS)
         End Try
-        ' gv_SQL.EndUpdate()
-        gv_SQL.DataSource = DTSQL
-        gv_SQL.BestFitColumns()
     End Sub
 
 #End Region
 
 #Region "Subs & Functions"
-
-    Public Sub showDesktopAlert(ByRef Caption As String, ByRef Content As String, Optional isError As Boolean = False, Optional img As Image = Nothing)
-        'dskAlert.CaptionText = Caption
-        'dskAlert.ContentText = Content
-        'If img IsNot Nothing Then
-        '    dskAlert.ContentImage = img
-        'End If
-        'If isError = True Then
-        '    dskAlert.ContentImage = My.Resources._error
-
-        'End If
-        'dskAlert.ShowOptionsButton = False
-        'dskAlert.ShowPinButton = False
-        'dskAlert.Show()
-    End Sub
-
-
 
     Public Sub ShowForm(ByVal frm As Form)
         frm.IsMdiContainer = False
@@ -147,17 +164,14 @@ Public Class frmHome
         frm.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        DTSAP = New DataTable
+        DTSQL = New DataTable
+        CheckSQLConnection()
+        PopSQLCustomers()
+        SAP.GetCustomerData()
+        DTSAP = My.Settings.CustomerDATARaw
         Compare()
     End Sub
-
-
-
-
-
-
-
-
-
 #End Region
 End Class
