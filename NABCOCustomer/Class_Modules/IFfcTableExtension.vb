@@ -11,7 +11,8 @@ Public Class IFfcTableExtension
         'ADD THE COLUMNS YOU NEED TO DATATABLE
         For liElement As Integer = 0 To sapTable.ElementCount - 1
             Dim metadata As RfcElementMetadata = sapTable.GetElementMetadata(liElement)
-            If metadata.Name = "FIRSTNAME" Or metadata.Name = "LASTNAME" Or metadata.Name = "ONEUSE_FLAG" Or metadata.Name = "CREATION_DATE" Or metadata.Name = "EXTRA_DATA" Then GoTo skiprow
+            'If metadata.Name = "FIRSTNAME" Or metadata.Name = "LASTNAME" Or metadata.Name = "ONEUSE_FLAG" Or metadata.Name = "CREATION_DATE" Or metadata.Name = "EXTRA_DATA" Then GoTo skiprow
+            If metadata.Name = "ONEUSE_FLAG" Or metadata.Name = "CREATION_DATE" Or metadata.Name = "EXTRA_DATA" Then GoTo skiprow
             adoTable.Columns.Add(metadata.Name, GetDataType(metadata.DataType))
 
 
@@ -21,13 +22,17 @@ skiprow:
 
         'ADDS THE ROWS TO THE DATATABLE
         For Each row As IRfcStructure In sapTable
+
             Dim ldr As DataRow = adoTable.NewRow()
-            If row(15).GetValue.ToString = "D" Or row(6).GetValue.ToString = "" Then GoTo NextRow
+            If row(15).GetValue.ToString = "D" Then GoTo NextRow
+            If row(6).GetValue.ToString = "" Then
+                row(6).SetValue(row(4).GetValue.ToString)
+            End If
             'MsgBox(row(5).GetValue.ToString & "    " & row(4).GetValue.ToString & "       " & row(6).GetValue.ToString)
 
             For liElement As Integer = 0 To sapTable.ElementCount - 1
                 Dim metadata As RfcElementMetadata = sapTable.GetElementMetadata(liElement)
-                If metadata.Name = "FIRSTNAME" Or metadata.Name = "LASTNAME" Or metadata.Name = "ONEUSE_FLAG" Or metadata.Name = "CREATION_DATE" Or metadata.Name = "EXTRA_DATA" Then GoTo skiprow2
+                If metadata.Name = "ONEUSE_FLAG" Or metadata.Name = "CREATION_DATE" Or metadata.Name = "EXTRA_DATA" Then GoTo skiprow2
                 Select Case metadata.DataType
                     Case RfcDataType.DATE
                         Dim STR As String = row.GetString(metadata.Name).Substring(0, 4) + row.GetString(metadata.Name).Substring(5, 2) + row.GetString(metadata.Name).Substring(8, 2)

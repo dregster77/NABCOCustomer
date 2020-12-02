@@ -25,6 +25,7 @@ Partial Class frmHome
         Me.components = New System.ComponentModel.Container()
         Dim GridViewTextBoxColumn1 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim GridViewTextBoxColumn2 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
+        Dim GridViewTextBoxColumn3 As Telerik.WinControls.UI.GridViewTextBoxColumn = New Telerik.WinControls.UI.GridViewTextBoxColumn()
         Dim TableViewDefinition1 As Telerik.WinControls.UI.TableViewDefinition = New Telerik.WinControls.UI.TableViewDefinition()
         Me.gv_Progress = New Telerik.WinControls.UI.RadGridView()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
@@ -40,24 +41,32 @@ Partial Class frmHome
         '
         '
         '
+        Me.gv_Progress.MasterTemplate.AllowAddNewRow = False
+        Me.gv_Progress.MasterTemplate.AllowDragToGroup = False
         Me.gv_Progress.MasterTemplate.AutoSizeColumnsMode = Telerik.WinControls.UI.GridViewAutoSizeColumnsMode.Fill
         GridViewTextBoxColumn1.HeaderText = "Update Time"
         GridViewTextBoxColumn1.Name = "update_Time"
-        GridViewTextBoxColumn1.Width = 896
+        GridViewTextBoxColumn1.Width = 697
         GridViewTextBoxColumn2.HeaderText = "Records Updated"
         GridViewTextBoxColumn2.MinWidth = 200
         GridViewTextBoxColumn2.Name = "Records_updated"
         GridViewTextBoxColumn2.Width = 200
-        Me.gv_Progress.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2})
+        GridViewTextBoxColumn3.HeaderText = "Time to Complete"
+        GridViewTextBoxColumn3.MinWidth = 200
+        GridViewTextBoxColumn3.Name = "Time_Elapsed"
+        GridViewTextBoxColumn3.Width = 200
+        Me.gv_Progress.MasterTemplate.Columns.AddRange(New Telerik.WinControls.UI.GridViewDataColumn() {GridViewTextBoxColumn1, GridViewTextBoxColumn2, GridViewTextBoxColumn3})
+        Me.gv_Progress.MasterTemplate.EnableGrouping = False
         Me.gv_Progress.MasterTemplate.ViewDefinition = TableViewDefinition1
         Me.gv_Progress.Name = "gv_Progress"
+        Me.gv_Progress.ReadOnly = True
         Me.gv_Progress.Size = New System.Drawing.Size(1116, 748)
         Me.gv_Progress.TabIndex = 2
         Me.gv_Progress.TitleText = "Progress"
         '
         'Timer1
         '
-        Me.Timer1.Interval = 300000
+        Me.Timer1.Interval = 600000
         '
         'frmHome
         '
