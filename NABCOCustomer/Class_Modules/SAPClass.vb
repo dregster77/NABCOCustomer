@@ -72,39 +72,21 @@ Public Class SAPClass
 
     Public Function GetParameters(destinationName As String) As RfcConfigParameters Implements IDestinationConfiguration.GetParameters
         Dim parms As New RfcConfigParameters
-        Select Case destinationName
-            Case "NabTest"
-                parms.Add(RfcConfigParameters.AppServerHost, "172.26.3.13")
-                parms.Add(RfcConfigParameters.SystemNumber, "00")
-                parms.Add(RfcConfigParameters.SystemID, "UTA")
-                parms.Add(RfcConfigParameters.User, "idreger")
-                parms.Add(RfcConfigParameters.Password, "Ian1234")
-                parms.Add(RfcConfigParameters.Client, "700")
-                parms.Add(RfcConfigParameters.Language, "EN")
-                parms.Add(RfcConfigParameters.PoolSize, "5")
-                parms.Add(RfcConfigParameters.PeakConnectionsLimit, "10")
-                parms.Add(RfcConfigParameters.ConnectionIdleTimeout, "600")
-
-            Case "NabUser"
-                parms.Add(RfcConfigParameters.AppServerHost, "172.26.3.13")
-                parms.Add(RfcConfigParameters.SystemNumber, "00")
-                parms.Add(RfcConfigParameters.SystemID, "UTA")
-                parms.Add(RfcConfigParameters.User, My.Settings.Sap_User)
-                parms.Add(RfcConfigParameters.Password, My.Settings.sap_Pass)
-                parms.Add(RfcConfigParameters.Client, "700")
-                parms.Add(RfcConfigParameters.Language, "EN")
-                parms.Add(RfcConfigParameters.PoolSize, "5")
-                parms.Add(RfcConfigParameters.PeakConnectionsLimit, "10")
-                parms.Add(RfcConfigParameters.ConnectionIdleTimeout, "600")
-            Case Else
-        End Select
+        parms.Add(RfcConfigParameters.AppServerHost, "172.26.3.13")
+        parms.Add(RfcConfigParameters.SystemNumber, "00")
+        parms.Add(RfcConfigParameters.SystemID, "UTA")
+        parms.Add(RfcConfigParameters.User, "CPQSYS")
+        parms.Add(RfcConfigParameters.Password, "Driveworks2020!")
+        parms.Add(RfcConfigParameters.Client, "700")
+        parms.Add(RfcConfigParameters.Language, "EN")
+        parms.Add(RfcConfigParameters.PoolSize, "5")
+        parms.Add(RfcConfigParameters.PeakConnectionsLimit, "10")
+        parms.Add(RfcConfigParameters.ConnectionIdleTimeout, "600")
         Return parms
     End Function
 
     Public Function ChangeEventsSupported() As Boolean Implements IDestinationConfiguration.ChangeEventsSupported
         Return False
     End Function
-
-
 
 End Class
