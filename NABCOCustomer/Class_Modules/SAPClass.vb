@@ -38,7 +38,7 @@ Public Class SAPClass
     Public Function GetParameters(destinationName As String) As RfcConfigParameters Implements IDestinationConfiguration.GetParameters
         Dim parms As New RfcConfigParameters
 
-
+        ''Sandbox
         parms.Add(RfcConfigParameters.AppServerHost, "172.26.3.13")
         parms.Add(RfcConfigParameters.SystemNumber, "00")
         parms.Add(RfcConfigParameters.SystemID, "UTA")

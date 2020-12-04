@@ -6,7 +6,7 @@ Imports System.Text
 Imports System.Threading.Tasks
 
 Public Class frm_Home
-    Dim DTSQL, DTSAP As DataTable
+    Dim DTSQL, DTSAP, DTProgress As DataTable
     Dim StpWatch As New Stopwatch
 
     Public SAP As SAPClass
@@ -22,14 +22,19 @@ Public Class frm_Home
 
     End Sub
 
+    Private Sub InitProgress()
+        DTProgress = New DataTable
+        DTProgress.Columns.Add("Time")
+        DTProgress.Columns.Add("Rows_Updated")
+        DTProgress.Columns.Add("Run_Time")
+    End Sub
 
     'Tests the connection with SQL, SAP and pulls information from SAP that is needed
     Private Sub frmHome_Load(sender As Object, e As EventArgs) Handles Me.Load
         Try
             'Need to reset the visibility of the form to not visible
             Me.Visible = False
-            ' gv_Info.Rows.Add()
-
+            InitProgress()
             CheckSQLConnection()
             SAP = New SAPClass
             SAP.TestSAP()
@@ -45,14 +50,10 @@ Public Class frm_Home
     Private Sub StopTiming()
         StpWatch.Stop()
         Dim ts As TimeSpan = StpWatch.Elapsed
-        Dim row As New DataGridViewRow
-        gv_Info.Rows.Add(row)
-        row.Cells("Time").Value = Today.Date
-        row.Cells("Rows_Updated").Value = rowID
-        row.Cells("Run_Time").Value = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10)
+        DTProgress.Rows.Add(DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss"), rowID, String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10))
+        gv_Info.DataSource = DTProgress
 
-        'EventLog1.WriteEntry("Update Complete, Record Updated =" & rowID & " , Time to complete= " &
-        '                     String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10), EventLogEntryType.SuccessAudit)
+
 
     End Sub
 
