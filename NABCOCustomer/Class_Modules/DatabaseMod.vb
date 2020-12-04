@@ -41,14 +41,6 @@ Module DatabaseMod
     End Function
 
     'is closed once the reader is complete
-    Public Sub SRS2(ByRef LocalRS As SqlDataReader)
-        Dim connection As New SqlConnection(CONSTR)
-        Dim command As New SqlCommand(SQL2, connection)
-        connection.Open()
-        LocalRS = command.ExecuteReader(CommandBehavior.CloseConnection)
-    End Sub
-
-    'is closed once the reader is complete
     Public Sub SRS(ByRef LocalRS As SqlDataReader)
         Dim connection As New SqlConnection(CONSTR)
         Dim command As New SqlCommand(SQL, connection)
@@ -90,7 +82,7 @@ Module DatabaseMod
             connection = Nothing
             Return Identity
         Catch ex As Exception
-            MsgBox(SQL & "    " & ex.Message,, "Execute")
+            ' MsgBox(SQL & "    " & ex.Message,, "Execute")
             Identity = Nothing
             SqlConnection.ClearAllPools()
             Return 0

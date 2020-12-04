@@ -15,9 +15,7 @@ C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\Telerik.WinC
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\Telerik.WinControls.UI.xml
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\Interop.SAP.dll
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.vbproj.ResolveComReference.cache
-C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.frmLoading.resources
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.Resources.resources
-C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.frmHome.resources
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.vbproj.GenerateResource.cache
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.exe.licenses
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.vbproj.CoreCompileInputs.cache
@@ -26,3 +24,8 @@ C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustome
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.xml
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.pdb
 C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.vbprojAssemblyReference.cache
+C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.frm_Home.resources
+C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe.manifest
+C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.application
+C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.exe.manifest
+C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\obj\Debug\NabcoCustomer.application

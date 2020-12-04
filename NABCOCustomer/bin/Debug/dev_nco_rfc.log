@@ -908,3 +908,373 @@ Default trace level: None
 >> Error entry 2020-12-01 13:43:03.047 [Thread 1]
 SAP.Middleware.Connector.RfcInvalidStateException: destination configuration already initialized
    at SAP.Middleware.Connector.RfcDestinationManager.RegisterDestinationConfiguration(IDestinationConfiguration config)
+
+**** Log file opened by process 19840 at 2020-12-04 08:14:42 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.22.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1218
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 08:14:42.529 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidStateException: destination configuration already initialized
+   at SAP.Middleware.Connector.RfcDestinationManager.RegisterDestinationConfiguration(IDestinationConfiguration config)
+
+**** Log file opened by process 21992 at 2020-12-04 09:55:37 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 09:55:37.917 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidStateException: Cannot get destination NabTest -- no destination configuration registered
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at NabcoCustomer.SAPClass.TestSAPConnection() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 69
+   at NabcoCustomer.frm_Home.frmHome_Load(Object sender, EventArgs e) in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 23
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81
+
+**** Log file opened by process 11960 at 2020-12-04 09:56:00 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 09:56:00.905 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidStateException: Cannot get destination NabTest -- no destination configuration registered
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at NabcoCustomer.SAPClass.TestSAPConnection() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 69
+   at NabcoCustomer.frm_Home.frmHome_Load(Object sender, EventArgs e) in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 23
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81
+
+**** Log file opened by process 15948 at 2020-12-04 10:13:34 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 10:13:34.509 [Thread 1]
+System.NotImplementedException: The method or operation is not implemented.
+   at NabcoCustomer.SAPClass.ChangeEventsSupported() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 95
+   at SAP.Middleware.Connector.RfcDestinationManager.RegisterDestinationConfiguration(IDestinationConfiguration config)
+   at NabcoCustomer.SAPClass.TestSAPConnection() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 70
+   at NabcoCustomer.frm_Home.frmHome_Load(Object sender, EventArgs e) in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 23
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81
+
+**** Log file opened by process 2100 at 2020-12-04 10:14:14 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 10:14:14.944 [Thread 1]
+System.NotImplementedException: The method or operation is not implemented.
+   at NabcoCustomer.SAPClass.ChangeEventsSupported() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 95
+   at SAP.Middleware.Connector.RfcDestinationManager.RegisterDestinationConfiguration(IDestinationConfiguration config)
+   at NabcoCustomer.SAPClass.TestSAPConnection() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 70
+   at NabcoCustomer.frm_Home.frmHome_Load(Object sender, EventArgs e) in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 23
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81
+
+**** Log file opened by process 22112 at 2020-12-04 10:55:31 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 10:55:31.555 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidParameterException: Destination NabTest does not exist
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at NabcoCustomer.SAPClass..ctor() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 15
+   at NabcoCustomer.frm_Home.frmHome_Load(Object sender, EventArgs e) in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 25
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81
+
+**** Log file opened by process 19692 at 2020-12-04 10:59:41 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 10:59:42.159 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidParameterException: Destination NabTest does not exist
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at NabcoCustomer.SAPClass..ctor() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 15
+   at NabcoCustomer.frm_Home.frmHome_Load(Object sender, EventArgs e) in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 25
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81
+
+**** Log file opened by process 25424 at 2020-12-04 11:01:10 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 11:01:10.376 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidParameterException: Destination NABCO does not exist
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at NabcoCustomer.SAPClass..ctor() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 15
+   at NabcoCustomer.frm_Home.frmHome_Load(Object sender, EventArgs e) in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 25
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81
+
+**** Log file opened by process 16196 at 2020-12-04 11:02:35 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 11:02:35.285 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidParameterException: Destination NABCO does not exist
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at NabcoCustomer.SAPClass..ctor() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 15
+   at NabcoCustomer.frm_Home.frmHome_Load(Object sender, EventArgs e) in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 25
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Windows.Forms.Form.OnLoad(EventArgs e)
+   at System.Windows.Forms.Form.OnCreateControl()
+   at System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   at System.Windows.Forms.Control.CreateControl()
+   at System.Windows.Forms.Control.WmShowWindow(Message& m)
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow_`60033cc(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.SafeNativeMethods.ShowWindow(HandleRef hWnd, Int32 nCmdShow)
+   at System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81
+
+**** Log file opened by process 25328 at 2020-12-04 11:32:12 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 11:32:13.196 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidParameterException: Destination NABCO does not exist
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at NabcoCustomer.SAPClass..ctor() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 13
+   at NabcoCustomer.frm_Home..ctor() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 7
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance[T]()
+   at NabcoCustomer.My.MyProject.MyForms.Create__Instance__[T](T Instance) in :line 187
+   at NabcoCustomer.My.MyProject.MyForms.get_frm_Home()
+   at NabcoCustomer.My.MyApplication.OnCreateMainForm() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\My Project\Application.Designer.vb:line 35
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81
+
+**** Log file opened by process 23368 at 2020-12-04 11:33:32 (UTC-06:00 Central Standard Time)
+
+SAP .NET Connector 3.0 with file version 3.0.23.0 running on 64-bit .NET Framework 4.0.30319.42000
+Program: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug\NabcoCustomer.exe
+Working directory: C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\bin\Debug
+Operating system: Windows 10 Professional 64-bit 
+Processor: 8x AMD64 (or x64)
+SAP release: 721, Kernel release: 721, Kernel patch level: 1321
+Hostname: WI1DT1335, IP address: 172.31.198.112, IP_v6 address: fe80::8593:4666:be4e:45a3
+
+Default trace level: None
+
+>> Error entry 2020-12-04 11:33:32.747 [Thread 1]
+SAP.Middleware.Connector.RfcInvalidParameterException: Destination NABCO does not exist
+   at SAP.Middleware.Connector.RfcDestinationManager.GetDestination(String destinationName)
+   at NabcoCustomer.SAPClass..ctor() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\Class_Modules\SAPClass.vb:line 13
+   at NabcoCustomer.frm_Home..ctor() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\frm_Home.vb:line 16
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance[T]()
+   at NabcoCustomer.My.MyProject.MyForms.Create__Instance__[T](T Instance) in :line 187
+   at NabcoCustomer.My.MyProject.MyForms.get_frm_Home()
+   at NabcoCustomer.My.MyApplication.OnCreateMainForm() in C:\Users\idreger\source\repos\NABCOCustomer\NABCOCustomer\My Project\Application.Designer.vb:line 35
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.DoApplicationModel()
+   at Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run(String[] commandLine)
+   at NabcoCustomer.My.MyApplication.Main(String[] Args) in :line 81

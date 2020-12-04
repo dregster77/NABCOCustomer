@@ -9,6 +9,10 @@ Public Class SAPClass
     Public Shared Property CustomerData As DataTable = New DataTable()
     Public Event ConfigurationChanged As RfcDestinationManager.ConfigurationChangeHandler Implements IDestinationConfiguration.ConfigurationChanged
 
+    Sub New()
+
+    End Sub
+
     Public Sub UpdateCustomer()
         Dim func As IRfcFunction = REPO.CreateFunction("Bapi_Customer_Edit")
         func.Invoke(RFCDEST)
@@ -22,56 +26,19 @@ Public Class SAPClass
 
     End Sub
 
-    Public Shared Function CleanCustomerData(ByVal data As DataTable)
 
 
-        Dim colsToDelete As List(Of DataColumn) = New List(Of DataColumn)()
-        For Each col As DataColumn In data.Columns
-            Select Case col.ColumnName.ToUpper
-                Case "CUSTNR"
-                    col.Caption = "Customer Number"
-                Case "COMPANYNAME"
-                    col.Caption = "Company Name"
-                Case "CITY"
-                    col.Caption = "City"
-                Case "STREET"
-                    col.Caption = "Street"
-                Case "ZIP"
-                    col.Caption = "ZIP"
-                Case "COUNTRY"
-                    col.Caption = "Country"
-                Case "REGION"
-                    col.Caption = "Region"
-                Case "TELEF1"
-                    col.Caption = "Telephone Number"
-                Case "VTWEG"
-                    col.Caption = "Dist Channel"
-                Case ""
-                Case Else
-                    colsToDelete.Add(col)
-            End Select
-        Next
+    Public Sub TestSAP()
+        RfcDestinationManager.RegisterDestinationConfiguration(New SAPClass())
+        RFCDEST = RfcDestinationManager.GetDestination("NABCO")
+        REPO = RFCDEST.Repository
 
-        For Each col In colsToDelete
-            data.Columns.Remove(col)
-        Next
-        Return data
-
-    End Function
-
-    Public Sub TestSAPConnection()
-        Try
-            RfcDestinationManager.RegisterDestinationConfiguration(New SAPClass)
-            RFCDEST = RfcDestinationManager.GetDestination("NabTest")
-            REPO = RFCDEST.Repository
-        Catch ex As Exception
-            MsgBox(ex.Message)
-
-        End Try
     End Sub
 
     Public Function GetParameters(destinationName As String) As RfcConfigParameters Implements IDestinationConfiguration.GetParameters
         Dim parms As New RfcConfigParameters
+
+
         parms.Add(RfcConfigParameters.AppServerHost, "172.26.3.13")
         parms.Add(RfcConfigParameters.SystemNumber, "00")
         parms.Add(RfcConfigParameters.SystemID, "UTA")
@@ -82,10 +49,13 @@ Public Class SAPClass
         parms.Add(RfcConfigParameters.PoolSize, "5")
         parms.Add(RfcConfigParameters.PeakConnectionsLimit, "10")
         parms.Add(RfcConfigParameters.ConnectionIdleTimeout, "600")
+
+
         Return parms
     End Function
 
     Public Function ChangeEventsSupported() As Boolean Implements IDestinationConfiguration.ChangeEventsSupported
+
         Return False
     End Function
 
