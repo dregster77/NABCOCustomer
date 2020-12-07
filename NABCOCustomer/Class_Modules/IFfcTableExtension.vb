@@ -12,7 +12,7 @@ Public Class IFfcTableExtension
         For liElement As Integer = 0 To sapTable.ElementCount - 1
             Dim metadata As RfcElementMetadata = sapTable.GetElementMetadata(liElement)
             'If metadata.Name = "FIRSTNAME" Or metadata.Name = "LASTNAME" Or metadata.Name = "ONEUSE_FLAG" Or metadata.Name = "CREATION_DATE" Or metadata.Name = "EXTRA_DATA" Then GoTo skiprow
-            If metadata.Name = "ONEUSE_FLAG" Or metadata.Name = "CREATION_DATE" Or metadata.Name = "EXTRA_DATA" Then GoTo skiprow
+            If metadata.Name = "ONEUSE_FLAG" Or metadata.Name = "CREATION_DATE" Or metadata.Name = "EXTRA_DATA" Or metadata.Name = "CHANGE_DATE" Then GoTo skiprow
             adoTable.Columns.Add(metadata.Name, GetDataType(metadata.DataType))
 
 
@@ -35,9 +35,9 @@ skiprow:
                 If metadata.Name = "ONEUSE_FLAG" Or metadata.Name = "CREATION_DATE" Or metadata.Name = "EXTRA_DATA" Then GoTo skiprow2
                 Select Case metadata.DataType
                     Case RfcDataType.DATE
-                        Dim STR As String = row.GetString(metadata.Name).Substring(0, 4) + row.GetString(metadata.Name).Substring(5, 2) + row.GetString(metadata.Name).Substring(8, 2)
-                        If Left(STR, 1) <> "0" Then STR = Date.ParseExact(STR, "yyyyMMdd", CultureInfo.InvariantCulture)
-                        ldr(metadata.Name) = STR
+                        'Dim STR As String = row.GetString(metadata.Name).Substring(0, 4) + row.GetString(metadata.Name).Substring(5, 2) + row.GetString(metadata.Name).Substring(8, 2)
+                        'If Left(STR, 1) <> "0" Then STR = Date.ParseExact(STR, "yyyyMMdd", CultureInfo.InvariantCulture)
+                       ' ldr(metadata.Name) = row.GetString(metadata.Name)
                     Case RfcDataType.BCD
                         ldr(metadata.Name) = row.GetDecimal(metadata.Name)
                     Case RfcDataType.CHAR

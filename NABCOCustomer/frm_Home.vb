@@ -37,6 +37,7 @@ Public Class frm_Home
             InitProgress()
             CheckSQLConnection()
             SAP = New SAPClass
+            SAP.TestSAP2()
             SAP.TestSAP()
             RunUpdatCheck()
             Timer1.Start()
@@ -180,11 +181,13 @@ Public Class frm_Home
         DTSAP = New DataTable
         DTSQL = New DataTable
         PopSQLCustomers()
-        SAP.GetCustomerData()
-        DTSAP = My.Settings.CustomerDATARaw
+
+        DTSAP = SAP.GetCustomerData()
         Compare()
         StopTiming()
         Timer1.Start()
+        DTSAP.Clear()
+        DTSQL.Clear()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
