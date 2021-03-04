@@ -20,7 +20,7 @@ Module DatabaseMod
     'Checking the Connection to the database to insure there is a proper connection 
     Public Function CheckSQLConnection() As Boolean
         Datasource = "Nabco-td"
-        Database = "CPQ"
+        Database = "CPQ_Sandbox"
         CONSTR = "Data Source=" & Datasource & ";Initial Catalog= " & Database & " ;Integrated Security=SSPI" 'User ID= sa;Password=2SZvW9hDY7_KJC"
         Dim connection As New SqlConnection(CONSTR)
 
@@ -123,4 +123,13 @@ Module DatabaseMod
         End Try
     End Function
 
+
+    Public Function SQLReplace(ByVal Val As String) As String
+        Try
+            Val = Replace(Val, "'", "")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Return Val
+    End Function
 End Module
